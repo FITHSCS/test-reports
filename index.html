@@ -2,149 +2,567 @@
 <html>
 <head>
     <title>Go Application Test Reports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f9fa; }
-        .header { background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .latest-report { background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .report-meta { margin-bottom: 15px; }
-        .report-meta p { margin: 5px 0; color: #666; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header { 
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: slideInDown 0.8s ease-out;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 3s infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .latest-report { 
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .latest-report:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .report-meta { 
+            margin-bottom: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .meta-item {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .meta-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+        }
+        
+        .meta-item strong {
+            color: #4c51bf;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .meta-item span {
+            color: #2d3748;
+            font-weight: 500;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+        
         .test-summary { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            color: white; 
-            padding: 15px; 
-            border-radius: 8px; 
-            margin: 15px 0; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 16px;
+            margin: 25px 0;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
         }
-        .test-summary h3 { margin: 0 0 10px 0; font-size: 1.1em; }
-        .summary-stats { display: flex; flex-wrap: wrap; gap: 15px; }
+        
+        .test-summary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            animation: scanning 2s linear infinite;
+        }
+        
+        @keyframes scanning {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .test-summary h3 { 
+            margin: 0 0 20px 0;
+            font-size: 1.4em;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .test-summary h3::before {
+            content: '📊';
+            font-size: 1.2em;
+            animation: pulse 2s infinite;
+        }
+        
+        .summary-stats { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+        }
+        
         .stat-item { 
-            background: rgba(255,255,255,0.2); 
-            padding: 8px 12px; 
-            border-radius: 6px; 
-            backdrop-filter: blur(10px); 
-            min-width: 120px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
         }
-        .stat-item strong { display: block; font-size: 0.9em; margin-bottom: 2px; }
-        .pass-icon { color: #28a745; font-weight: bold; }
-        .fail-icon { color: #dc3545; font-weight: bold; }
-        .skip-icon { color: #ffc107; font-weight: bold; }
-        .coverage-icon { color: #17a2b8; font-weight: bold; }
-        .report-list { list-style-type: none; padding: 0; }
-        .report-item { background-color: #ffffff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00f5ff, #0099ff);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover::before {
+            transform: translateX(0);
+        }
+        
+        .stat-item strong { 
+            display: block;
+            font-size: 0.85em;
+            margin-bottom: 8px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+        
+        .stat-item .value {
+            font-size: 1.8em;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+        
+        .report-links {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
         .report-links a { 
-            display: inline-block;
-            margin-right: 10px; 
-            text-decoration: none; 
-            color: #ffffff; 
-            background: #007bff;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
         }
-        .report-links a:hover { background: #0056b3; }
-        h1 { color: #333; margin: 0; }
-        h2 { color: #444; margin: 0 0 15px 0; }
-        h3 { color: #555; }
+        
+        .report-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .report-links a:hover::before {
+            left: 100%;
+        }
+        
+        .report-links a:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+        
+        .report-list { 
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .report-item { 
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .report-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        h1 { 
+            color: #2d3748;
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+        
+        .header p {
+            color: #4a5568;
+            font-size: 1.1em;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+        
+        h2 { 
+            color: #2d3748;
+            margin: 0 0 20px 0;
+            font-size: 1.8em;
+            font-weight: 700;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+        }
+        
+        h3 { 
+            color: #4a5568;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .branch-section {
+            margin-bottom: 30px;
+        }
+        
+        .branch-section h3 {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 15px 20px;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            color: #2d3748;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .header { padding: 25px; }
+            h1 { font-size: 2em; }
+            .summary-stats { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+            .report-links { flex-direction: column; }
+            .report-links a { justify-content: center; }
+        }
+        
+        .loading-shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🧪 Go Application Test Reports</h1>
-        <p>Automated test results and coverage reports</p>
-    </div>
-    
-    <div class="latest-report">
-        <h2>📊 Latest Report</h2>
-        <div class="report-meta">
-            <p><strong>Branch:</strong> dev</p>
-            <p><strong>Commit:</strong> bc8d12473d67791fa71a6cca00ea719ca79d62e0</p>
-            <p><strong>Date:</strong> Tue Jun 24 06:07:43 UTC 2025</p>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 Go Application Test Reports</h1>
+            <p>Automated test results and coverage reports with real-time insights</p>
         </div>
+    
+        <div class="latest-report">
+            <h2>📊 Latest Report</h2>
+            <div class="report-meta">
+                <div class="meta-item">
+                    <strong>Branch</strong>
+                    <span>dev</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Commit</strong>
+                    <span>f9e2b5ff</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Date</strong>
+                    <span>2025-06-24 06:26</span>
+                </div>
+            </div>
         
         <div class="test-summary">
             <h3>Test Summary</h3>
             <div class="summary-stats">
-                          <div class="stat-item"><strong>✅ Passed</strong>87</div>
-                          <div class="stat-item"><strong>❌ Failed</strong>0</div>
-                          <div class="stat-item"><strong>⏭️ Skipped</strong>0</div>
-                          <div class="stat-item"><strong>📊 Avg Coverage</strong>80.5%</div>
+                          <div class="stat-item"><strong>✅ Passed</strong><div class="value">87</div></div>
+                          <div class="stat-item"><strong>❌ Failed</strong><div class="value">0</div></div>
+                          <div class="stat-item"><strong>⏭️ Skipped</strong><div class="value">0</div></div>
+                          <div class="stat-item"><strong>📊 Coverage</strong><div class="value">80.5%</div></div>
             </div>
         </div>
         
         <div class="report-links">
-            <a href="reports/dev/bc8d124/test-results.html">🧪 View Detailed Test Results</a>
-            <a href="reports/dev/bc8d124/coverage.html">📊 View Coverage Report</a>
+            <a href="reports/dev/f9e2b5f/test-results.html">
+                <span>🧪</span> View Detailed Test Results
+            </a>
+            <a href="reports/dev/f9e2b5f/coverage.html">
+                <span>📊</span> View Coverage Report
+            </a>
         </div>
     </div>
     
-    <h2>📚 Historical Reports</h2>
+    <div class="section-header">
+        <h2>📚 Historical Reports</h2>
+        <p style="color: #4a5568; margin-top: 10px;">Browse previous test runs and track progress over time</p>
+    </div>
     <ul class="report-list">
-<h3>Branch: dev</h3>
+<div class="branch-section">
+<h3>🌿 Branch: dev</h3>
 <li class="report-item">
-<strong>Commit:</strong> dc814f6
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+<div>
+<strong style="color: #2d3748; font-size: 1.1em;">📝 Commit: f9e2b5f</strong>
+<p style="color: #718096; margin: 5px 0; font-size: 0.9em;">📅 2025-06-24</p>
+</div>
+</div>
 <div class="report-links">
-<a href="reports/dev/dc814f6/test-results.html">🧪 Tests</a>
-<a href="reports/dev/dc814f6/coverage.html">📊 Coverage</a>
-<a href="reports/dev/dc814f6/test-summary.md">📋 Summary</a>
+<a href="reports/dev/f9e2b5f/test-results.html"><span>🧪</span> Tests</a>
+<a href="reports/dev/f9e2b5f/coverage.html"><span>📊</span> Coverage</a>
+<a href="reports/dev/f9e2b5f/test-summary.md"><span>📋</span> Summary</a>
 </div>
 </li>
 <li class="report-item">
-<strong>Commit:</strong> bc8d124
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+<div>
+<strong style="color: #2d3748; font-size: 1.1em;">📝 Commit: dc814f6</strong>
+<p style="color: #718096; margin: 5px 0; font-size: 0.9em;">📅 2025-06-24</p>
+</div>
+</div>
 <div class="report-links">
-<a href="reports/dev/bc8d124/test-results.html">🧪 Tests</a>
-<a href="reports/dev/bc8d124/coverage.html">📊 Coverage</a>
-<a href="reports/dev/bc8d124/test-summary.md">📋 Summary</a>
+<a href="reports/dev/dc814f6/test-results.html"><span>🧪</span> Tests</a>
+<a href="reports/dev/dc814f6/coverage.html"><span>📊</span> Coverage</a>
+<a href="reports/dev/dc814f6/test-summary.md"><span>📋</span> Summary</a>
 </div>
 </li>
 <li class="report-item">
-<strong>Commit:</strong> 85ee635
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+<div>
+<strong style="color: #2d3748; font-size: 1.1em;">📝 Commit: bc8d124</strong>
+<p style="color: #718096; margin: 5px 0; font-size: 0.9em;">📅 2025-06-24</p>
+</div>
+</div>
 <div class="report-links">
-<a href="reports/dev/85ee635/test-results.html">🧪 Tests</a>
-<a href="reports/dev/85ee635/coverage.html">📊 Coverage</a>
-<a href="reports/dev/85ee635/test-summary.md">📋 Summary</a>
+<a href="reports/dev/bc8d124/test-results.html"><span>🧪</span> Tests</a>
+<a href="reports/dev/bc8d124/coverage.html"><span>📊</span> Coverage</a>
+<a href="reports/dev/bc8d124/test-summary.md"><span>📋</span> Summary</a>
 </div>
 </li>
 <li class="report-item">
-<strong>Commit:</strong> 517e517
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+<div>
+<strong style="color: #2d3748; font-size: 1.1em;">📝 Commit: 85ee635</strong>
+<p style="color: #718096; margin: 5px 0; font-size: 0.9em;">📅 2025-06-24</p>
+</div>
+</div>
 <div class="report-links">
-<a href="reports/dev/517e517/test-results.html">🧪 Tests</a>
-<a href="reports/dev/517e517/coverage.html">📊 Coverage</a>
-<a href="reports/dev/517e517/test-summary.md">📋 Summary</a>
+<a href="reports/dev/85ee635/test-results.html"><span>🧪</span> Tests</a>
+<a href="reports/dev/85ee635/coverage.html"><span>📊</span> Coverage</a>
+<a href="reports/dev/85ee635/test-summary.md"><span>📋</span> Summary</a>
 </div>
 </li>
 <li class="report-item">
-<strong>Commit:</strong> 4b1df61
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+<div>
+<strong style="color: #2d3748; font-size: 1.1em;">📝 Commit: 517e517</strong>
+<p style="color: #718096; margin: 5px 0; font-size: 0.9em;">📅 2025-06-24</p>
+</div>
+</div>
 <div class="report-links">
-<a href="reports/dev/4b1df61/test-results.html">🧪 Tests</a>
-<a href="reports/dev/4b1df61/coverage.html">📊 Coverage</a>
-<a href="reports/dev/4b1df61/test-summary.md">📋 Summary</a>
+<a href="reports/dev/517e517/test-results.html"><span>🧪</span> Tests</a>
+<a href="reports/dev/517e517/coverage.html"><span>📊</span> Coverage</a>
+<a href="reports/dev/517e517/test-summary.md"><span>📋</span> Summary</a>
 </div>
 </li>
 <li class="report-item">
-<strong>Commit:</strong> 38f5108
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+<div>
+<strong style="color: #2d3748; font-size: 1.1em;">📝 Commit: 4b1df61</strong>
+<p style="color: #718096; margin: 5px 0; font-size: 0.9em;">📅 2025-06-24</p>
+</div>
+</div>
 <div class="report-links">
-<a href="reports/dev/38f5108/test-results.html">🧪 Tests</a>
-<a href="reports/dev/38f5108/coverage.html">📊 Coverage</a>
-<a href="reports/dev/38f5108/test-summary.md">📋 Summary</a>
+<a href="reports/dev/4b1df61/test-results.html"><span>🧪</span> Tests</a>
+<a href="reports/dev/4b1df61/coverage.html"><span>📊</span> Coverage</a>
+<a href="reports/dev/4b1df61/test-summary.md"><span>📋</span> Summary</a>
 </div>
 </li>
 <li class="report-item">
-<strong>Commit:</strong> 2ea0d55
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+<div>
+<strong style="color: #2d3748; font-size: 1.1em;">📝 Commit: 38f5108</strong>
+<p style="color: #718096; margin: 5px 0; font-size: 0.9em;">📅 2025-06-24</p>
+</div>
+</div>
 <div class="report-links">
-<a href="reports/dev/2ea0d55/test-results.html">🧪 Tests</a>
-<a href="reports/dev/2ea0d55/coverage.html">📊 Coverage</a>
-<a href="reports/dev/2ea0d55/test-summary.md">📋 Summary</a>
+<a href="reports/dev/38f5108/test-results.html"><span>🧪</span> Tests</a>
+<a href="reports/dev/38f5108/coverage.html"><span>📊</span> Coverage</a>
+<a href="reports/dev/38f5108/test-summary.md"><span>📋</span> Summary</a>
 </div>
 </li>
 <li class="report-item">
-<strong>Commit:</strong> 0e0f069
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+<div>
+<strong style="color: #2d3748; font-size: 1.1em;">📝 Commit: 2ea0d55</strong>
+<p style="color: #718096; margin: 5px 0; font-size: 0.9em;">📅 2025-06-24</p>
+</div>
+</div>
 <div class="report-links">
-<a href="reports/dev/0e0f069/test-results.html">🧪 Tests</a>
-<a href="reports/dev/0e0f069/coverage.html">📊 Coverage</a>
-<a href="reports/dev/0e0f069/test-summary.md">📋 Summary</a>
+<a href="reports/dev/2ea0d55/test-results.html"><span>🧪</span> Tests</a>
+<a href="reports/dev/2ea0d55/coverage.html"><span>📊</span> Coverage</a>
+<a href="reports/dev/2ea0d55/test-summary.md"><span>📋</span> Summary</a>
 </div>
 </li>
+<li class="report-item">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+<div>
+<strong style="color: #2d3748; font-size: 1.1em;">📝 Commit: 0e0f069</strong>
+<p style="color: #718096; margin: 5px 0; font-size: 0.9em;">📅 2025-06-24</p>
+</div>
+</div>
+<div class="report-links">
+<a href="reports/dev/0e0f069/test-results.html"><span>🧪</span> Tests</a>
+<a href="reports/dev/0e0f069/coverage.html"><span>📊</span> Coverage</a>
+<a href="reports/dev/0e0f069/test-summary.md"><span>📋</span> Summary</a>
+</div>
+</li>
+</div>
     </ul>
+    </div>
 </body>
 </html>
