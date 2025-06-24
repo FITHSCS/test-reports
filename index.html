@@ -3,13 +3,49 @@
 <head>
     <title>Go Application Test Reports</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .header { background-color: #f4f4f4; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
-        .latest-report { background-color: #e8f5e8; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f9fa; }
+        .header { background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .latest-report { background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .report-meta { margin-bottom: 15px; }
+        .report-meta p { margin: 5px 0; color: #666; }
+        .test-summary { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 15px 0; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .test-summary h3 { margin: 0 0 10px 0; font-size: 1.1em; }
+        .summary-stats { display: flex; flex-wrap: wrap; gap: 15px; }
+        .stat-item { 
+            background: rgba(255,255,255,0.2); 
+            padding: 8px 12px; 
+            border-radius: 6px; 
+            backdrop-filter: blur(10px); 
+            min-width: 120px;
+        }
+        .stat-item strong { display: block; font-size: 0.9em; margin-bottom: 2px; }
+        .pass-icon { color: #28a745; font-weight: bold; }
+        .fail-icon { color: #dc3545; font-weight: bold; }
+        .skip-icon { color: #ffc107; font-weight: bold; }
+        .coverage-icon { color: #17a2b8; font-weight: bold; }
         .report-list { list-style-type: none; padding: 0; }
-        .report-item { background-color: #f9f9f9; margin: 10px 0; padding: 10px; border-radius: 5px; }
-        .report-links a { margin-right: 10px; text-decoration: none; color: #0066cc; }
-        .report-links a:hover { text-decoration: underline; }
+        .report-item { background-color: #ffffff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .report-links a { 
+            display: inline-block;
+            margin-right: 10px; 
+            text-decoration: none; 
+            color: #ffffff; 
+            background: #007bff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .report-links a:hover { background: #0056b3; }
+        h1 { color: #333; margin: 0; }
+        h2 { color: #444; margin: 0 0 15px 0; }
+        h3 { color: #555; }
     </style>
 </head>
 <body>
@@ -20,18 +56,37 @@
     
     <div class="latest-report">
         <h2>📊 Latest Report</h2>
-        <p><strong>Branch:</strong> dev</p>
-        <p><strong>Commit:</strong> 517e517dc3373b2fe95038d056b24e520b21c864</p>
-        <p><strong>Date:</strong> Tue Jun 24 05:26:42 UTC 2025</p>
-        <p><a href="reports/dev/517e517/test-summary.md">📋 Summary</a></p>
+        <div class="report-meta">
+            <p><strong>Branch:</strong> dev</p>
+            <p><strong>Commit:</strong> 85ee635c6ce3344cab717651aae55de38d0c2534</p>
+            <p><strong>Date:</strong> Tue Jun 24 05:34:28 UTC 2025</p>
+        </div>
+        
+        <div class="test-summary">
+            <h3>Test Summary</h3>
+            <div class="summary-stats">
+                          <div class="stat-item"><strong>✅ Passed</strong>91</div>
+                          <div class="stat-item"><strong>❌ Failed</strong>0</div>
+                          <div class="stat-item"><strong>⏭️ Skipped</strong>0</div>
+                          <div class="stat-item"><strong>📊 Coverage</strong>8.2%</div>
+            </div>
+        </div>
+        
         <div class="report-links">
-            <a href="reports/dev/517e517/test-results.html">🧪 Test Results</a>
+            <a href="reports/dev/85ee635/test-results.html">🧪 View Detailed Test Results</a>
         </div>
     </div>
     
     <h2>📚 Historical Reports</h2>
     <ul class="report-list">
 <h3>Branch: dev</h3>
+<li class="report-item">
+<strong>Commit:</strong> 85ee635
+<div class="report-links">
+<a href="reports/dev/85ee635/test-results.html">🧪 Tests</a>
+<a href="reports/dev/85ee635/test-summary.md">📋 Summary</a>
+</div>
+</li>
 <li class="report-item">
 <strong>Commit:</strong> 517e517
 <div class="report-links">
