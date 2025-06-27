@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Go Test Results - Smart Coverage Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); padding: 30px; border-radius: 20px; margin-bottom: 25px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); text-align: center; }
+        .status-badge { display: inline-block; padding: 8px 20px; border-radius: 25px; font-weight: 600; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; margin: 10px 5px; }
+        .status-passed { background: #48bb78; color: white; }
+        .status-failed { background: #f56565; color: white; }
+        .status-unknown { background: #a0aec0; color: white; }
+        .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); justify-content: center; gap: 20px; margin: 25px 0; }
+        .coverage-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); padding: 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center; transition: transform 0.3s ease; }
+        .coverage-card:hover { transform: translateY(-5px); }
+        .coverage-number { font-size: 2.5em; font-weight: 800; margin-bottom: 10px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .coverage-label { color: #4a5568; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9em; }
+        .section { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); padding: 25px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+        .section h2 { color: #2d3748; margin-bottom: 20px; font-size: 1.5em; font-weight: 700; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+        .test-output { background: #1a202c; color: #e2e8f0; padding: 20px; border-radius: 12px; font-family: 'Monaco', 'Consolas', monospace; white-space: pre-wrap; font-size: 0.9em; overflow-x: auto; max-height: 400px; overflow-y: auto; }
+        .pass { color: #48bb78; font-weight: 600; }
+        .fail { color: #f56565; font-weight: 600; }
+        .skip { color: #ed8936; font-weight: 600; }
+        .metadata { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }
+        .metadata-item { background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%); padding: 15px; border-radius: 12px; border-left: 4px solid #667eea; }
+        .metadata-item strong { color: #4c51bf; font-weight: 600; display: block; margin-bottom: 5px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; }
+        .metadata-item span { color: #2d3748; font-weight: 500; font-family: 'Monaco', 'Consolas', monospace; }
+        .coverage-progress { width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; margin: 15px 0 5px 0; }
+        .coverage-progress-bar { height: 100%; background: linear-gradient(90deg, #48bb78 0%, #38a169 100%); transition: width 0.5s ease; }
+        .nav-links { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+        .nav-links a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #ffffff; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 12px 24px; border-radius: 50px; font-weight: 600; font-size: 0.9em; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3); }
+        .nav-links a:hover { transform: translateY(-2px) scale(1.05); box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4); }
+        h1 { color: #2d3748; margin: 0 0 15px 0; font-size: 2.2em; font-weight: 800; }
+        @media (max-width: 768px) { body { padding: 15px; } .header { padding: 20px; } h1 { font-size: 1.8em; } .coverage-grid { grid-template-columns: 1fr; } .nav-links { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Go Test Results</h1>
+            <div class="status-badge status-passed">Test Status: PASSED</div>
+            <div class="metadata">
+                <div class="metadata-item"><strong>Generated</strong><span>Fri Jun 27 09:26:33 UTC 2025</span></div>
+                <div class="metadata-item"><strong>Commit</strong><span>7f51aea2fc352f5ed7932217b08c51a4</span></div>
+                <div class="metadata-item"><strong>Branch</strong><span>dev</span></div>
+            </div>
+        </div>
+        <div class="coverage-grid">
+            <div class="coverage-card">
+                <div class="coverage-number">82.0%</div>
+                <div class="coverage-label">Smart Coverage</div>
+                <div class="coverage-progress"><div class="coverage-progress-bar" style="width: 82.0%"></div></div>
+            </div>
+            <div class="coverage-card">
+                <div class="coverage-number">304</div>
+                <div class="coverage-label">Total Packages</div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Test Output</h2>
+            <div class="test-output">
+=== RUN   Test_Audit
+=== PAUSE Test_Audit
+=== CONT  Test_Audit
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: zjqr
+    dbtest.go:89: Migrate Database: zjqr
+=== RUN   Test_Audit/query-all
+=== NAME  Test_Audit
+    dbtest.go:102: Drop Database: zjqr
+    dbtest.go:102: ******************** LOGS (Test_Audit) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_Audit) ********************
+--- <span class="pass">PASS</span>: Test_Audit (13.07s)
+    --- <span class="pass">PASS</span>: Test_Audit/query-all (0.01s)
+<span class="pass">PASS</span>
+coverage: 82.1% of statements
+ok  	github.com/FITHSCS/backend/business/domain/auditbus	13.075s	coverage: 82.1% of statements
+	github.com/FITHSCS/backend/business/domain/auditbus/stores/auditdb		coverage: 0.0% of statements
+=== RUN   Test_DeliveryException
+=== PAUSE Test_DeliveryException
+=== CONT  Test_DeliveryException
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: favh
+    dbtest.go:89: Migrate Database: favh
+{a8c8847b-4cb5-4379-9b67-bdfd24e0f242 03-B-129813 Truck 9813 13 Active 2025-06-27 09:26:18.088247 +0000 UTC 2025-06-27 09:26:18.088247 +0000 UTC}
+{26cd7074-28ee-413c-ab1d-9c76c86acdd0 03-B-129814 Truck 9814 14 Active 2025-06-27 09:26:18.096867 +0000 UTC 2025-06-27 09:26:18.096867 +0000 UTC}
+{cbcd142b-5d2a-4520-b673-d70fa6c4f867 03-B-124796 Truck 4796 96 Active 2025-06-27 09:26:18.420652 +0000 UTC 2025-06-27 09:26:18.420652 +0000 UTC}
+{921d52ac-427a-4d6c-9473-55c11b538b0c 03-B-124797 Truck 4797 97 Active 2025-06-27 09:26:18.435719 +0000 UTC 2025-06-27 09:26:18.435719 +0000 UTC}
+=== RUN   Test_DeliveryException/query-all
+[{555f85b8-944a-49dd-b21f-07dc17d3c4fa 00cb39fd-8c45-4d80-ba53-7c644c7f083b 72f3c24f-ebbf-4de4-9056-bc08043c7166 low damaged This is the description for this exception 2025-06-10 12:59:33 +0000 UTC pending {48f71059-892d-46a4-b66e-68bc7652ec19 true} false true 2025-06-10 13:00:33 +0000 UTC 2025-06-27 09:26:18.50976 +0000 UTC 2025-06-27 09:26:18.50976 +0000 UTC} {7a856d27-4832-4235-866b-1a22db8867f8 288df4ca-e1a5-4bd7-8529-0fdf0ce1575a 39026ef0-6444-44ce-ad23-66672576d916 medium descripancy This is the description for this exception 2025-06-10 12:59:33 +0000 UTC resolved {00000000-0000-0000-0000-000000000000 false} false true 2025-06-10 13:00:33 +0000 UTC 2025-06-27 09:26:18.170549 +0000 UTC 2025-06-27 09:26:18.170549 +0000 UTC} {9eca3543-4cde-4f25-9c9e-566d989c2fdc 288df4ca-e1a5-4bd7-8529-0fdf0ce1575a 39026ef0-6444-44ce-ad23-66672576d916 low damaged This is the description for this exception 2025-06-10 12:59:33 +0000 UTC pending {5bd121ae-6d83-4c9e-88b0-e940d3027e67 true} false true 2025-06-10 13:00:33 +0000 UTC 2025-06-27 09:26:18.151951 +0000 UTC 2025-06-27 09:26:18.151951 +0000 UTC} {e5e3d932-e35e-4efb-9990-933046883022 00cb39fd-8c45-4d80-ba53-7c644c7f083b 72f3c24f-ebbf-4de4-9056-bc08043c7166 medium descripancy This is the description for this exception 2025-06-10 12:59:33 +0000 UTC resolved {00000000-0000-0000-0000-000000000000 false} false true 2025-06-10 13:00:33 +0000 UTC 2025-06-27 09:26:18.519476 +0000 UTC 2025-06-27 09:26:18.519476 +0000 UTC}]
+=== RUN   Test_DeliveryException/query-byid
+=== RUN   Test_DeliveryException/create-basic_no_resolved_by
+=== RUN   Test_DeliveryException/create-basic_with_resolved_by
+=== RUN   Test_DeliveryException/update-basic_no_resolved_by
+=== RUN   Test_DeliveryException/update-basic_with_resolved_by
+=== RUN   Test_DeliveryException/softDelete-user
+=== RUN   Test_DeliveryException/softDelete-admin
+=== RUN   Test_DeliveryException/hardDelete-user
+=== RUN   Test_DeliveryException/hardDelete-admin
+=== NAME  Test_DeliveryException
+    dbtest.go:102: Drop Database: favh
+    dbtest.go:102: ******************** LOGS (Test_DeliveryException) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_DeliveryException) ********************
+--- <span class="pass">PASS</span>: Test_DeliveryException (12.26s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/create-basic_no_resolved_by (0.01s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/create-basic_with_resolved_by (0.01s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/update-basic_no_resolved_by (0.03s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/update-basic_with_resolved_by (0.02s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/softDelete-user (0.02s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/softDelete-admin (0.02s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/hardDelete-user (0.02s)
+    --- <span class="pass">PASS</span>: Test_DeliveryException/hardDelete-admin (0.01s)
+<span class="pass">PASS</span>
+coverage: 83.8% of statements
+ok  	github.com/FITHSCS/backend/business/domain/delexceptionbus	12.269s	coverage: 83.8% of statements
+	github.com/FITHSCS/backend/business/domain/delexceptionbus/store/delexceptiondb		coverage: 0.0% of statements
+=== RUN   Test_Facility
+=== PAUSE Test_Facility
+=== CONT  Test_Facility
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: whxo
+    dbtest.go:89: Migrate Database: whxo
+=== RUN   Test_Facility/query-all
+[{53f293cc-8893-4bdf-9db6-68608cb23f39 Name7824 health_facility FacName7824 Region:7824 9.019499778747559 38.739200592041016 10 b1f9c58b-d633-496d-a6b2-a01182c6af76 922337824 false 2025-06-27 09:26:20.021808 +0000 UTC 2025-06-27 09:26:20.021808 +0000 UTC} {7ffa0225-52e4-4147-b7a0-76625c334451 Name7823 warehouse FacName7823 Region:7823 9.019499778747559 38.739200592041016 10 b1f9c58b-d633-496d-a6b2-a01182c6af76 922337823 false 2025-06-27 09:26:20.01246 +0000 UTC 2025-06-27 09:26:20.01246 +0000 UTC} {bfaad703-f069-4625-9ee3-754e2d3480b0 Name416 health_facility FacName416 Region:416 9.019499778747559 38.739200592041016 10 0938172d-e01e-407f-932a-a702cc20530b 922330416 false 2025-06-27 09:26:19.923182 +0000 UTC 2025-06-27 09:26:19.923182 +0000 UTC} {e37daab5-c494-4770-82bc-3010864feb1b Name415 warehouse FacName415 Region:415 9.019499778747559 38.739200592041016 10 0938172d-e01e-407f-932a-a702cc20530b 922330415 false 2025-06-27 09:26:19.913168 +0000 UTC 2025-06-27 09:26:19.913168 +0000 UTC}]
+=== RUN   Test_Facility/query-byid
+=== RUN   Test_Facility/create-basic
+=== RUN   Test_Facility/update-basic
+=== RUN   Test_Facility/delete-user
+=== RUN   Test_Facility/delete-admin
+=== NAME  Test_Facility
+    dbtest.go:102: Drop Database: whxo
+    dbtest.go:102: ******************** LOGS (Test_Facility) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_Facility) ********************
+--- <span class="pass">PASS</span>: Test_Facility (0.84s)
+    --- <span class="pass">PASS</span>: Test_Facility/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_Facility/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_Facility/create-basic (0.01s)
+    --- <span class="pass">PASS</span>: Test_Facility/update-basic (0.02s)
+    --- <span class="pass">PASS</span>: Test_Facility/delete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_Facility/delete-admin (0.01s)
+<span class="pass">PASS</span>
+coverage: 74.3% of statements
+ok  	github.com/FITHSCS/backend/business/domain/facilitybus	0.848s	coverage: 74.3% of statements
+	github.com/FITHSCS/backend/business/domain/facilitybus/stores/facilitydb		coverage: 0.0% of statements
+=== RUN   Test_GPSTracking
+=== PAUSE Test_GPSTracking
+=== CONT  Test_GPSTracking
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: xlcv
+    dbtest.go:89: Migrate Database: xlcv
+{425dab05-0b56-47bd-9b8d-dbdead3779f7 03-B-129487 Truck 9487 87 Active 2025-06-27 09:26:21.131405 +0000 UTC 2025-06-27 09:26:21.131405 +0000 UTC}
+{3cc1695a-9aee-4438-91d5-2aee4c3ed2c8 03-B-129488 Truck 9488 88 Active 2025-06-27 09:26:21.140053 +0000 UTC 2025-06-27 09:26:21.140053 +0000 UTC}
+{146c6ff8-c484-4e0e-874b-40a15d995b08 03-B-12486 Truck 486 86 Active 2025-06-27 09:26:21.291415 +0000 UTC 2025-06-27 09:26:21.291415 +0000 UTC}
+{6b231ea1-40e1-476c-8c43-9c022bda0d4f 03-B-12487 Truck 487 87 Active 2025-06-27 09:26:21.300718 +0000 UTC 2025-06-27 09:26:21.300718 +0000 UTC}
+=== RUN   Test_GPSTracking/query-all
+=== RUN   Test_GPSTracking/query-byid
+=== RUN   Test_GPSTracking/create-basic
+=== RUN   Test_GPSTracking/update-basic
+=== RUN   Test_GPSTracking/softDelete-user
+=== RUN   Test_GPSTracking/softDelete-admin
+=== RUN   Test_GPSTracking/hardDelete-user
+=== RUN   Test_GPSTracking/hardDelete-admin
+=== NAME  Test_GPSTracking
+    dbtest.go:102: Drop Database: xlcv
+    dbtest.go:102: ******************** LOGS (Test_GPSTracking) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_GPSTracking) ********************
+--- <span class="pass">PASS</span>: Test_GPSTracking (0.94s)
+    --- <span class="pass">PASS</span>: Test_GPSTracking/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_GPSTracking/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_GPSTracking/create-basic (0.01s)
+    --- <span class="pass">PASS</span>: Test_GPSTracking/update-basic (0.02s)
+    --- <span class="pass">PASS</span>: Test_GPSTracking/softDelete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_GPSTracking/softDelete-admin (0.01s)
+    --- <span class="pass">PASS</span>: Test_GPSTracking/hardDelete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_GPSTracking/hardDelete-admin (0.01s)
+<span class="pass">PASS</span>
+coverage: 83.1% of statements
+ok  	github.com/FITHSCS/backend/business/domain/gpstrackingbus	0.952s	coverage: 83.1% of statements
+	github.com/FITHSCS/backend/business/domain/gpstrackingbus/stores/gpstrackingdb		coverage: 0.0% of statements
+=== RUN   Test_Image
+=== PAUSE Test_Image
+=== CONT  Test_Image
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: eccb
+    dbtest.go:89: Migrate Database: eccb
+{2300ead5-85d9-4385-b253-6b784e4d5b53 03-B-124576 Truck 4576 76 Active 2025-06-27 09:26:22.53935 +0000 UTC 2025-06-27 09:26:22.53935 +0000 UTC}
+{6e8c5c2c-181e-4132-873d-5cd3776d55e8 03-B-124577 Truck 4577 77 Active 2025-06-27 09:26:22.548139 +0000 UTC 2025-06-27 09:26:22.548139 +0000 UTC}
+{09d001c9-016f-4344-ae1d-3cf5a2b62fe3 03-B-123298 Truck 3298 98 Active 2025-06-27 09:26:22.833079 +0000 UTC 2025-06-27 09:26:22.833079 +0000 UTC}
+{d6f34944-b868-462e-be39-a58305a616c7 03-B-123299 Truck 3299 99 Active 2025-06-27 09:26:22.841058 +0000 UTC 2025-06-27 09:26:22.841058 +0000 UTC}
+=== RUN   Test_Image/query-all
+=== RUN   Test_Image/query-byid
+=== RUN   Test_Image/create-basic_no_exception_id
+=== RUN   Test_Image/create-basic_with_exception_id
+=== RUN   Test_Image/update-basic_no_exception_id
+=== RUN   Test_Image/update-basic_with_exception_id
+=== RUN   Test_Image/softDelete-user
+=== RUN   Test_Image/softDelete-admin
+=== RUN   Test_Image/hardDelete-user
+=== RUN   Test_Image/hardDelete-admin
+=== NAME  Test_Image
+    dbtest.go:102: Drop Database: eccb
+    dbtest.go:102: ******************** LOGS (Test_Image) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_Image) ********************
+--- <span class="pass">PASS</span>: Test_Image (1.28s)
+    --- <span class="pass">PASS</span>: Test_Image/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_Image/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_Image/create-basic_no_exception_id (0.01s)
+    --- <span class="pass">PASS</span>: Test_Image/create-basic_with_exception_id (0.01s)
+    --- <span class="pass">PASS</span>: Test_Image/update-basic_no_exception_id (0.02s)
+    --- <span class="pass">PASS</span>: Test_Image/update-basic_with_exception_id (0.02s)
+    --- <span class="pass">PASS</span>: Test_Image/softDelete-user (0.02s)
+    --- <span class="pass">PASS</span>: Test_Image/softDelete-admin (0.02s)
+    --- <span class="pass">PASS</span>: Test_Image/hardDelete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_Image/hardDelete-admin (0.01s)
+<span class="pass">PASS</span>
+coverage: 84.1% of statements
+ok  	github.com/FITHSCS/backend/business/domain/imagebus	1.293s	coverage: 84.1% of statements
+	github.com/FITHSCS/backend/business/domain/imagebus/stores/imagedb		coverage: 0.0% of statements
+=== RUN   Test_Manifest
+=== PAUSE Test_Manifest
+=== CONT  Test_Manifest
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: zeov
+    dbtest.go:89: Migrate Database: zeov
+{4ef521f5-dd1e-4964-9790-4fc518a18d0c 03-B-12610 Truck 610 10 Active 2025-06-27 09:26:23.936095 +0000 UTC 2025-06-27 09:26:23.936095 +0000 UTC}
+{86fb564d-2ce4-4d3f-9827-74325211acba 03-B-12611 Truck 611 11 Active 2025-06-27 09:26:23.948519 +0000 UTC 2025-06-27 09:26:23.948519 +0000 UTC}
+{05f5148e-8404-4a26-8c9e-1798ac31a754 03-B-126986 Truck 6986 86 Active 2025-06-27 09:26:24.143715 +0000 UTC 2025-06-27 09:26:24.143715 +0000 UTC}
+{cc971111-2427-4257-be0c-41494ac4b350 03-B-126987 Truck 6987 87 Active 2025-06-27 09:26:24.153024 +0000 UTC 2025-06-27 09:26:24.153024 +0000 UTC}
+=== RUN   Test_Manifest/query-all
+[{1e35d05e-be9f-43cd-99ad-b75a9eabba76 688eeb78-eca7-4c40-97d3-ec8080e9a814 16b9c0f7-8244-45f7-9138-b512f3f45a7e 5ae1315f-d8f1-42cc-9914-80b8ba609d27 OrderID:9866 DeliveryID:9866 picked_up {"items": {"Code": 4, "Type": 6}, "total_items": 10, "total_weight_kg": 5.82, "contains_fragile": false} 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC false false 2025-06-27 09:26:24.004 +0000 UTC 2025-06-27 09:26:24.004 +0000 UTC 2025-06-27 09:26:24.004 +0000 UTC} {9ec79371-3f76-4157-96e1-d9505cc8ebf6 688eeb78-eca7-4c40-97d3-ec8080e9a814 16b9c0f7-8244-45f7-9138-b512f3f45a7e 5ae1315f-d8f1-42cc-9914-80b8ba609d27 OrderID:9865 DeliveryID:9865 pending {"items": {"Code": 2, "Type": 3}, "total_items": 5, "total_weight_kg": 0.62, "contains_fragile": true} 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC false false 2025-06-27 09:26:23.992 +0000 UTC 2025-06-27 09:26:23.992 +0000 UTC 2025-06-27 09:26:23.992 +0000 UTC} {bede3b90-81b5-4ea3-b4aa-b62c7a863c48 04edea2b-4eea-4652-b3f3-dba753dcda84 7fbec10c-6431-402e-8f45-4ca7144bfc42 651b8225-11f4-447d-bcb6-14c3cb3f8c24 OrderID:7986 DeliveryID:7986 pending {"items": {"Code": 2, "Type": 3}, "total_items": 5, "total_weight_kg": 10.36, "contains_fragile": true} 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC false false 2025-06-27 09:26:24.196 +0000 UTC 2025-06-27 09:26:24.196 +0000 UTC 2025-06-27 09:26:24.196 +0000 UTC} {c9c4cf7f-d029-47ff-af11-8b19e9612c52 04edea2b-4eea-4652-b3f3-dba753dcda84 7fbec10c-6431-402e-8f45-4ca7144bfc42 651b8225-11f4-447d-bcb6-14c3cb3f8c24 OrderID:7987 DeliveryID:7987 picked_up {"items": {"Code": 4, "Type": 6}, "total_items": 10, "total_weight_kg": 0.48, "contains_fragile": false} 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC false false 2025-06-27 09:26:24.205 +0000 UTC 2025-06-27 09:26:24.205 +0000 UTC 2025-06-27 09:26:24.205 +0000 UTC}]
+=== RUN   Test_Manifest/query-byid
+=== RUN   Test_Manifest/create-basic
+=== RUN   Test_Manifest/update-basic
+=== RUN   Test_Manifest/softDelete-user
+=== RUN   Test_Manifest/softDelete-admin
+=== RUN   Test_Manifest/hardDelete-user
+=== RUN   Test_Manifest/hardDelete-admin
+=== NAME  Test_Manifest
+    dbtest.go:102: Drop Database: zeov
+    dbtest.go:102: ******************** LOGS (Test_Manifest) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_Manifest) ********************
+--- <span class="pass">PASS</span>: Test_Manifest (1.06s)
+    --- <span class="pass">PASS</span>: Test_Manifest/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_Manifest/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_Manifest/create-basic (0.01s)
+    --- <span class="pass">PASS</span>: Test_Manifest/update-basic (0.02s)
+    --- <span class="pass">PASS</span>: Test_Manifest/softDelete-user (0.02s)
+    --- <span class="pass">PASS</span>: Test_Manifest/softDelete-admin (0.02s)
+    --- <span class="pass">PASS</span>: Test_Manifest/hardDelete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_Manifest/hardDelete-admin (0.01s)
+<span class="pass">PASS</span>
+coverage: 84.0% of statements
+ok  	github.com/FITHSCS/backend/business/domain/manifestbus	1.073s	coverage: 84.0% of statements
+	github.com/FITHSCS/backend/business/domain/manifestbus/stores/manifestdb		coverage: 0.0% of statements
+=== RUN   Test_PickupBatch
+=== PAUSE Test_PickupBatch
+=== CONT  Test_PickupBatch
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: zgim
+    dbtest.go:89: Migrate Database: zgim
+{3d9d1eab-62ba-4d13-86c2-21d437b69592 03-B-126280 Truck 6280 80 Active 2025-06-27 09:26:25.526464 +0000 UTC 2025-06-27 09:26:25.526464 +0000 UTC}
+{0239a680-fad7-4c10-a2ee-7b6f14248928 03-B-126281 Truck 6281 81 Active 2025-06-27 09:26:25.534829 +0000 UTC 2025-06-27 09:26:25.534829 +0000 UTC}
+{975a640d-d7b1-4573-98e5-37ceeb297624 03-B-122516 Truck 2516 16 Active 2025-06-27 09:26:25.67863 +0000 UTC 2025-06-27 09:26:25.67863 +0000 UTC}
+{0c36ebd0-5ed1-48cb-b278-9a4a506da6e1 03-B-122517 Truck 2517 17 Active 2025-06-27 09:26:25.68479 +0000 UTC 2025-06-27 09:26:25.68479 +0000 UTC}
+=== RUN   Test_PickupBatch/query-all
+[{1bda0456-5480-4872-afb3-fe5b95fdd643 5e638607-ad8e-4620-a2f6-5b3a029f7126 095b4d16-de5a-49fb-b38c-945b4757d68f 975a640d-d7b1-4573-98e5-37ceeb297624 72ccb9f7-9ef2-4857-92ff-c77374b1143a BatchName9243 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-06-27 09:26:25.692626 +0000 UTC 2025-06-27 09:26:25.692626 +0000 UTC 2025-06-27 09:26:25.692626 +0000 UTC} {b7d5bb5c-4cfa-41c3-9677-9d44ed60c285 29361988-018f-41eb-983c-fd136ee9f68b 3a0a4875-0a84-47d5-9c43-81a3f50514ac 3d9d1eab-62ba-4d13-86c2-21d437b69592 c1b722fd-4140-4d2e-9222-5128734e010d BatchName5174 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-06-27 09:26:25.555777 +0000 UTC 2025-06-27 09:26:25.555777 +0000 UTC 2025-06-27 09:26:25.555777 +0000 UTC} {ba0867a8-9697-4511-bba2-ab6e9d4d7688 29361988-018f-41eb-983c-fd136ee9f68b 3a0a4875-0a84-47d5-9c43-81a3f50514ac 3d9d1eab-62ba-4d13-86c2-21d437b69592 c1b722fd-4140-4d2e-9222-5128734e010d BatchName5173 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-06-27 09:26:25.544484 +0000 UTC 2025-06-27 09:26:25.544484 +0000 UTC 2025-06-27 09:26:25.544484 +0000 UTC} {c2ba3575-4c99-4eda-8dd5-411265ee178a 5e638607-ad8e-4620-a2f6-5b3a029f7126 095b4d16-de5a-49fb-b38c-945b4757d68f 975a640d-d7b1-4573-98e5-37ceeb297624 72ccb9f7-9ef2-4857-92ff-c77374b1143a BatchName9244 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-06-27 09:26:25.701525 +0000 UTC 2025-06-27 09:26:25.701525 +0000 UTC 2025-06-27 09:26:25.701525 +0000 UTC}]
+=== RUN   Test_PickupBatch/query-byid
+=== RUN   Test_PickupBatch/create-basic
+=== RUN   Test_PickupBatch/update-basic
+=== RUN   Test_PickupBatch/softDelete-user
+=== RUN   Test_PickupBatch/softDelete-admin
+=== RUN   Test_PickupBatch/hardDelete-user
+=== RUN   Test_PickupBatch/hardDelete-admin
+=== NAME  Test_PickupBatch
+    dbtest.go:102: Drop Database: zgim
+    dbtest.go:102: ******************** LOGS (Test_Facility) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_Facility) ********************
+--- <span class="pass">PASS</span>: Test_PickupBatch (0.97s)
+    --- <span class="pass">PASS</span>: Test_PickupBatch/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_PickupBatch/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_PickupBatch/create-basic (0.01s)
+    --- <span class="pass">PASS</span>: Test_PickupBatch/update-basic (0.02s)
+    --- <span class="pass">PASS</span>: Test_PickupBatch/softDelete-user (0.02s)
+    --- <span class="pass">PASS</span>: Test_PickupBatch/softDelete-admin (0.02s)
+    --- <span class="pass">PASS</span>: Test_PickupBatch/hardDelete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_PickupBatch/hardDelete-admin (0.01s)
+<span class="pass">PASS</span>
+coverage: 83.1% of statements
+ok  	github.com/FITHSCS/backend/business/domain/pickupbatchbus	0.984s	coverage: 83.1% of statements
+	github.com/FITHSCS/backend/business/domain/pickupbatchbus/stores/pickupbatchdb		coverage: 0.0% of statements
+=== RUN   Test_QRcode
+=== PAUSE Test_QRcode
+=== CONT  Test_QRcode
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: ivpi
+    dbtest.go:89: Migrate Database: ivpi
+{36d3545d-1a2d-4b8e-be50-cfe9037ed909 03-B-1256 Truck 56 56 Active 2025-06-27 09:26:26.792569 +0000 UTC 2025-06-27 09:26:26.792569 +0000 UTC}
+{ac53066d-71cb-4cca-80d4-9c6a5183a396 03-B-1257 Truck 57 57 Active 2025-06-27 09:26:26.804162 +0000 UTC 2025-06-27 09:26:26.804162 +0000 UTC}
+{3907ae82-731e-4445-bf9b-b078c887ca20 03-B-127049 Truck 7049 49 Active 2025-06-27 09:26:26.98133 +0000 UTC 2025-06-27 09:26:26.98133 +0000 UTC}
+{fdbf94ef-dc03-4781-8df4-d9c126f096f6 03-B-127050 Truck 7050 50 Active 2025-06-27 09:26:26.987398 +0000 UTC 2025-06-27 09:26:26.987398 +0000 UTC}
+=== RUN   Test_QRcode/query-all
+=== RUN   Test_QRcode/query-byid
+=== RUN   Test_QRcode/query-byhash
+=== RUN   Test_QRcode/create-basic
+=== RUN   Test_QRcode/Delete-user
+=== RUN   Test_QRcode/Delete-admin
+=== NAME  Test_QRcode
+    dbtest.go:102: Drop Database: ivpi
+    dbtest.go:102: ******************** LOGS (Test_QRcode) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_QRcode) ********************
+--- <span class="pass">PASS</span>: Test_QRcode (1.00s)
+    --- <span class="pass">PASS</span>: Test_QRcode/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_QRcode/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_QRcode/query-byhash (0.01s)
+    --- <span class="pass">PASS</span>: Test_QRcode/create-basic (0.01s)
+    --- <span class="pass">PASS</span>: Test_QRcode/Delete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_QRcode/Delete-admin (0.01s)
+<span class="pass">PASS</span>
+coverage: 80.5% of statements
+ok  	github.com/FITHSCS/backend/business/domain/qrcodebus	1.015s	coverage: 80.5% of statements
+	github.com/FITHSCS/backend/business/domain/qrcodebus/stores/qrcodedb		coverage: 0.0% of statements
+=== RUN   Test_Routes
+=== PAUSE Test_Routes
+=== CONT  Test_Routes
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: obgf
+    dbtest.go:89: Migrate Database: obgf
+=== RUN   Test_Routes/query-all
+=== RUN   Test_Routes/query-byid
+=== RUN   Test_Routes/create-basic
+=== RUN   Test_Routes/update-basic
+=== RUN   Test_Routes/delete-user
+=== RUN   Test_Routes/delete-admin
+=== NAME  Test_Routes
+    dbtest.go:102: Drop Database: obgf
+    dbtest.go:102: ******************** LOGS (Test_Routes) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_Routes) ********************
+--- <span class="pass">PASS</span>: Test_Routes (0.90s)
+    --- <span class="pass">PASS</span>: Test_Routes/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_Routes/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_Routes/create-basic (0.01s)
+    --- <span class="pass">PASS</span>: Test_Routes/update-basic (0.02s)
+    --- <span class="pass">PASS</span>: Test_Routes/delete-user (0.02s)
+    --- <span class="pass">PASS</span>: Test_Routes/delete-admin (0.02s)
+<span class="pass">PASS</span>
+coverage: 82.8% of statements
+ok  	github.com/FITHSCS/backend/business/domain/routebus	0.905s	coverage: 82.8% of statements
+	github.com/FITHSCS/backend/business/domain/routebus/stores/routedb		coverage: 0.0% of statements
+=== RUN   Test_Signature
+=== PAUSE Test_Signature
+=== CONT  Test_Signature
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: xoou
+    dbtest.go:89: Migrate Database: xoou
+{10321076-cf70-446b-b118-b7712d4d1596 03-B-127874 Truck 7874 74 Active 2025-06-27 09:26:29.298798 +0000 UTC 2025-06-27 09:26:29.298798 +0000 UTC}
+{d164be07-fec4-4efe-aee9-261dc3d2bfd7 03-B-127875 Truck 7875 75 Active 2025-06-27 09:26:29.31259 +0000 UTC 2025-06-27 09:26:29.31259 +0000 UTC}
+
+
+
+signature: {50736e4e-8b89-4916-ad09-6cb557812673 cf240a56-2318-4561-9dcf-cccd9e2049d9 a5913154-20f7-46a8-995d-f016036eac26 pickup PIN q24cr98mq3vt9m9q4wrm9sdf3112 Device:8277 2025-06-10 15:59:33 +0300 +0300 {38.739200592041016} {9.019499778747559} true true false true 2025-06-27 09:26:29.392315798 +0000 UTC m=+0.746864489 2025-06-27 09:26:29.392315798 +0000 UTC m=+0.746864489 2025-06-27 09:26:29.392315798 +0000 UTC m=+0.746864489}
+
+
+
+
+
+signature: {4dad685f-abfa-47bd-a583-1756992868bd cf240a56-2318-4561-9dcf-cccd9e2049d9 a5913154-20f7-46a8-995d-f016036eac26 delivery Freehand q24cr98mq3vt9m9q4wrm9sdf3112 Device:8278 2025-06-10 15:59:33 +0300 +0300 {38.739200592041016} {9.019499778747559} false false false false 2025-06-27 09:26:29.411681353 +0000 UTC m=+0.766230054 2025-06-27 09:26:29.411681353 +0000 UTC m=+0.766230054 2025-06-27 09:26:29.411681353 +0000 UTC m=+0.766230054}
+
+
+{d4c1c5e6-6908-4a42-8ddf-d7f4496f5f29 03-B-125021 Truck 5021 21 Active 2025-06-27 09:26:29.56362 +0000 UTC 2025-06-27 09:26:29.56362 +0000 UTC}
+{0850a41e-076c-420a-a787-033192d852e6 03-B-125022 Truck 5022 22 Active 2025-06-27 09:26:29.571079 +0000 UTC 2025-06-27 09:26:29.571079 +0000 UTC}
+
+
+
+signature: {f4a33b1b-b4db-47ea-8488-515eca14861e d5d22b2d-112e-4911-a09b-4943a8958331 0ad1ef49-4a68-448e-b39f-31232cdd3127 pickup PIN q24cr98mq3vt9m9q4wrm9sdf3112 Device:8984 2025-06-10 15:59:33 +0300 +0300 {38.739200592041016} {9.019499778747559} true true false true 2025-06-27 09:26:29.627743385 +0000 UTC m=+0.982292086 2025-06-27 09:26:29.627743385 +0000 UTC m=+0.982292086 2025-06-27 09:26:29.627743385 +0000 UTC m=+0.982292086}
+
+
+
+
+
+signature: {27948471-a011-444f-85c9-f2ed6d463557 d5d22b2d-112e-4911-a09b-4943a8958331 0ad1ef49-4a68-448e-b39f-31232cdd3127 delivery Freehand q24cr98mq3vt9m9q4wrm9sdf3112 Device:8985 2025-06-10 15:59:33 +0300 +0300 {38.739200592041016} {9.019499778747559} false false false false 2025-06-27 09:26:29.638021099 +0000 UTC m=+0.992569801 2025-06-27 09:26:29.638021099 +0000 UTC m=+0.992569801 2025-06-27 09:26:29.638021099 +0000 UTC m=+0.992569801}
+
+
+=== RUN   Test_Signature/query-all
+=== RUN   Test_Signature/query-byid
+=== RUN   Test_Signature/create-basic
+
+
+
+signature: {e8e3a029-07b9-4263-b74d-5278ee2775ff cf240a56-2318-4561-9dcf-cccd9e2049d9 a5913154-20f7-46a8-995d-f016036eac26 delivery PIN 12345fgrh345ytrg24ygr354tgr43qregf DevID 2025-06-10 15:59:33 +0300 +0300 {38.739200592041016} {9.019499778747559} true true false true 2025-06-27 09:26:29.671957687 +0000 UTC m=+1.026506388 2025-06-27 09:26:29.671957687 +0000 UTC m=+1.026506388 2025-06-27 09:26:29.671957687 +0000 UTC m=+1.026506388}
+
+
+=== RUN   Test_Signature/update-basic
+=== RUN   Test_Signature/softDelete-user
+=== RUN   Test_Signature/softDelete-admin
+=== RUN   Test_Signature/hardDelete-user
+=== RUN   Test_Signature/hardDelete-admin
+=== NAME  Test_Signature
+    dbtest.go:102: Drop Database: xoou
+    dbtest.go:102: ******************** LOGS (Test_Signature) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_Signature) ********************
+--- <span class="pass">PASS</span>: Test_Signature (1.13s)
+    --- <span class="pass">PASS</span>: Test_Signature/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_Signature/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_Signature/create-basic (0.01s)
+    --- <span class="pass">PASS</span>: Test_Signature/update-basic (0.02s)
+    --- <span class="pass">PASS</span>: Test_Signature/softDelete-user (0.02s)
+    --- <span class="pass">PASS</span>: Test_Signature/softDelete-admin (0.02s)
+    --- <span class="pass">PASS</span>: Test_Signature/hardDelete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_Signature/hardDelete-admin (0.01s)
+<span class="pass">PASS</span>
+coverage: 85.2% of statements
+ok  	github.com/FITHSCS/backend/business/domain/signaturebus	1.135s	coverage: 85.2% of statements
+	github.com/FITHSCS/backend/business/domain/signaturebus/stores/signaturedb		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/syncbatchbus		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/syncbatchbus/stores/syncbatchdb		coverage: 0.0% of statements
+=== RUN   Test_User
+=== PAUSE Test_User
+=== CONT  Test_User
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: zapx
+    dbtest.go:89: Migrate Database: zapx
+=== RUN   Test_User/query-all
+=== RUN   Test_User/create-basic
+=== RUN   Test_User/update-basic
+=== RUN   Test_User/delete-user
+=== RUN   Test_User/delete-admin
+=== NAME  Test_User
+    dbtest.go:102: Drop Database: zapx
+    dbtest.go:102: ******************** LOGS (Test_User) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_User) ********************
+--- <span class="pass">PASS</span>: Test_User (1.29s)
+    --- <span class="pass">PASS</span>: Test_User/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_User/create-basic (0.16s)
+    --- <span class="pass">PASS</span>: Test_User/update-basic (0.18s)
+    --- <span class="pass">PASS</span>: Test_User/delete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_User/delete-admin (0.02s)
+<span class="pass">PASS</span>
+coverage: 59.2% of statements
+ok  	github.com/FITHSCS/backend/business/domain/userbus	1.297s	coverage: 59.2% of statements
+	github.com/FITHSCS/backend/business/domain/userbus/extensions/useraudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/userbus/stores/usercache		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/userbus/stores/userdb		coverage: 0.0% of statements
+=== RUN   Test_Vehicle
+=== PAUSE Test_Vehicle
+=== CONT  Test_Vehicle
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:71: Create Database: kfmc
+    dbtest.go:89: Migrate Database: kfmc
+{fac97481-cfe3-4522-b0b6-291711faea6f 03-B-125216 Truck 5216 16 Active 2025-06-27 09:26:32.044317 +0000 UTC 2025-06-27 09:26:32.044317 +0000 UTC}
+{abef15bf-eb40-4d6d-9fd9-c2b88b775b69 03-B-125217 Truck 5217 17 Active 2025-06-27 09:26:32.050521 +0000 UTC 2025-06-27 09:26:32.050521 +0000 UTC}
+{685a0342-f7dd-4755-83d7-ecc3702abffd 03-B-122394 Truck 2394 94 Active 2025-06-27 09:26:32.129236 +0000 UTC 2025-06-27 09:26:32.129236 +0000 UTC}
+{3bdc03f0-4450-479d-8080-d44f4b309760 03-B-122395 Truck 2395 95 Active 2025-06-27 09:26:32.135143 +0000 UTC 2025-06-27 09:26:32.135143 +0000 UTC}
+=== RUN   Test_Vehicle/query-all
+[{3bdc03f0-4450-479d-8080-d44f4b309760 03-B-122395 Truck 2395 95 Active 2025-06-27 09:26:32.135143 +0000 UTC 2025-06-27 09:26:32.135143 +0000 UTC} {685a0342-f7dd-4755-83d7-ecc3702abffd 03-B-122394 Truck 2394 94 Active 2025-06-27 09:26:32.129236 +0000 UTC 2025-06-27 09:26:32.129236 +0000 UTC} {abef15bf-eb40-4d6d-9fd9-c2b88b775b69 03-B-125217 Truck 5217 17 Active 2025-06-27 09:26:32.050521 +0000 UTC 2025-06-27 09:26:32.050521 +0000 UTC} {fac97481-cfe3-4522-b0b6-291711faea6f 03-B-125216 Truck 5216 16 Active 2025-06-27 09:26:32.044317 +0000 UTC 2025-06-27 09:26:32.044317 +0000 UTC}]
+=== RUN   Test_Vehicle/query-byid
+=== RUN   Test_Vehicle/create-basic
+{63a7bc06-e7d9-4f5b-977f-e127613b0c75 03-A-12223 SUV 120 23 Active 2025-06-27 09:26:32.15371 +0000 UTC 2025-06-27 09:26:32.15371 +0000 UTC}
+=== RUN   Test_Vehicle/update-basic
+=== RUN   Test_Vehicle/delete-user
+=== RUN   Test_Vehicle/delete-admin
+=== NAME  Test_Vehicle
+    dbtest.go:102: Drop Database: kfmc
+    dbtest.go:102: ******************** LOGS (Test_Vehicle) ********************
+        
+    dbtest.go:102: 
+    dbtest.go:102: ******************** LOGS (Test_Vehicle) ********************
+--- <span class="pass">PASS</span>: Test_Vehicle (0.53s)
+    --- <span class="pass">PASS</span>: Test_Vehicle/query-all (0.01s)
+    --- <span class="pass">PASS</span>: Test_Vehicle/query-byid (0.01s)
+    --- <span class="pass">PASS</span>: Test_Vehicle/create-basic (0.01s)
+    --- <span class="pass">PASS</span>: Test_Vehicle/update-basic (0.01s)
+    --- <span class="pass">PASS</span>: Test_Vehicle/delete-user (0.01s)
+    --- <span class="pass">PASS</span>: Test_Vehicle/delete-admin (0.01s)
+<span class="pass">PASS</span>
+coverage: 84.0% of statements
+ok  	github.com/FITHSCS/backend/business/domain/vehiclebus	0.533s	coverage: 84.0% of statements
+	github.com/FITHSCS/backend/business/domain/vehiclebus/stores/vehicledb		coverage: 0.0% of statements
+            </div>
+            <div class="nav-links">
+                <a href="../../../">Back to Reports Index</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
