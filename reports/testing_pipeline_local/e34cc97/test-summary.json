@@ -1,0 +1,134 @@
+{
+  "branch": "testing_pipeline_local",
+  "commit": "e34cc9728625eb65a56c0114cffd613b9f1f2675",
+  "timestamp": "2025-07-05T14:22:35Z",
+  "duration": "0.638s",
+  "status": "passed",
+  "total_tests": 94,
+  "passed_tests": 94,
+  "failed_tests": 0,
+  "skipped_tests": 0,
+  "coverage": 29.4,
+  "packages": [
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/auditbus",
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "12.35s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "tests": 11,
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "10.87s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "0.771s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "0.923s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "tests": 11,
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "1.296s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "1.029s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/pickupbatchbus",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "0.934s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "1.009s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/routebus",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "0.935s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "1.084s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/userbus",
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "1.299s",
+      "coverage": 29.4
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "status": "passed",
+      "duration": "0.638s",
+      "coverage": 29.4
+    }
+  ]
+}
