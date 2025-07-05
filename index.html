@@ -1,500 +1,270 @@
-  # Generate the main dashboard index.html
-cd ./pages-repo
-
-# Create the dashboard template
-cat > dashboard-template.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Report Dashboard</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <title>Test Reports Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            background: white;
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
+            border-bottom: 2px solid #e1e5e9;
+            padding-bottom: 20px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 700;
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
-        .header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
+        .status-passed { background-color: #d4edda; color: #155724; }
+        .status-failed { background-color: #f8d7da; color: #721c24; }
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
         .stat-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
         }
-        .stat-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #495057;
         }
-        .stat-card h3 {
-            color: #64748b;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 8px;
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 5px;
         }
-        .stat-card .value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
+        .run-item {
+            background: #f8f9fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #28a745;
         }
-        .stat-card .change {
-            font-size: 0.875rem;
-            font-weight: 500;
+        .run-item.failed {
+            border-left-color: #dc3545;
         }
-        .success { color: #10b981; }
-        .danger { color: #ef4444; }
-        .warning { color: #f59e0b; }
-        .info { color: #3b82f6; }
-        .charts-section {
+        .run-meta {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+        .package-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
-        .chart-container {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
+        .package-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #28a745;
         }
-        .chart-container h3 {
-            margin-bottom: 20px;
-            color: #1e293b;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-        .chart-wrapper {
-            position: relative;
-            height: 300px;
-        }
-        .table-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-            overflow: hidden;
-        }
-        .table-header {
-            background: #f8fafc;
-            padding: 20px 25px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .table-header h3 {
-            color: #1e293b;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-        .table-wrapper {
-            overflow-x: auto;
+        .package-card.failed {
+            border-left-color: #dc3545;
         }
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
         }
         th, td {
-            padding: 12px 25px;
             text-align: left;
-            border-bottom: 1px solid #e2e8f0;
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
         }
         th {
-            background: #f8fafc;
-            font-weight: 600;
-            color: #475569;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        tbody tr:hover {
-            background: #f8fafc;
-        }
-        .badge {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .badge.success {
-            background: #dcfce7;
-            color: #166534;
-        }
-        .badge.danger {
-            background: #fee2e2;
-            color: #991b1b;
-        }
-        .badge.warning {
-            background: #fef3c7;
-            color: #92400e;
-        }
-        .filters {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-            margin-bottom: 30px;
-        }
-        .filters h3 {
-            margin-bottom: 15px;
-            color: #1e293b;
-            font-size: 1.125rem;
+            background-color: #f8f9fa;
             font-weight: 600;
         }
-        .filter-group {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .filter-group label {
-            font-weight: 500;
-            color: #374151;
-        }
-        .filter-group select, .filter-group input {
-            padding: 8px 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            background: white;
-        }
-        .filter-group select:focus, .filter-group input:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: #64748b;
-        }
-        .empty-state h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        @media (max-width: 768px) {
-            .charts-section {
-                grid-template-columns: 1fr;
-            }
-            .container {
-                padding: 10px;
-            }
-            .header h1 {
-                font-size: 2rem;
-            }
+        .chart-container {
+            margin: 30px 0;
+            height: 400px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Test Report Dashboard</h1>
-            <p>Comprehensive test results and coverage analysis</p>
+            <h1>Test Reports Dashboard</h1>
+            <p>Branch: testing_pipeline_local</p>
         </div>
-        <div class="filters">
-            <h3>Filters</h3>
-            <div class="filter-group">
-                <label for="branchFilter">Branch:</label>
-                <select id="branchFilter">
-                    <option value="">All Branches</option>
-                </select>
-                <label for="dateRange">Date Range:</label>
-                <input type="date" id="dateFrom">
-                <input type="date" id="dateTo">
-                <label for="statusFilter">Status:</label>
-                <select id="statusFilter">
-                    <option value="">All Status</option>
-                    <option value="passed">Passed</option>
-                    <option value="failed">Failed</option>
-                </select>
-            </div>
-        </div>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h3>Total Test Runs</h3>
-                <div class="value info" id="totalRuns">0</div>
-                <div class="change" id="totalRunsChange">Last 30 days</div>
-            </div>
-            <div class="stat-card">
-                <h3>Success Rate</h3>
-                <div class="value success" id="successRate">0%</div>
-                <div class="change" id="successRateChange">Overall average</div>
-            </div>
-            <div class="stat-card">
-                <h3>Total Tests</h3>
-                <div class="value info" id="totalTests">0</div>
-                <div class="change" id="totalTestsChange">Across all runs</div>
-            </div>
-            <div class="stat-card">
-                <h3>Average Coverage</h3>
-                <div class="value warning" id="avgCoverage">0%</div>
-                <div class="change" id="avgCoverageChange">All packages</div>
-            </div>
-        </div>
-        <div class="charts-section">
-            <div class="chart-container">
-                <h3>Test Results Over Time</h3>
-                <div class="chart-wrapper">
-                    <canvas id="timelineChart"></canvas>
-                </div>
-            </div>
-            <div class="chart-container">
-                <h3>Test Distribution</h3>
-                <div class="chart-wrapper">
-                    <canvas id="distributionChart"></canvas>
-                </div>
-            </div>
-        </div>
-        <div class="table-container">
-            <div class="table-header">
-                <h3>Test Suite Details (Packages with Tests Only)</h3>
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Package</th>
-                            <th>Total Tests</th>
-                            <th>Passed</th>
-                            <th>Failed</th>
-                            <th>Skipped</th>
-                            <th>Success Rate</th>
-                            <th>Coverage</th>
-                            <th>Duration</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id="packageTableBody">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="table-container" style="margin-top: 30px;">
-            <div class="table-header">
-                <h3>Historical Test Runs</h3>
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Branch</th>
-                            <th>Commit</th>
-                            <th>Total Tests</th>
-                            <th>Passed</th>
-                            <th>Failed</th>
-                            <th>Success Rate</th>
-                            <th>Coverage</th>
-                            <th>Duration</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id="historicalTableBody">
-                    </tbody>
-                </table>
-            </div>
+        
+        <div id="dashboard-content">
+            <p>Loading test reports...</p>
         </div>
     </div>
+    
     <script>
-        const injectedHistoricalRunsData = [{"branch":"testing_pipeline_local","commit":"f4410cd84f5653b3b77687c9b42742d1c25874d7","timestamp":"2025-07-04T20:22:28Z","duration":"0.661s","status":"passed","summary":{"total":94,"passed":94,"failed":0,"skipped":0,"coverage":29.4},"suites":[{"name":"github.com/FITHSCS/backend/business/domain/auditbus","tests":2,"passed":2,"failed":0,"skipped":0,"status":"passed","duration":"11.349s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/auditbus/stores/auditdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.457s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"10.885s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus/store/delexceptiondb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.009s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.797s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus/stores/facilitydb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.007s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.933s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus/stores/gpstrackingdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"1.308s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus/stores/imagedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.004s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus/stores/manifestdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.937s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus/stores/pickupbatchdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.982s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus/stores/qrcodedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.008s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.843s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus/stores/routedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.007s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.065s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus/stores/signaturedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/syncbatchbus","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.008s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/syncbatchbus/stores/syncbatchdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus","tests":6,"passed":6,"failed":0,"skipped":0,"status":"passed","duration":"1.292s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus/extensions/useraudit","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.004s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus/stores/usercache","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus/stores/userdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.661s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus/stores/vehicledb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.004s","coverage":29.4}]},{"branch":"testing_pipeline_local","commit":"60ecf9cb9a85a400a9df2deb9bd5925e01183b79","timestamp":"2025-07-04T20:33:24Z","duration":"0.601s","status":"passed","summary":{"total":94,"passed":94,"failed":0,"skipped":0,"coverage":29.4},"suites":[{"name":"github.com/FITHSCS/backend/business/domain/auditbus","tests":2,"passed":2,"failed":0,"skipped":0,"status":"passed","duration":"13.099s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/auditbus/stores/auditdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.279s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"12.74s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus/store/delexceptiondb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.742s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus/stores/facilitydb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.878s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus/stores/gpstrackingdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"1.272s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus/stores/imagedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.95s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus/stores/manifestdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.897s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus/stores/pickupbatchdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.92s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus/stores/qrcodedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.853s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus/stores/routedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.98s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus/stores/signaturedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/syncbatchbus","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/syncbatchbus/stores/syncbatchdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus","tests":6,"passed":6,"failed":0,"skipped":0,"status":"passed","duration":"1.194s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus/extensions/useraudit","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus/stores/usercache","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.004s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus/stores/userdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.601s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus/stores/vehicledb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.007s","coverage":29.4}]},{"branch":"testing_pipeline_local","commit":"9684b571ca554d4cd866a7ab2edc70cab739da60","timestamp":"2025-07-04T20:24:59Z","duration":"0.638s","status":"passed","summary":{"total":94,"passed":94,"failed":0,"skipped":0,"coverage":29.4},"suites":[{"name":"github.com/FITHSCS/backend/business/domain/auditbus","tests":2,"passed":2,"failed":0,"skipped":0,"status":"passed","duration":"12.786s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/auditbus/stores/auditdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.167s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"12.595s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus/store/delexceptiondb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.007s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.802s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus/stores/facilitydb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.896s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus/stores/gpstrackingdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.004s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"1.333s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus/stores/imagedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.001s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus/stores/manifestdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.936s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus/stores/pickupbatchdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.007s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.976s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus/stores/qrcodedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.795s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus/stores/routedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.037s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus/stores/signaturedb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/syncbatchbus","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/syncbatchbus/stores/syncbatchdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.006s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus","tests":6,"passed":6,"failed":0,"skipped":0,"status":"passed","duration":"1.313s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus/extensions/useraudit","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.004s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus/stores/usercache","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus/stores/userdb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.005s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.638s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus/stores/vehicledb","tests":0,"passed":0,"failed":0,"skipped":0,"status":"passed","duration":"0.004s","coverage":29.4}]},{"branch":"testing_pipeline_local","commit":"424d30d9ea27491c016c304b3650dbda47eefa61","timestamp":"2025-07-05T15:48:23Z","duration":"0.619s","status":"passed","total_tests":94,"passed_tests":94,"failed_tests":0,"skipped_tests":0,"coverage":29.4,"packages":[{"name":"github.com/FITHSCS/backend/business/domain/auditbus","tests":2,"passed":2,"failed":0,"skipped":0,"status":"passed","duration":"11.934s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"11.461s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.799s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.895s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"1.278s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.974s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.931s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.943s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.822s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.044s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus","tests":6,"passed":6,"failed":0,"skipped":0,"status":"passed","duration":"1.272s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.619s","coverage":29.4}]},{"branch":"testing_pipeline_local","commit":"6ab48edd657b7ad9969a0e4818482358b83e80a3","timestamp":"2025-07-05T11:16:11Z","duration":"0.617s","status":"passed","total_tests":94,"passed_tests":94,"failed_tests":0,"skipped_tests":0,"coverage":29.4,"packages":[{"name":"github.com/FITHSCS/backend/business/domain/auditbus","tests":2,"passed":2,"failed":0,"skipped":0,"status":"passed","duration":"12.299s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"11.628s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.751s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.925s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"1.314s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.008s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.984s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"1.055s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.839s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.084s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus","tests":6,"passed":6,"failed":0,"skipped":0,"status":"passed","duration":"1.224s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.617s","coverage":29.4}]},{"branch":"testing_pipeline_local","commit":"1a2dc24e7bb3e3339594d5f4ca6934568c13ebd5","timestamp":"2025-07-05T15:57:10Z","duration":"0.642s","status":"passed","total_tests":94,"passed_tests":94,"failed_tests":0,"skipped_tests":0,"coverage":29.4,"packages":[{"name":"github.com/FITHSCS/backend/business/domain/auditbus","tests":2,"passed":2,"failed":0,"skipped":0,"status":"passed","duration":"12.926s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"12.75s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.748s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.893s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"1.264s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.968s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.912s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.993s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.797s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.013s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus","tests":6,"passed":6,"failed":0,"skipped":0,"status":"passed","duration":"1.27s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.642s","coverage":29.4}]},{"branch":"testing_pipeline_local","commit":"289a0cbbe10d9700f2cf934e88b880e67ed14ace","timestamp":"2025-07-05T06:43:18Z","duration":"0.643s","status":"passed","total_tests":94,"passed_tests":94,"failed_tests":0,"skipped_tests":0,"coverage":29.4,"packages":[{"name":"github.com/FITHSCS/backend/business/domain/auditbus","tests":2,"passed":2,"failed":0,"skipped":0,"status":"passed","duration":"12.332s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"11.676s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.757s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.882s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"1.319s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.994s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.932s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.932s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.871s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.049s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus","tests":6,"passed":6,"failed":0,"skipped":0,"status":"passed","duration":"1.306s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.643s","coverage":29.4}]},{"branch":"testing_pipeline_local","commit":"e34cc9728625eb65a56c0114cffd613b9f1f2675","timestamp":"2025-07-05T14:22:35Z","duration":"0.638s","status":"passed","total_tests":94,"passed_tests":94,"failed_tests":0,"skipped_tests":0,"coverage":29.4,"packages":[{"name":"github.com/FITHSCS/backend/business/domain/auditbus","tests":2,"passed":2,"failed":0,"skipped":0,"status":"passed","duration":"12.35s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/delexceptionbus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"10.87s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/facilitybus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.771s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/gpstrackingbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.923s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/imagebus","tests":11,"passed":11,"failed":0,"skipped":0,"status":"passed","duration":"1.296s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/manifestbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.029s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/pickupbatchbus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"0.934s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/qrcodebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"1.009s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/routebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.935s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/signaturebus","tests":9,"passed":9,"failed":0,"skipped":0,"status":"passed","duration":"1.084s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/userbus","tests":6,"passed":6,"failed":0,"skipped":0,"status":"passed","duration":"1.299s","coverage":29.4},{"name":"github.com/FITHSCS/backend/business/domain/vehiclebus","tests":7,"passed":7,"failed":0,"skipped":0,"status":"passed","duration":"0.638s","coverage":29.4}]}];
-        let filteredData = [];
-        let timelineChart = null;
-        let distributionChart = null;
-        function initializeDashboard() {
-            if (!injectedHistoricalRunsData || injectedHistoricalRunsData.length === 0) {
-                showEmptyState();
+        async function loadReports() {
+            try {
+                const reports = [];
+                const reportDirs = ["20250705_202113_6b5515e"];
+                
+                // Load all available reports
+                for (const dir of reportDirs) {
+                    try {
+                        const response = await fetch(`reports/${dir}/test-summary.json`);
+                        const data = await response.json();
+                        reports.push(data);
+                    } catch (e) {
+                        console.warn(`Failed to load report for ${dir}:`, e);
+                    }
+                }
+                
+                // Sort by timestamp (newest first)
+                reports.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                
+                renderDashboard(reports);
+            } catch (error) {
+                document.getElementById('dashboard-content').innerHTML = 
+                    '<p>Error loading reports: ' + error.message + '</p>';
+            }
+        }
+        
+        function renderDashboard(reports) {
+            if (reports.length === 0) {
+                document.getElementById('dashboard-content').innerHTML = 
+                    '<p>No test reports found.</p>';
                 return;
             }
-            filteredData = [...injectedHistoricalRunsData];
-            setupFilters();
-            updateDashboard();
-        }
-        function showEmptyState() {
-            document.querySelector('.container').innerHTML = '<div class="header"><h1>Test Report Dashboard</h1><p>No test data available</p></div><div class="empty-state"><h3>No Test Reports Found</h3><p>Run some tests to see results here.</p></div>';
-        }
-        function setupFilters() {
-            const branchFilter = document.getElementById('branchFilter');
-            const branches = [...new Set(injectedHistoricalRunsData.map(run => run.branch))];
-            branches.forEach(branch => {
-                const option = document.createElement('option');
-                option.value = branch;
-                option.textContent = branch;
-                branchFilter.appendChild(option);
-            });
-            document.getElementById('branchFilter').addEventListener('change', applyFilters);
-            document.getElementById('dateFrom').addEventListener('change', applyFilters);
-            document.getElementById('dateTo').addEventListener('change', applyFilters);
-            document.getElementById('statusFilter').addEventListener('change', applyFilters);
-        }
-        function applyFilters() {
-            const branchFilter = document.getElementById('branchFilter').value;
-            const dateFrom = document.getElementById('dateFrom').value;
-            const dateTo = document.getElementById('dateTo').value;
-            const statusFilter = document.getElementById('statusFilter').value;
-            filteredData = injectedHistoricalRunsData.filter(run => {
-                if (branchFilter && run.branch !== branchFilter) return false;
-                if (statusFilter && run.status !== statusFilter) return false;
-                const runDate = new Date(run.timestamp);
-                if (dateFrom && runDate < new Date(dateFrom)) return false;
-                if (dateTo && runDate > new Date(dateTo + 'T23:59:59')) return false;
-                return true;
-            });
-            updateDashboard();
-        }
-        function updateDashboard() {
-            updateStats();
-            updateCharts();
-            updateTables();
-        }
-        function updateStats() {
-            const totalRuns = filteredData.length;
-            const passedRuns = filteredData.filter(run => run.status === 'passed').length;
-            const successRate = totalRuns > 0 ? ((passedRuns / totalRuns) * 100).toFixed(1) : 0;
-            const totalTests = filteredData.reduce((sum, run) => sum + run.total_tests, 0);
-            const avgCoverage = filteredData.length > 0 ? (filteredData.reduce((sum, run) => sum + run.coverage, 0) / filteredData.length).toFixed(1) : 0;
-            document.getElementById('totalRuns').textContent = totalRuns;
-            document.getElementById('successRate').textContent = successRate + '%';
-            document.getElementById('totalTests').textContent = totalTests;
-            document.getElementById('avgCoverage').textContent = avgCoverage + '%';
-        }
-        function updateCharts() {
-            const timelineCtx = document.getElementById('timelineChart').getContext('2d');
-            const timelineData = filteredData.map(run => ({
-                x: new Date(run.timestamp),
-                y: run.total_tests,
-                passed: run.passed_tests,
-                failed: run.failed_tests,
-                status: run.status
-            })).sort((a, b) => a.x - b.x);
-            if (timelineChart) {
-                timelineChart.destroy();
-            }
-            timelineChart = new Chart(timelineCtx, {
+            
+            const latest = reports[0];
+            
+            const html = `
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">${latest.totals.tests}</div>
+                        <div class="stat-label">Total Tests</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" style="color: #28a745">${latest.totals.passed}</div>
+                        <div class="stat-label">Passed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" style="color: #dc3545">${latest.totals.failed}</div>
+                        <div class="stat-label">Failed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${latest.coverage.toFixed(1)}%</div>
+                        <div class="stat-label">Coverage</div>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="trendsChart"></canvas>
+                </div>
+                
+                <h2>Latest Run - ${latest.commit_short}</h2>
+                <div class="run-item ${latest.status}">
+                    <strong>Status:</strong> 
+                    <span class="status-badge status-${latest.status}">${latest.status}</span>
+                    <div class="run-meta">
+                        <strong>Commit:</strong> ${latest.commit_short} | 
+                        <strong>Time:</strong> ${new Date(latest.timestamp).toLocaleString()} |
+                        <strong>Duration:</strong> ${latest.duration.toFixed(2)}s
+                    </div>
+                </div>
+                
+                <div class="package-grid">
+                    ${latest.packages.map(pkg => `
+                        <div class="package-card ${pkg.status}">
+                            <h4>${pkg.name.split('/').pop()}</h4>
+                            <p><strong>Tests:</strong> ${pkg.total} 
+                               (✅ ${pkg.passed} | ❌ ${pkg.failed} | ⏸️ ${pkg.skipped})</p>
+                            <p><strong>Duration:</strong> ${pkg.duration.toFixed(2)}s</p>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <h2>Test History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Commit</th>
+                            <th>Status</th>
+                            <th>Tests</th>
+                            <th>Coverage</th>
+                            <th>Duration</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${reports.map(report => `
+                            <tr>
+                                <td>${report.commit_short}</td>
+                                <td><span class="status-badge status-${report.status}">${report.status}</span></td>
+                                <td>${report.totals.passed}/${report.totals.tests}</td>
+                                <td>${report.coverage.toFixed(1)}%</td>
+                                <td>${report.duration.toFixed(2)}s</td>
+                                <td>${new Date(report.timestamp).toLocaleString()}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+            
+            document.getElementById('dashboard-content').innerHTML = html;
+            
+            // Render trends chart
+            const ctx = document.getElementById('trendsChart').getContext('2d');
+            new Chart(ctx, {
                 type: 'line',
                 data: {
+                    labels: reports.reverse().map(r => r.commit_short),
                     datasets: [{
-                        label: 'Total Tests',
-                        data: timelineData,
-                        borderColor: '#3b82f6',
-                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
-                        fill: true,
-                        tension: 0.4
+                        label: 'Test Pass Rate',
+                        data: reports.map(r => (r.totals.passed / r.totals.tests * 100).toFixed(1)),
+                        borderColor: '#28a745',
+                        backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                        tension: 0.1
+                    }, {
+                        label: 'Coverage %',
+                        data: reports.map(r => r.coverage),
+                        borderColor: '#007bff',
+                        backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                        tension: 0.1
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
                     scales: {
-                        x: {
-                            type: 'time',
-                            time: {
-                                unit: 'day'
-                            }
-                        },
                         y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-            const distributionCtx = document.getElementById('distributionChart').getContext('2d');
-            const totalPassed = filteredData.reduce((sum, run) => sum + run.passed_tests, 0);
-            const totalFailed = filteredData.reduce((sum, run) => sum + run.failed_tests, 0);
-            const totalSkipped = filteredData.reduce((sum, run) => sum + run.skipped_tests, 0);
-            if (distributionChart) {
-                distributionChart.destroy();
-            }
-            distributionChart = new Chart(distributionCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Passed', 'Failed', 'Skipped'],
-                    datasets: [{
-                        data: [totalPassed, totalFailed, totalSkipped],
-                        backgroundColor: ['#10b981', '#ef4444', '#f59e0b']
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
+                            beginAtZero: true,
+                            max: 100
                         }
                     }
                 }
             });
         }
-        function updateTables() {
-            const packageTableBody = document.getElementById('packageTableBody');
-            packageTableBody.innerHTML = '';
-            if (filteredData.length === 0) {
-                packageTableBody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: #64748b;">No data available</td></tr>';
-                return;
-            }
-            const latestRun = filteredData[filteredData.length - 1];
-            const packagesWithTests = latestRun.packages.filter(pkg => pkg.tests > 0);
-            packagesWithTests.forEach(pkg => {
-                const successRate = pkg.tests > 0 ? ((pkg.passed / pkg.tests) * 100).toFixed(1) : 0;
-                const row = document.createElement('tr');
-                row.innerHTML = '<td>' + pkg.name.split('/').pop() + '</td><td>' + pkg.tests + '</td><td class="success">' + pkg.passed + '</td><td class="danger">' + pkg.failed + '</td><td class="warning">' + pkg.skipped + '</td><td><span class="badge ' + (successRate == 100 ? 'success' : successRate > 0 ? 'warning' : 'danger') + '">' + successRate + '%</span></td><td>' + pkg.coverage + '%</td><td>' + pkg.duration + '</td><td><span class="badge ' + (pkg.status === 'passed' ? 'success' : 'danger') + '">' + pkg.status + '</span></td>';
-                packageTableBody.appendChild(row);
-            });
-            const historicalTableBody = document.getElementById('historicalTableBody');
-            historicalTableBody.innerHTML = '';
-            const sortedData = [...filteredData].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-            sortedData.forEach(run => {
-                const successRate = run.total_tests > 0 ? ((run.passed_tests / run.total_tests) * 100).toFixed(1) : 0;
-                const row = document.createElement('tr');
-                row.innerHTML = '<td>' + new Date(run.timestamp).toLocaleDateString() + '</td><td>' + run.branch + '</td><td><code>' + run.commit.substring(0, 7) + '</code></td><td>' + run.total_tests + '</td><td class="success">' + run.passed_tests + '</td><td class="danger">' + run.failed_tests + '</td><td><span class="badge ' + (successRate == 100 ? 'success' : successRate > 0 ? 'warning' : 'danger') + '">' + successRate + '%</span></td><td>' + run.coverage + '%</td><td>' + run.duration + '</td><td><span class="badge ' + (run.status === 'passed' ? 'success' : 'danger') + '">' + run.status + '</span></td>';
-                historicalTableBody.appendChild(row);
-            });
-        }
-        document.addEventListener('DOMContentLoaded', initializeDashboard);
+        
+        // Load reports on page load
+        loadReports();
     </script>
 </body>
 </html>
