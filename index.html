@@ -129,53 +129,6 @@
             font-size: 14px;
             color: #6c757d;
         }
-        .run-item {
-            background: #f8f9fa;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 4px solid #28a745;
-        }
-        .run-item.failed {
-            border-left-color: #dc3545;
-        }
-        .run-meta {
-            font-size: 0.9em;
-            color: #6c757d;
-            margin-top: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            text-align: left;
-            padding: 12px;
-            border-bottom: 1px solid #dee2e6;
-        }
-        th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
-        .trends-toggle {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .toggle-btn {
-            padding: 8px 16px;
-            border: 1px solid #007bff;
-            background: white;
-            color: #007bff;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .toggle-btn.active {
-            background: #007bff;
-            color: white;
-        }
         .loading {
             text-align: center;
             padding: 40px;
@@ -193,11 +146,11 @@
         <div class="header">
             <div>
                 <h1>Test Reports Dashboard</h1>
-                <p id="branch-info">Branch: loading...</p>
+                <p id="branch-info">Branch: testing_pipeline_local</p>
             </div>
             <div class="controls">
                 <select id="branch-select">
-                    <option value="">Select Branch</option>
+                    <option value="testing_pipeline_local">testing_pipeline_local</option>
                 </select>
                 <select id="commit-select">
                     <option value="">Latest Commit</option>
@@ -212,11 +165,112 @@
     </div>
     
     <script>
-        // Basic dashboard functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('dashboard-content').innerHTML = 
-                '<div class="no-data">Dashboard will be populated with test reports data.</div>';
-        });
+        let allReports = [];
+        
+        // Load available reports
+        async function loadReports() {
+            try {
+                const response = await fetch('reports-index.json');
+                const data = await response.json();
+                allReports = data.reports || [];
+                
+                // Populate branch dropdown
+                const branchSelect = document.getElementById('branch-select');
+                const branches = [...new Set(allReports.map(r => r.branch))];
+                branches.forEach(branch => {
+                    if (branch !== 'testing_pipeline_local') {
+                        const option = document.createElement('option');
+                        option.value = branch;
+                        option.textContent = branch;
+                        branchSelect.appendChild(option);
+                    }
+                });
+                
+                // Populate commit dropdown
+                const commitSelect = document.getElementById('commit-select');
+                allReports.slice(0, 10).forEach(report => {
+                    const option = document.createElement('option');
+                    option.value = report.commit;
+                    option.textContent = `${report.commit_short} - ${report.timestamp}`;
+                    commitSelect.appendChild(option);
+                });
+                
+                // Load latest report
+                if (allReports.length > 0) {
+                    await loadReport(allReports[0]);
+                } else {
+                    document.getElementById('dashboard-content').innerHTML = 
+                        '<div class="no-data">No test reports found.</div>';
+                }
+            } catch (error) {
+                console.error('Error loading reports:', error);
+                document.getElementById('dashboard-content').innerHTML = 
+                    '<div class="no-data">Error loading reports. Check console for details.</div>';
+            }
+        }
+        
+        // Load specific report
+        async function loadReport(reportInfo) {
+            try {
+                const response = await fetch(`reports/${reportInfo.dir}/test-summary.json`);
+                const data = await response.json();
+                renderDashboard(data);
+            } catch (error) {
+                console.error('Error loading report:', error);
+                document.getElementById('dashboard-content').innerHTML = 
+                    '<div class="no-data">Error loading report data.</div>';
+            }
+        }
+        
+        // Render dashboard with data
+        function renderDashboard(data) {
+            const content = document.getElementById('dashboard-content');
+            
+            content.innerHTML = `
+                <div class="stats-grid">
+                    <div class="stat-card success">
+                        <div class="stat-value">${data.totals.tests}</div>
+                        <div class="stat-label">Total Tests</div>
+                    </div>
+                    <div class="stat-card success">
+                        <div class="stat-value">${data.totals.passed}</div>
+                        <div class="stat-label">Passed</div>
+                    </div>
+                    <div class="stat-card danger">
+                        <div class="stat-value">${data.totals.failed}</div>
+                        <div class="stat-label">Failed</div>
+                    </div>
+                    <div class="stat-card warning">
+                        <div class="stat-value">${data.coverage.toFixed(1)}%</div>
+                        <div class="stat-label">Coverage</div>
+                    </div>
+                </div>
+                
+                <div class="test-matrix">
+                    ${data.packages.map(pkg => `
+                        <div class="package-matrix ${pkg.status === 'failed' ? 'failed' : ''}">
+                            <div class="package-header">
+                                <span class="package-name">${pkg.name.split('/').pop()}</span>
+                                <span class="status-badge status-${pkg.status}">${pkg.status}</span>
+                            </div>
+                            <div class="test-bars">
+                                ${pkg.passed > 0 ? `<div class="test-bar-passed" style="width: ${(pkg.passed / pkg.total * 100)}%"></div>` : ''}
+                                ${pkg.failed > 0 ? `<div class="test-bar-failed" style="width: ${(pkg.failed / pkg.total * 100)}%"></div>` : ''}
+                                ${pkg.skipped > 0 ? `<div class="test-bar-skipped" style="width: ${(pkg.skipped / pkg.total * 100)}%"></div>` : ''}
+                            </div>
+                            <div class="test-stats">
+                                <span>Passed: ${pkg.passed}</span>
+                                <span>Failed: ${pkg.failed}</span>
+                                <span>Duration: ${pkg.duration.toFixed(2)}s</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+        
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', loadReports);
     </script>
 </body>
 </html>
