@@ -1,0 +1,627 @@
+Enhanced Assertion Report - 2025-07-06 20:53:38 UTC
+================================================================================
+
+Total Assertions: 116
+Passed: 116
+Failed: 0
+Info: 0
+
+Assertion Types:
+----------------------------------------
+  test_completion: 116 (P:116, F:0, I:0)
+
+Detailed Package Breakdown:
+========================================
+
+📦 auditbus:
+   Total: 3, Passed: 3, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/auditbus
+   ------------------------------------------------------------
+
+   🧪 Test_Audit/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.095604283Z
+      --------------------------------------------------
+
+   🧪 Test_Audit:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.095619953Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.099497082Z
+      --------------------------------------------------
+
+📦 facilitybus:
+   Total: 8, Passed: 8, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/facilitybus
+   ------------------------------------------------------------
+
+   🧪 Test_Facility/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.247340451Z
+      --------------------------------------------------
+
+   🧪 Test_Facility/query-byid:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.24735086Z
+      --------------------------------------------------
+
+   🧪 Test_Facility/create-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.247358935Z
+      --------------------------------------------------
+
+   🧪 Test_Facility/update-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.247366449Z
+      --------------------------------------------------
+
+   🧪 Test_Facility/delete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.247373633Z
+      --------------------------------------------------
+
+   🧪 Test_Facility/delete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.247401074Z
+      --------------------------------------------------
+
+   🧪 Test_Facility:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.24740419Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:24.248888956Z
+      --------------------------------------------------
+
+📦 manifestbus:
+   Total: 10, Passed: 10, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/manifestbus
+   ------------------------------------------------------------
+
+   🧪 Test_Manifest/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.611230484Z
+      --------------------------------------------------
+
+   🧪 Test_Manifest/query-byid:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.611240462Z
+      --------------------------------------------------
+
+   🧪 Test_Manifest/create-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.611248237Z
+      --------------------------------------------------
+
+   🧪 Test_Manifest/update-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.611255651Z
+      --------------------------------------------------
+
+   🧪 Test_Manifest/softDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.611263556Z
+      --------------------------------------------------
+
+   🧪 Test_Manifest/softDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.611270859Z
+      --------------------------------------------------
+
+   🧪 Test_Manifest/hardDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.611295866Z
+      --------------------------------------------------
+
+   🧪 Test_Manifest/hardDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.611305043Z
+      --------------------------------------------------
+
+   🧪 Test_Manifest:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.611312477Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:26.613495744Z
+      --------------------------------------------------
+
+📦 userbus:
+   Total: 7, Passed: 7, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/userbus
+   ------------------------------------------------------------
+
+   🧪 Test_User/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:27.473236855Z
+      --------------------------------------------------
+
+   🧪 Test_User/create-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:27.473249619Z
+      --------------------------------------------------
+
+   🧪 Test_User/update-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:27.473258806Z
+      --------------------------------------------------
+
+   🧪 Test_User/delete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:27.473266611Z
+      --------------------------------------------------
+
+   🧪 Test_User/delete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:27.473277311Z
+      --------------------------------------------------
+
+   🧪 Test_User:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:27.473390792Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:27.478861081Z
+      --------------------------------------------------
+
+📦 gpstrackingbus:
+   Total: 10, Passed: 10, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/gpstrackingbus
+   ------------------------------------------------------------
+
+   🧪 Test_GPSTracking/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.90350764Z
+      --------------------------------------------------
+
+   🧪 Test_GPSTracking/query-byid:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.90351833Z
+      --------------------------------------------------
+
+   🧪 Test_GPSTracking/create-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.903525433Z
+      --------------------------------------------------
+
+   🧪 Test_GPSTracking/update-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.903532366Z
+      --------------------------------------------------
+
+   🧪 Test_GPSTracking/softDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.90353958Z
+      --------------------------------------------------
+
+   🧪 Test_GPSTracking/softDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.903546202Z
+      --------------------------------------------------
+
+   🧪 Test_GPSTracking/hardDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.903553165Z
+      --------------------------------------------------
+
+   🧪 Test_GPSTracking/hardDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.903559497Z
+      --------------------------------------------------
+
+   🧪 Test_GPSTracking:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.903564577Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:28.904849284Z
+      --------------------------------------------------
+
+📦 signaturebus:
+   Total: 10, Passed: 10, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/signaturebus
+   ------------------------------------------------------------
+
+   🧪 Test_Signature/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.214251313Z
+      --------------------------------------------------
+
+   🧪 Test_Signature/query-byid:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.214261802Z
+      --------------------------------------------------
+
+   🧪 Test_Signature/create-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.214269507Z
+      --------------------------------------------------
+
+   🧪 Test_Signature/update-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.21427669Z
+      --------------------------------------------------
+
+   🧪 Test_Signature/softDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.214343144Z
+      --------------------------------------------------
+
+   🧪 Test_Signature/softDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.214355738Z
+      --------------------------------------------------
+
+   🧪 Test_Signature/hardDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.214364634Z
+      --------------------------------------------------
+
+   🧪 Test_Signature/hardDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.215344553Z
+      --------------------------------------------------
+
+   🧪 Test_Signature:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.215359972Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:30.219490443Z
+      --------------------------------------------------
+
+📦 vehiclebus:
+   Total: 8, Passed: 8, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/vehiclebus
+   ------------------------------------------------------------
+
+   🧪 Test_Vehicle/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:31.378793576Z
+      --------------------------------------------------
+
+   🧪 Test_Vehicle/query-byid:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:31.378803284Z
+      --------------------------------------------------
+
+   🧪 Test_Vehicle/create-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:31.378810548Z
+      --------------------------------------------------
+
+   🧪 Test_Vehicle/update-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:31.378819364Z
+      --------------------------------------------------
+
+   🧪 Test_Vehicle/delete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:31.379024206Z
+      --------------------------------------------------
+
+   🧪 Test_Vehicle/delete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:31.379031079Z
+      --------------------------------------------------
+
+   🧪 Test_Vehicle:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:31.379034125Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:31.383349621Z
+      --------------------------------------------------
+
+📦 delexceptionbus:
+   Total: 14, Passed: 14, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/delexceptionbus
+   ------------------------------------------------------------
+
+   🧪 Test_DeliveryException/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220794379Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/query-byid:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220806372Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/create-basic_no_resolved_by:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220817893Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/create-basic_with_resolved_by:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220828102Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/update-basic_no_resolved_by:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220836418Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/update-basic_with_resolved_by:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220845865Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/update-basic_with_escalated_to:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220857798Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/update-basic_without_resolved_by:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220866985Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/softDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220875711Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/softDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220884097Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/hardDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220893364Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException/hardDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220900868Z
+      --------------------------------------------------
+
+   🧪 Test_DeliveryException:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.220904585Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:33.224588673Z
+      --------------------------------------------------
+
+📦 imagebus:
+   Total: 12, Passed: 12, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/imagebus
+   ------------------------------------------------------------
+
+   🧪 Test_Image/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.361128824Z
+      --------------------------------------------------
+
+   🧪 Test_Image/query-byid:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.361138111Z
+      --------------------------------------------------
+
+   🧪 Test_Image/create-basic_no_exception_id:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.361145044Z
+      --------------------------------------------------
+
+   🧪 Test_Image/create-basic_with_exception_id:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.361151666Z
+      --------------------------------------------------
+
+   🧪 Test_Image/update-basic_no_exception_id:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.361158188Z
+      --------------------------------------------------
+
+   🧪 Test_Image/update-basic_with_exception_id:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.361164881Z
+      --------------------------------------------------
+
+   🧪 Test_Image/softDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.361171183Z
+      --------------------------------------------------
+
+   🧪 Test_Image/softDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.361179178Z
+      --------------------------------------------------
+
+   🧪 Test_Image/hardDelete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.361186992Z
+      --------------------------------------------------
+
+   🧪 Test_Image/hardDelete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.364512459Z
+      --------------------------------------------------
+
+   🧪 Test_Image:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.364526605Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:34.366844824Z
+      --------------------------------------------------
+
+📦 qrcodebus:
+   Total: 8, Passed: 8, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/qrcodebus
+   ------------------------------------------------------------
+
+   🧪 Test_QRcode/query-all:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:35.747549325Z
+      --------------------------------------------------
+
+   🧪 Test_QRcode/query-byid:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:35.747558572Z
+      --------------------------------------------------
+
+   🧪 Test_QRcode/query-byhash:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:35.747751311Z
+      --------------------------------------------------
+
+   🧪 Test_QRcode/create-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:35.747758825Z
+      --------------------------------------------------
+
+   🧪 Test_QRcode/Delete-user:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:35.747765578Z
+      --------------------------------------------------
+
+   🧪 Test_QRcode/Delete-admin:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:35.74777194Z
+      --------------------------------------------------
+
+   🧪 Test_QRcode:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:35.747775086Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:35.750242621Z
+      --------------------------------------------------
+
+📦 syncbatchbus:
+   Total: 26, Passed: 26, Failed: 0, Info: 0
+   Package: github.com/FITHSCS/backend/business/domain/syncbatchbus
+   ------------------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316138731Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316148981Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#01:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316158268Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#01:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316165612Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#02:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316172444Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#03:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316278543Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#02:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316307226Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#03:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316316994Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#04:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316323787Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#04:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316330449Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#05:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316337112Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#05:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.31635237Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#06:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316367839Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#06:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316374912Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-basic:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316383148Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#07:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316390521Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#07:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316397284Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#08:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316403957Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#08:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316410378Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#09:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.31641689Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#09:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316424986Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/create-basic#10:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316432289Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#10:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316438982Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch/query-byid#11:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.316445143Z
+      --------------------------------------------------
+
+   🧪 Test_SyncBatch:
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.31644899Z
+      --------------------------------------------------
+      ✅ test_completion (passed)
+         Time: 2025-07-06T20:53:38.318564799Z
+      --------------------------------------------------
