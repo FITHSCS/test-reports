@@ -1,0 +1,472 @@
+Assertion Report - 2025-07-06 18:31:35 UTC
+================================================================================
+
+Total Assertions: 210
+Passed: 105
+Failed: 0
+Info: 0
+
+Assertion Types:
+----------------------------------------
+  test_start: 105 (P:0, F:0, I:0)
+  test_pass: 105 (P:105, F:0, I:0)
+
+Package Breakdown:
+----------------------------------------
+
+auditbus:
+  Total: 4, Passed: 2, Failed: 0, Info: 0
+
+facilitybus:
+  Total: 14, Passed: 7, Failed: 0, Info: 0
+
+manifestbus:
+  Total: 18, Passed: 9, Failed: 0, Info: 0
+
+userbus:
+  Total: 12, Passed: 6, Failed: 0, Info: 0
+
+gpstrackingbus:
+  Total: 18, Passed: 9, Failed: 0, Info: 0
+
+signaturebus:
+  Total: 18, Passed: 9, Failed: 0, Info: 0
+
+vehiclebus:
+  Total: 14, Passed: 7, Failed: 0, Info: 0
+
+delexceptionbus:
+  Total: 26, Passed: 13, Failed: 0, Info: 0
+
+imagebus:
+  Total: 22, Passed: 11, Failed: 0, Info: 0
+
+qrcodebus:
+  Total: 14, Passed: 7, Failed: 0, Info: 0
+
+syncbatchbus:
+  Total: 50, Passed: 25, Failed: 0, Info: 0
+
+
+Test Cases Summary:
+----------------------------------------
+
+Test_Audit:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Facility:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Audit/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Facility/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Facility/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Facility/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Facility/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Facility/delete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Facility/delete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Manifest:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_User:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Manifest/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Manifest/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Manifest/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Manifest/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Manifest/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Manifest/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Manifest/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Manifest/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_User/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_User/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_User/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_User/delete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_User/delete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_GPSTracking:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_GPSTracking/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_GPSTracking/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_GPSTracking/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_GPSTracking/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_GPSTracking/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_GPSTracking/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_GPSTracking/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_GPSTracking/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Signature:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Signature/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Signature/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Signature/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Signature/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Signature/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Signature/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Signature/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Signature/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Vehicle:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Vehicle/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Vehicle/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Vehicle/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Vehicle/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Vehicle/delete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Vehicle/delete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/create-basic_no_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/create-basic_with_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/update-basic_no_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/update-basic_with_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/update-basic_with_escalated_to:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/update-basic_without_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_DeliveryException/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/create-basic_no_exception_id:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/create-basic_with_exception_id:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/update-basic_no_exception_id:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/update-basic_with_exception_id:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_Image/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_QRcode:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_QRcode/query-all:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_QRcode/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_QRcode/query-byhash:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_QRcode/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_QRcode/Delete-user:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_QRcode/Delete-admin:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#01:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#01:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#02:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#03:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#02:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#03:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#04:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#04:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#05:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#05:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#06:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#06:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-basic:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#07:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#07:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#08:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#08:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#09:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#09:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/create-basic#10:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#10:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
+
+Test_SyncBatch/query-byid#11:
+  Total: 2, Passed: 1, Failed: 0
+  Assertion Types: test_start:1, test_pass:1
