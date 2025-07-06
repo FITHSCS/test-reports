@@ -1,0 +1,1774 @@
+{
+  "timestamp": "2025-07-06T18:09:40.146590Z",
+  "total_assertions": 105,
+  "passed_assertions": 105,
+  "failed_assertions": 0,
+  "assertion_types": {
+    "test_pass": {
+      "count": 105,
+      "passed": 105,
+      "failed": 0
+    }
+  },
+  "packages": {
+    "github.com/FITHSCS/backend/business/domain/auditbus": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/auditbus",
+          "test": "Test_Audit",
+          "type": "test_pass",
+          "message": "Test Test_Audit passed",
+          "timestamp": "2025-07-06T18:09:24.239839091Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/auditbus",
+          "test": "Test_Audit/query-all",
+          "type": "test_pass",
+          "message": "Test Test_Audit/query-all passed",
+          "timestamp": "2025-07-06T18:09:24.239844972Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/facilitybus": {
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+          "test": "Test_Facility",
+          "type": "test_pass",
+          "message": "Test Test_Facility passed",
+          "timestamp": "2025-07-06T18:09:24.373482273Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+          "test": "Test_Facility/query-all",
+          "type": "test_pass",
+          "message": "Test Test_Facility/query-all passed",
+          "timestamp": "2025-07-06T18:09:24.373488274Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+          "test": "Test_Facility/query-byid",
+          "type": "test_pass",
+          "message": "Test Test_Facility/query-byid passed",
+          "timestamp": "2025-07-06T18:09:24.373500276Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+          "test": "Test_Facility/create-basic",
+          "type": "test_pass",
+          "message": "Test Test_Facility/create-basic passed",
+          "timestamp": "2025-07-06T18:09:24.373508582Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+          "test": "Test_Facility/update-basic",
+          "type": "test_pass",
+          "message": "Test Test_Facility/update-basic passed",
+          "timestamp": "2025-07-06T18:09:24.373516917Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+          "test": "Test_Facility/delete-user",
+          "type": "test_pass",
+          "message": "Test Test_Facility/delete-user passed",
+          "timestamp": "2025-07-06T18:09:24.373525153Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+          "test": "Test_Facility/delete-admin",
+          "type": "test_pass",
+          "message": "Test Test_Facility/delete-admin passed",
+          "timestamp": "2025-07-06T18:09:24.373533238Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/manifestbus": {
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+          "test": "Test_Manifest",
+          "type": "test_pass",
+          "message": "Test Test_Manifest passed",
+          "timestamp": "2025-07-06T18:09:26.952298696Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+          "test": "Test_Manifest/query-all",
+          "type": "test_pass",
+          "message": "Test Test_Manifest/query-all passed",
+          "timestamp": "2025-07-06T18:09:26.952304667Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+          "test": "Test_Manifest/query-byid",
+          "type": "test_pass",
+          "message": "Test Test_Manifest/query-byid passed",
+          "timestamp": "2025-07-06T18:09:26.952315858Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+          "test": "Test_Manifest/create-basic",
+          "type": "test_pass",
+          "message": "Test Test_Manifest/create-basic passed",
+          "timestamp": "2025-07-06T18:09:26.952324434Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+          "test": "Test_Manifest/update-basic",
+          "type": "test_pass",
+          "message": "Test Test_Manifest/update-basic passed",
+          "timestamp": "2025-07-06T18:09:26.952333761Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+          "test": "Test_Manifest/softDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_Manifest/softDelete-user passed",
+          "timestamp": "2025-07-06T18:09:26.9523438Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+          "test": "Test_Manifest/softDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_Manifest/softDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:26.952351996Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+          "test": "Test_Manifest/hardDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_Manifest/hardDelete-user passed",
+          "timestamp": "2025-07-06T18:09:26.952360472Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+          "test": "Test_Manifest/hardDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_Manifest/hardDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:26.952368326Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/userbus": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/userbus",
+          "test": "Test_User",
+          "type": "test_pass",
+          "message": "Test Test_User passed",
+          "timestamp": "2025-07-06T18:09:27.891633661Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/userbus",
+          "test": "Test_User/query-all",
+          "type": "test_pass",
+          "message": "Test Test_User/query-all passed",
+          "timestamp": "2025-07-06T18:09:27.891640704Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/userbus",
+          "test": "Test_User/create-basic",
+          "type": "test_pass",
+          "message": "Test Test_User/create-basic passed",
+          "timestamp": "2025-07-06T18:09:27.891650733Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/userbus",
+          "test": "Test_User/update-basic",
+          "type": "test_pass",
+          "message": "Test Test_User/update-basic passed",
+          "timestamp": "2025-07-06T18:09:27.89165963Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/userbus",
+          "test": "Test_User/delete-user",
+          "type": "test_pass",
+          "message": "Test Test_User/delete-user passed",
+          "timestamp": "2025-07-06T18:09:27.891666803Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/userbus",
+          "test": "Test_User/delete-admin",
+          "type": "test_pass",
+          "message": "Test Test_User/delete-admin passed",
+          "timestamp": "2025-07-06T18:09:27.891674518Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/gpstrackingbus": {
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+          "test": "Test_GPSTracking",
+          "type": "test_pass",
+          "message": "Test Test_GPSTracking passed",
+          "timestamp": "2025-07-06T18:09:29.454958672Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+          "test": "Test_GPSTracking/query-all",
+          "type": "test_pass",
+          "message": "Test Test_GPSTracking/query-all passed",
+          "timestamp": "2025-07-06T18:09:29.454964864Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+          "test": "Test_GPSTracking/query-byid",
+          "type": "test_pass",
+          "message": "Test Test_GPSTracking/query-byid passed",
+          "timestamp": "2025-07-06T18:09:29.454982477Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+          "test": "Test_GPSTracking/create-basic",
+          "type": "test_pass",
+          "message": "Test Test_GPSTracking/create-basic passed",
+          "timestamp": "2025-07-06T18:09:29.454993457Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+          "test": "Test_GPSTracking/update-basic",
+          "type": "test_pass",
+          "message": "Test Test_GPSTracking/update-basic passed",
+          "timestamp": "2025-07-06T18:09:29.455000521Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+          "test": "Test_GPSTracking/softDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_GPSTracking/softDelete-user passed",
+          "timestamp": "2025-07-06T18:09:29.455008175Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+          "test": "Test_GPSTracking/softDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_GPSTracking/softDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:29.455014917Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+          "test": "Test_GPSTracking/hardDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_GPSTracking/hardDelete-user passed",
+          "timestamp": "2025-07-06T18:09:29.455021921Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+          "test": "Test_GPSTracking/hardDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_GPSTracking/hardDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:29.455028743Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/signaturebus": {
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+          "test": "Test_Signature",
+          "type": "test_pass",
+          "message": "Test Test_Signature passed",
+          "timestamp": "2025-07-06T18:09:30.815167405Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+          "test": "Test_Signature/query-all",
+          "type": "test_pass",
+          "message": "Test Test_Signature/query-all passed",
+          "timestamp": "2025-07-06T18:09:30.815228379Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+          "test": "Test_Signature/query-byid",
+          "type": "test_pass",
+          "message": "Test Test_Signature/query-byid passed",
+          "timestamp": "2025-07-06T18:09:30.815260069Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+          "test": "Test_Signature/create-basic",
+          "type": "test_pass",
+          "message": "Test Test_Signature/create-basic passed",
+          "timestamp": "2025-07-06T18:09:30.815286709Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+          "test": "Test_Signature/update-basic",
+          "type": "test_pass",
+          "message": "Test Test_Signature/update-basic passed",
+          "timestamp": "2025-07-06T18:09:30.815397657Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+          "test": "Test_Signature/softDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_Signature/softDelete-user passed",
+          "timestamp": "2025-07-06T18:09:30.815406042Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+          "test": "Test_Signature/softDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_Signature/softDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:30.815413306Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+          "test": "Test_Signature/hardDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_Signature/hardDelete-user passed",
+          "timestamp": "2025-07-06T18:09:30.81542058Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+          "test": "Test_Signature/hardDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_Signature/hardDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:30.815427813Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/vehiclebus": {
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+          "test": "Test_Vehicle",
+          "type": "test_pass",
+          "message": "Test Test_Vehicle passed",
+          "timestamp": "2025-07-06T18:09:32.060173097Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+          "test": "Test_Vehicle/query-all",
+          "type": "test_pass",
+          "message": "Test Test_Vehicle/query-all passed",
+          "timestamp": "2025-07-06T18:09:32.060179268Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+          "test": "Test_Vehicle/query-byid",
+          "type": "test_pass",
+          "message": "Test Test_Vehicle/query-byid passed",
+          "timestamp": "2025-07-06T18:09:32.060189868Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+          "test": "Test_Vehicle/create-basic",
+          "type": "test_pass",
+          "message": "Test Test_Vehicle/create-basic passed",
+          "timestamp": "2025-07-06T18:09:32.060197392Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+          "test": "Test_Vehicle/update-basic",
+          "type": "test_pass",
+          "message": "Test Test_Vehicle/update-basic passed",
+          "timestamp": "2025-07-06T18:09:32.062185527Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+          "test": "Test_Vehicle/delete-user",
+          "type": "test_pass",
+          "message": "Test Test_Vehicle/delete-user passed",
+          "timestamp": "2025-07-06T18:09:32.062204693Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+          "test": "Test_Vehicle/delete-admin",
+          "type": "test_pass",
+          "message": "Test Test_Vehicle/delete-admin passed",
+          "timestamp": "2025-07-06T18:09:32.062212718Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/delexceptionbus": {
+      "total": 13,
+      "passed": 13,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException passed",
+          "timestamp": "2025-07-06T18:09:34.040862528Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/query-all",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/query-all passed",
+          "timestamp": "2025-07-06T18:09:34.040869351Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/query-byid",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/query-byid passed",
+          "timestamp": "2025-07-06T18:09:34.040881895Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/create-basic_no_resolved_by",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/create-basic_no_resolved_by passed",
+          "timestamp": "2025-07-06T18:09:34.040892094Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/create-basic_with_resolved_by",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/create-basic_with_resolved_by passed",
+          "timestamp": "2025-07-06T18:09:34.04090112Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/update-basic_no_resolved_by",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/update-basic_no_resolved_by passed",
+          "timestamp": "2025-07-06T18:09:34.040908434Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/update-basic_with_resolved_by",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/update-basic_with_resolved_by passed",
+          "timestamp": "2025-07-06T18:09:34.040915778Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/update-basic_with_escalated_to",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/update-basic_with_escalated_to passed",
+          "timestamp": "2025-07-06T18:09:34.040923072Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/update-basic_without_resolved_by",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/update-basic_without_resolved_by passed",
+          "timestamp": "2025-07-06T18:09:34.040933331Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/softDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/softDelete-user passed",
+          "timestamp": "2025-07-06T18:09:34.040941957Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/softDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/softDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:34.040951024Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/hardDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/hardDelete-user passed",
+          "timestamp": "2025-07-06T18:09:34.040963047Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+          "test": "Test_DeliveryException/hardDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_DeliveryException/hardDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:34.040973356Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/imagebus": {
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image",
+          "type": "test_pass",
+          "message": "Test Test_Image passed",
+          "timestamp": "2025-07-06T18:09:35.250134193Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/query-all",
+          "type": "test_pass",
+          "message": "Test Test_Image/query-all passed",
+          "timestamp": "2025-07-06T18:09:35.250147829Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/query-byid",
+          "type": "test_pass",
+          "message": "Test Test_Image/query-byid passed",
+          "timestamp": "2025-07-06T18:09:35.250161013Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/create-basic_no_exception_id",
+          "type": "test_pass",
+          "message": "Test Test_Image/create-basic_no_exception_id passed",
+          "timestamp": "2025-07-06T18:09:35.250168788Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/create-basic_with_exception_id",
+          "type": "test_pass",
+          "message": "Test Test_Image/create-basic_with_exception_id passed",
+          "timestamp": "2025-07-06T18:09:35.250176532Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/update-basic_no_exception_id",
+          "type": "test_pass",
+          "message": "Test Test_Image/update-basic_no_exception_id passed",
+          "timestamp": "2025-07-06T18:09:35.250184157Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/update-basic_with_exception_id",
+          "type": "test_pass",
+          "message": "Test Test_Image/update-basic_with_exception_id passed",
+          "timestamp": "2025-07-06T18:09:35.25020218Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/softDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_Image/softDelete-user passed",
+          "timestamp": "2025-07-06T18:09:35.250209865Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/softDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_Image/softDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:35.250217369Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/hardDelete-user",
+          "type": "test_pass",
+          "message": "Test Test_Image/hardDelete-user passed",
+          "timestamp": "2025-07-06T18:09:35.250224773Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+          "test": "Test_Image/hardDelete-admin",
+          "type": "test_pass",
+          "message": "Test Test_Image/hardDelete-admin passed",
+          "timestamp": "2025-07-06T18:09:35.250232076Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/qrcodebus": {
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+          "test": "Test_QRcode",
+          "type": "test_pass",
+          "message": "Test Test_QRcode passed",
+          "timestamp": "2025-07-06T18:09:36.822060564Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+          "test": "Test_QRcode/query-all",
+          "type": "test_pass",
+          "message": "Test Test_QRcode/query-all passed",
+          "timestamp": "2025-07-06T18:09:36.822066545Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+          "test": "Test_QRcode/query-byid",
+          "type": "test_pass",
+          "message": "Test Test_QRcode/query-byid passed",
+          "timestamp": "2025-07-06T18:09:36.822102713Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+          "test": "Test_QRcode/query-byhash",
+          "type": "test_pass",
+          "message": "Test Test_QRcode/query-byhash passed",
+          "timestamp": "2025-07-06T18:09:36.82211176Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+          "test": "Test_QRcode/create-basic",
+          "type": "test_pass",
+          "message": "Test Test_QRcode/create-basic passed",
+          "timestamp": "2025-07-06T18:09:36.822121388Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+          "test": "Test_QRcode/Delete-user",
+          "type": "test_pass",
+          "message": "Test Test_QRcode/Delete-user passed",
+          "timestamp": "2025-07-06T18:09:36.822129273Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+          "test": "Test_QRcode/Delete-admin",
+          "type": "test_pass",
+          "message": "Test Test_QRcode/Delete-admin passed",
+          "timestamp": "2025-07-06T18:09:36.822141626Z",
+          "status": "passed"
+        }
+      ]
+    },
+    "github.com/FITHSCS/backend/business/domain/syncbatchbus": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0,
+      "assertions": [
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch passed",
+          "timestamp": "2025-07-06T18:09:39.650385071Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid passed",
+          "timestamp": "2025-07-06T18:09:39.650405469Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic passed",
+          "timestamp": "2025-07-06T18:09:39.650970829Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#01",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#01 passed",
+          "timestamp": "2025-07-06T18:09:39.650983101Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#01",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#01 passed",
+          "timestamp": "2025-07-06T18:09:39.650991938Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#02",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#02 passed",
+          "timestamp": "2025-07-06T18:09:39.651000955Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#03",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#03 passed",
+          "timestamp": "2025-07-06T18:09:39.651008159Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#02",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#02 passed",
+          "timestamp": "2025-07-06T18:09:39.651016003Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#03",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#03 passed",
+          "timestamp": "2025-07-06T18:09:39.651080274Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#04",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#04 passed",
+          "timestamp": "2025-07-06T18:09:39.651108346Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#04",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#04 passed",
+          "timestamp": "2025-07-06T18:09:39.651162368Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#05",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#05 passed",
+          "timestamp": "2025-07-06T18:09:39.651191863Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#05",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#05 passed",
+          "timestamp": "2025-07-06T18:09:39.651473741Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#06",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#06 passed",
+          "timestamp": "2025-07-06T18:09:39.651481676Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#06",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#06 passed",
+          "timestamp": "2025-07-06T18:09:39.651489801Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-basic",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-basic passed",
+          "timestamp": "2025-07-06T18:09:39.651498036Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#07",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#07 passed",
+          "timestamp": "2025-07-06T18:09:39.651505681Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#07",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#07 passed",
+          "timestamp": "2025-07-06T18:09:39.651512884Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#08",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#08 passed",
+          "timestamp": "2025-07-06T18:09:39.651519958Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#08",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#08 passed",
+          "timestamp": "2025-07-06T18:09:39.651527782Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#09",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#09 passed",
+          "timestamp": "2025-07-06T18:09:39.651535056Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#09",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#09 passed",
+          "timestamp": "2025-07-06T18:09:39.65154251Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/create-basic#10",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/create-basic#10 passed",
+          "timestamp": "2025-07-06T18:09:39.651551857Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#10",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#10 passed",
+          "timestamp": "2025-07-06T18:09:39.65155882Z",
+          "status": "passed"
+        },
+        {
+          "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+          "test": "Test_SyncBatch/query-byid#11",
+          "type": "test_pass",
+          "message": "Test Test_SyncBatch/query-byid#11 passed",
+          "timestamp": "2025-07-06T18:09:39.651566334Z",
+          "status": "passed"
+        }
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/auditbus",
+      "test": "Test_Audit",
+      "type": "test_pass",
+      "message": "Test Test_Audit passed",
+      "timestamp": "2025-07-06T18:09:24.239839091Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/auditbus",
+      "test": "Test_Audit/query-all",
+      "type": "test_pass",
+      "message": "Test Test_Audit/query-all passed",
+      "timestamp": "2025-07-06T18:09:24.239844972Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "test": "Test_Facility",
+      "type": "test_pass",
+      "message": "Test Test_Facility passed",
+      "timestamp": "2025-07-06T18:09:24.373482273Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "test": "Test_Facility/query-all",
+      "type": "test_pass",
+      "message": "Test Test_Facility/query-all passed",
+      "timestamp": "2025-07-06T18:09:24.373488274Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "test": "Test_Facility/query-byid",
+      "type": "test_pass",
+      "message": "Test Test_Facility/query-byid passed",
+      "timestamp": "2025-07-06T18:09:24.373500276Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "test": "Test_Facility/create-basic",
+      "type": "test_pass",
+      "message": "Test Test_Facility/create-basic passed",
+      "timestamp": "2025-07-06T18:09:24.373508582Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "test": "Test_Facility/update-basic",
+      "type": "test_pass",
+      "message": "Test Test_Facility/update-basic passed",
+      "timestamp": "2025-07-06T18:09:24.373516917Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "test": "Test_Facility/delete-user",
+      "type": "test_pass",
+      "message": "Test Test_Facility/delete-user passed",
+      "timestamp": "2025-07-06T18:09:24.373525153Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "test": "Test_Facility/delete-admin",
+      "type": "test_pass",
+      "message": "Test Test_Facility/delete-admin passed",
+      "timestamp": "2025-07-06T18:09:24.373533238Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "test": "Test_Manifest",
+      "type": "test_pass",
+      "message": "Test Test_Manifest passed",
+      "timestamp": "2025-07-06T18:09:26.952298696Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "test": "Test_Manifest/query-all",
+      "type": "test_pass",
+      "message": "Test Test_Manifest/query-all passed",
+      "timestamp": "2025-07-06T18:09:26.952304667Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "test": "Test_Manifest/query-byid",
+      "type": "test_pass",
+      "message": "Test Test_Manifest/query-byid passed",
+      "timestamp": "2025-07-06T18:09:26.952315858Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "test": "Test_Manifest/create-basic",
+      "type": "test_pass",
+      "message": "Test Test_Manifest/create-basic passed",
+      "timestamp": "2025-07-06T18:09:26.952324434Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "test": "Test_Manifest/update-basic",
+      "type": "test_pass",
+      "message": "Test Test_Manifest/update-basic passed",
+      "timestamp": "2025-07-06T18:09:26.952333761Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "test": "Test_Manifest/softDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_Manifest/softDelete-user passed",
+      "timestamp": "2025-07-06T18:09:26.9523438Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "test": "Test_Manifest/softDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_Manifest/softDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:26.952351996Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "test": "Test_Manifest/hardDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_Manifest/hardDelete-user passed",
+      "timestamp": "2025-07-06T18:09:26.952360472Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "test": "Test_Manifest/hardDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_Manifest/hardDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:26.952368326Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/userbus",
+      "test": "Test_User",
+      "type": "test_pass",
+      "message": "Test Test_User passed",
+      "timestamp": "2025-07-06T18:09:27.891633661Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/userbus",
+      "test": "Test_User/query-all",
+      "type": "test_pass",
+      "message": "Test Test_User/query-all passed",
+      "timestamp": "2025-07-06T18:09:27.891640704Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/userbus",
+      "test": "Test_User/create-basic",
+      "type": "test_pass",
+      "message": "Test Test_User/create-basic passed",
+      "timestamp": "2025-07-06T18:09:27.891650733Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/userbus",
+      "test": "Test_User/update-basic",
+      "type": "test_pass",
+      "message": "Test Test_User/update-basic passed",
+      "timestamp": "2025-07-06T18:09:27.89165963Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/userbus",
+      "test": "Test_User/delete-user",
+      "type": "test_pass",
+      "message": "Test Test_User/delete-user passed",
+      "timestamp": "2025-07-06T18:09:27.891666803Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/userbus",
+      "test": "Test_User/delete-admin",
+      "type": "test_pass",
+      "message": "Test Test_User/delete-admin passed",
+      "timestamp": "2025-07-06T18:09:27.891674518Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "test": "Test_GPSTracking",
+      "type": "test_pass",
+      "message": "Test Test_GPSTracking passed",
+      "timestamp": "2025-07-06T18:09:29.454958672Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "test": "Test_GPSTracking/query-all",
+      "type": "test_pass",
+      "message": "Test Test_GPSTracking/query-all passed",
+      "timestamp": "2025-07-06T18:09:29.454964864Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "test": "Test_GPSTracking/query-byid",
+      "type": "test_pass",
+      "message": "Test Test_GPSTracking/query-byid passed",
+      "timestamp": "2025-07-06T18:09:29.454982477Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "test": "Test_GPSTracking/create-basic",
+      "type": "test_pass",
+      "message": "Test Test_GPSTracking/create-basic passed",
+      "timestamp": "2025-07-06T18:09:29.454993457Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "test": "Test_GPSTracking/update-basic",
+      "type": "test_pass",
+      "message": "Test Test_GPSTracking/update-basic passed",
+      "timestamp": "2025-07-06T18:09:29.455000521Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "test": "Test_GPSTracking/softDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_GPSTracking/softDelete-user passed",
+      "timestamp": "2025-07-06T18:09:29.455008175Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "test": "Test_GPSTracking/softDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_GPSTracking/softDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:29.455014917Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "test": "Test_GPSTracking/hardDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_GPSTracking/hardDelete-user passed",
+      "timestamp": "2025-07-06T18:09:29.455021921Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "test": "Test_GPSTracking/hardDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_GPSTracking/hardDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:29.455028743Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "test": "Test_Signature",
+      "type": "test_pass",
+      "message": "Test Test_Signature passed",
+      "timestamp": "2025-07-06T18:09:30.815167405Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "test": "Test_Signature/query-all",
+      "type": "test_pass",
+      "message": "Test Test_Signature/query-all passed",
+      "timestamp": "2025-07-06T18:09:30.815228379Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "test": "Test_Signature/query-byid",
+      "type": "test_pass",
+      "message": "Test Test_Signature/query-byid passed",
+      "timestamp": "2025-07-06T18:09:30.815260069Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "test": "Test_Signature/create-basic",
+      "type": "test_pass",
+      "message": "Test Test_Signature/create-basic passed",
+      "timestamp": "2025-07-06T18:09:30.815286709Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "test": "Test_Signature/update-basic",
+      "type": "test_pass",
+      "message": "Test Test_Signature/update-basic passed",
+      "timestamp": "2025-07-06T18:09:30.815397657Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "test": "Test_Signature/softDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_Signature/softDelete-user passed",
+      "timestamp": "2025-07-06T18:09:30.815406042Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "test": "Test_Signature/softDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_Signature/softDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:30.815413306Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "test": "Test_Signature/hardDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_Signature/hardDelete-user passed",
+      "timestamp": "2025-07-06T18:09:30.81542058Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "test": "Test_Signature/hardDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_Signature/hardDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:30.815427813Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "test": "Test_Vehicle",
+      "type": "test_pass",
+      "message": "Test Test_Vehicle passed",
+      "timestamp": "2025-07-06T18:09:32.060173097Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "test": "Test_Vehicle/query-all",
+      "type": "test_pass",
+      "message": "Test Test_Vehicle/query-all passed",
+      "timestamp": "2025-07-06T18:09:32.060179268Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "test": "Test_Vehicle/query-byid",
+      "type": "test_pass",
+      "message": "Test Test_Vehicle/query-byid passed",
+      "timestamp": "2025-07-06T18:09:32.060189868Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "test": "Test_Vehicle/create-basic",
+      "type": "test_pass",
+      "message": "Test Test_Vehicle/create-basic passed",
+      "timestamp": "2025-07-06T18:09:32.060197392Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "test": "Test_Vehicle/update-basic",
+      "type": "test_pass",
+      "message": "Test Test_Vehicle/update-basic passed",
+      "timestamp": "2025-07-06T18:09:32.062185527Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "test": "Test_Vehicle/delete-user",
+      "type": "test_pass",
+      "message": "Test Test_Vehicle/delete-user passed",
+      "timestamp": "2025-07-06T18:09:32.062204693Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "test": "Test_Vehicle/delete-admin",
+      "type": "test_pass",
+      "message": "Test Test_Vehicle/delete-admin passed",
+      "timestamp": "2025-07-06T18:09:32.062212718Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException passed",
+      "timestamp": "2025-07-06T18:09:34.040862528Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/query-all",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/query-all passed",
+      "timestamp": "2025-07-06T18:09:34.040869351Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/query-byid",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/query-byid passed",
+      "timestamp": "2025-07-06T18:09:34.040881895Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/create-basic_no_resolved_by",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/create-basic_no_resolved_by passed",
+      "timestamp": "2025-07-06T18:09:34.040892094Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/create-basic_with_resolved_by",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/create-basic_with_resolved_by passed",
+      "timestamp": "2025-07-06T18:09:34.04090112Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/update-basic_no_resolved_by",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/update-basic_no_resolved_by passed",
+      "timestamp": "2025-07-06T18:09:34.040908434Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/update-basic_with_resolved_by",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/update-basic_with_resolved_by passed",
+      "timestamp": "2025-07-06T18:09:34.040915778Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/update-basic_with_escalated_to",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/update-basic_with_escalated_to passed",
+      "timestamp": "2025-07-06T18:09:34.040923072Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/update-basic_without_resolved_by",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/update-basic_without_resolved_by passed",
+      "timestamp": "2025-07-06T18:09:34.040933331Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/softDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/softDelete-user passed",
+      "timestamp": "2025-07-06T18:09:34.040941957Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/softDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/softDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:34.040951024Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/hardDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/hardDelete-user passed",
+      "timestamp": "2025-07-06T18:09:34.040963047Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "test": "Test_DeliveryException/hardDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_DeliveryException/hardDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:34.040973356Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image",
+      "type": "test_pass",
+      "message": "Test Test_Image passed",
+      "timestamp": "2025-07-06T18:09:35.250134193Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/query-all",
+      "type": "test_pass",
+      "message": "Test Test_Image/query-all passed",
+      "timestamp": "2025-07-06T18:09:35.250147829Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/query-byid",
+      "type": "test_pass",
+      "message": "Test Test_Image/query-byid passed",
+      "timestamp": "2025-07-06T18:09:35.250161013Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/create-basic_no_exception_id",
+      "type": "test_pass",
+      "message": "Test Test_Image/create-basic_no_exception_id passed",
+      "timestamp": "2025-07-06T18:09:35.250168788Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/create-basic_with_exception_id",
+      "type": "test_pass",
+      "message": "Test Test_Image/create-basic_with_exception_id passed",
+      "timestamp": "2025-07-06T18:09:35.250176532Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/update-basic_no_exception_id",
+      "type": "test_pass",
+      "message": "Test Test_Image/update-basic_no_exception_id passed",
+      "timestamp": "2025-07-06T18:09:35.250184157Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/update-basic_with_exception_id",
+      "type": "test_pass",
+      "message": "Test Test_Image/update-basic_with_exception_id passed",
+      "timestamp": "2025-07-06T18:09:35.25020218Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/softDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_Image/softDelete-user passed",
+      "timestamp": "2025-07-06T18:09:35.250209865Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/softDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_Image/softDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:35.250217369Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/hardDelete-user",
+      "type": "test_pass",
+      "message": "Test Test_Image/hardDelete-user passed",
+      "timestamp": "2025-07-06T18:09:35.250224773Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "test": "Test_Image/hardDelete-admin",
+      "type": "test_pass",
+      "message": "Test Test_Image/hardDelete-admin passed",
+      "timestamp": "2025-07-06T18:09:35.250232076Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "test": "Test_QRcode",
+      "type": "test_pass",
+      "message": "Test Test_QRcode passed",
+      "timestamp": "2025-07-06T18:09:36.822060564Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "test": "Test_QRcode/query-all",
+      "type": "test_pass",
+      "message": "Test Test_QRcode/query-all passed",
+      "timestamp": "2025-07-06T18:09:36.822066545Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "test": "Test_QRcode/query-byid",
+      "type": "test_pass",
+      "message": "Test Test_QRcode/query-byid passed",
+      "timestamp": "2025-07-06T18:09:36.822102713Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "test": "Test_QRcode/query-byhash",
+      "type": "test_pass",
+      "message": "Test Test_QRcode/query-byhash passed",
+      "timestamp": "2025-07-06T18:09:36.82211176Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "test": "Test_QRcode/create-basic",
+      "type": "test_pass",
+      "message": "Test Test_QRcode/create-basic passed",
+      "timestamp": "2025-07-06T18:09:36.822121388Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "test": "Test_QRcode/Delete-user",
+      "type": "test_pass",
+      "message": "Test Test_QRcode/Delete-user passed",
+      "timestamp": "2025-07-06T18:09:36.822129273Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "test": "Test_QRcode/Delete-admin",
+      "type": "test_pass",
+      "message": "Test Test_QRcode/Delete-admin passed",
+      "timestamp": "2025-07-06T18:09:36.822141626Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch passed",
+      "timestamp": "2025-07-06T18:09:39.650385071Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid passed",
+      "timestamp": "2025-07-06T18:09:39.650405469Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic passed",
+      "timestamp": "2025-07-06T18:09:39.650970829Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#01",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#01 passed",
+      "timestamp": "2025-07-06T18:09:39.650983101Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#01",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#01 passed",
+      "timestamp": "2025-07-06T18:09:39.650991938Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#02",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#02 passed",
+      "timestamp": "2025-07-06T18:09:39.651000955Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#03",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#03 passed",
+      "timestamp": "2025-07-06T18:09:39.651008159Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#02",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#02 passed",
+      "timestamp": "2025-07-06T18:09:39.651016003Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#03",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#03 passed",
+      "timestamp": "2025-07-06T18:09:39.651080274Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#04",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#04 passed",
+      "timestamp": "2025-07-06T18:09:39.651108346Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#04",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#04 passed",
+      "timestamp": "2025-07-06T18:09:39.651162368Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#05",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#05 passed",
+      "timestamp": "2025-07-06T18:09:39.651191863Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#05",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#05 passed",
+      "timestamp": "2025-07-06T18:09:39.651473741Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#06",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#06 passed",
+      "timestamp": "2025-07-06T18:09:39.651481676Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#06",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#06 passed",
+      "timestamp": "2025-07-06T18:09:39.651489801Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-basic",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-basic passed",
+      "timestamp": "2025-07-06T18:09:39.651498036Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#07",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#07 passed",
+      "timestamp": "2025-07-06T18:09:39.651505681Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#07",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#07 passed",
+      "timestamp": "2025-07-06T18:09:39.651512884Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#08",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#08 passed",
+      "timestamp": "2025-07-06T18:09:39.651519958Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#08",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#08 passed",
+      "timestamp": "2025-07-06T18:09:39.651527782Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#09",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#09 passed",
+      "timestamp": "2025-07-06T18:09:39.651535056Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#09",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#09 passed",
+      "timestamp": "2025-07-06T18:09:39.65154251Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/create-basic#10",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/create-basic#10 passed",
+      "timestamp": "2025-07-06T18:09:39.651551857Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#10",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#10 passed",
+      "timestamp": "2025-07-06T18:09:39.65155882Z",
+      "status": "passed"
+    },
+    {
+      "package": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "test": "Test_SyncBatch/query-byid#11",
+      "type": "test_pass",
+      "message": "Test Test_SyncBatch/query-byid#11 passed",
+      "timestamp": "2025-07-06T18:09:39.651566334Z",
+      "status": "passed"
+    }
+  ]
+}
