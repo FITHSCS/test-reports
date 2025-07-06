@@ -1,0 +1,1630 @@
+{
+  "timestamp": "2025-07-06T20:46:15.037438Z",
+  "branch": "testing_pipeline_local",
+  "commit": "9ab1bf7c631bb1098cc4142e0d8abcc6b7c38139",
+  "commit_short": "9ab1bf7",
+  "status": "passed",
+  "duration": 30.506999999999998,
+  "coverage": 82.6,
+  "totals": {
+    "tests": 105,
+    "passed": 105,
+    "failed": 0,
+    "skipped": 0
+  },
+  "packages": [
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/auditbus",
+      "tests": [
+        {
+          "name": "Test_Audit/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Audit",
+          "status": "passed",
+          "duration": 10.37
+        }
+      ],
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "total": 2,
+      "duration": 10.384,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_Audit",
+          "status": "passed",
+          "duration": 10.37,
+          "sub_tests": [],
+          "output_lines": 12,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Audit/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "tests": [
+        {
+          "name": "Test_Facility/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Facility/query-byid",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Facility/create-basic",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Facility/update-basic",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Facility/delete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Facility/delete-admin",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Facility",
+          "status": "passed",
+          "duration": 8.81
+        }
+      ],
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "total": 7,
+      "duration": 8.818999999999999,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_Facility",
+          "status": "passed",
+          "duration": 8.81,
+          "sub_tests": [],
+          "output_lines": 12,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Facility/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 3,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Facility/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Facility/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Facility/update-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Facility/delete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Facility/delete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "tests": [
+        {
+          "name": "Test_Manifest/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Manifest/query-byid",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Manifest/create-basic",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Manifest/update-basic",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Manifest/softDelete-user",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Manifest/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Manifest/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Manifest/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Manifest",
+          "status": "passed",
+          "duration": 1.08
+        }
+      ],
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "total": 9,
+      "duration": 1.093,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_Manifest",
+          "status": "passed",
+          "duration": 1.08,
+          "sub_tests": [],
+          "output_lines": 20,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Manifest/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 4,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Manifest/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Manifest/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Manifest/update-basic",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Manifest/softDelete-user",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Manifest/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Manifest/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Manifest/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/userbus",
+      "tests": [
+        {
+          "name": "Test_User/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_User/create-basic",
+          "status": "passed",
+          "duration": 0.16
+        },
+        {
+          "name": "Test_User/update-basic",
+          "status": "passed",
+          "duration": 0.15
+        },
+        {
+          "name": "Test_User/delete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_User/delete-admin",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_User",
+          "status": "passed",
+          "duration": 1.26
+        }
+      ],
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "total": 6,
+      "duration": 1.2730000000000001,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_User",
+          "status": "passed",
+          "duration": 1.26,
+          "sub_tests": [],
+          "output_lines": 12,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_User/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_User/create-basic",
+          "status": "passed",
+          "duration": 0.16,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_User/update-basic",
+          "status": "passed",
+          "duration": 0.15,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_User/delete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_User/delete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "tests": [
+        {
+          "name": "Test_GPSTracking/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_GPSTracking/query-byid",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_GPSTracking/create-basic",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_GPSTracking/update-basic",
+          "status": "passed",
+          "duration": 0.03
+        },
+        {
+          "name": "Test_GPSTracking/softDelete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_GPSTracking/softDelete-admin",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_GPSTracking/hardDelete-user",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_GPSTracking/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_GPSTracking",
+          "status": "passed",
+          "duration": 0.95
+        }
+      ],
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "total": 9,
+      "duration": 0.964,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_GPSTracking",
+          "status": "passed",
+          "duration": 0.95,
+          "sub_tests": [],
+          "output_lines": 16,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_GPSTracking/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_GPSTracking/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_GPSTracking/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_GPSTracking/update-basic",
+          "status": "passed",
+          "duration": 0.03,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_GPSTracking/softDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_GPSTracking/softDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_GPSTracking/hardDelete-user",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_GPSTracking/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "tests": [
+        {
+          "name": "Test_Signature/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Signature/query-byid",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Signature/create-basic",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Signature/update-basic",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Signature/softDelete-user",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Signature/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Signature/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Signature/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Signature",
+          "status": "passed",
+          "duration": 1.15
+        }
+      ],
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "total": 9,
+      "duration": 1.156,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_Signature",
+          "status": "passed",
+          "duration": 1.15,
+          "sub_tests": [],
+          "output_lines": 20,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Signature/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Signature/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Signature/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Signature/update-basic",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Signature/softDelete-user",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Signature/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Signature/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Signature/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "tests": [
+        {
+          "name": "Test_Vehicle/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Vehicle/query-byid",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Vehicle/create-basic",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Vehicle/update-basic",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Vehicle/delete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Vehicle/delete-admin",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Vehicle",
+          "status": "passed",
+          "duration": 0.89
+        }
+      ],
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "total": 7,
+      "duration": 0.899,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_Vehicle",
+          "status": "passed",
+          "duration": 0.89,
+          "sub_tests": [],
+          "output_lines": 16,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Vehicle/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 3,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Vehicle/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Vehicle/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 3,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Vehicle/update-basic",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Vehicle/delete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Vehicle/delete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "tests": [
+        {
+          "name": "Test_DeliveryException/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_DeliveryException/query-byid",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_DeliveryException/create-basic_no_resolved_by",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_DeliveryException/create-basic_with_resolved_by",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_no_resolved_by",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_with_resolved_by",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_with_escalated_to",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_without_resolved_by",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_DeliveryException/softDelete-user",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_DeliveryException/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_DeliveryException/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_DeliveryException/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_DeliveryException",
+          "status": "passed",
+          "duration": 1.34
+        }
+      ],
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "total": 13,
+      "duration": 1.351,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_DeliveryException",
+          "status": "passed",
+          "duration": 1.34,
+          "sub_tests": [],
+          "output_lines": 20,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 4,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/create-basic_no_resolved_by",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/create-basic_with_resolved_by",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_no_resolved_by",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_with_resolved_by",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_with_escalated_to",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_without_resolved_by",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/softDelete-user",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_DeliveryException/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "tests": [
+        {
+          "name": "Test_Image/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Image/query-byid",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Image/create-basic_no_exception_id",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Image/create-basic_with_exception_id",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Image/update-basic_no_exception_id",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Image/update-basic_with_exception_id",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Image/softDelete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Image/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02
+        },
+        {
+          "name": "Test_Image/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Image/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_Image",
+          "status": "passed",
+          "duration": 1.34
+        }
+      ],
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "total": 11,
+      "duration": 1.355,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_Image",
+          "status": "passed",
+          "duration": 1.34,
+          "sub_tests": [],
+          "output_lines": 20,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/create-basic_no_exception_id",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/create-basic_with_exception_id",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/update-basic_no_exception_id",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/update-basic_with_exception_id",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/softDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_Image/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "tests": [
+        {
+          "name": "Test_QRcode/query-all",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_QRcode/query-byid",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_QRcode/query-byhash",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_QRcode/create-basic",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_QRcode/Delete-user",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_QRcode/Delete-admin",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_QRcode",
+          "status": "passed",
+          "duration": 1.15
+        }
+      ],
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "total": 7,
+      "duration": 1.171,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_QRcode",
+          "status": "passed",
+          "duration": 1.15,
+          "sub_tests": [],
+          "output_lines": 20,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_QRcode/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_QRcode/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_QRcode/query-byhash",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_QRcode/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_QRcode/Delete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_QRcode/Delete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 2,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "tests": [
+        {
+          "name": "Test_SyncBatch/query-byid",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#01",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#01",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#02",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#03",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#02",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#03",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#04",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#04",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#05",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#05",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#06",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#06",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-basic",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#07",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#07",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#08",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#08",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#09",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#09",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#10",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#10",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#11",
+          "status": "passed",
+          "duration": 0.01
+        },
+        {
+          "name": "Test_SyncBatch",
+          "status": "passed",
+          "duration": 2.03
+        }
+      ],
+      "passed": 25,
+      "failed": 0,
+      "skipped": 0,
+      "total": 25,
+      "duration": 2.042,
+      "status": "passed",
+      "detailed_tests": [
+        {
+          "name": "Test_SyncBatch",
+          "status": "passed",
+          "duration": 2.03,
+          "sub_tests": [],
+          "output_lines": 150,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 8,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#01",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 9,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#01",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#02",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 9,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#03",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 9,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#02",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#03",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#04",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 9,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#04",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#05",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 9,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#05",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#06",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 8,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#06",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 8,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#07",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#07",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 8,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#08",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 8,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#08",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#09",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#09",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 8,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#10",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 9,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#10",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#11",
+          "status": "passed",
+          "duration": 0.01,
+          "sub_tests": [],
+          "output_lines": 5,
+          "error_lines": 0,
+          "has_sub_tests": false
+        }
+      ]
+    }
+  ]
+}
