@@ -1,0 +1,190 @@
+Detailed Test Report - 2025-07-06 17:50:07 UTC
+Branch: testing_pipeline_local
+Commit: 15116c5
+Status: passed
+Duration: 33.30s
+Coverage: 82.6%
+
+Package Results:
+
+auditbus:
+  Status: passed
+  Tests: 2 (Passed: 2, Failed: 0, Skipped: 0)
+  Duration: 11.32s
+  Detailed Tests:
+    - Test_Audit: passed (11.31s)
+    - Test_Audit/query-all: passed (0.01s)
+
+
+facilitybus:
+  Status: passed
+  Tests: 7 (Passed: 7, Failed: 0, Skipped: 0)
+  Duration: 10.56s
+  Detailed Tests:
+    - Test_Facility: passed (10.55s)
+    - Test_Facility/query-all: passed (0.01s)
+    - Test_Facility/query-byid: passed (0.02s)
+    - Test_Facility/create-basic: passed (0.01s)
+    - Test_Facility/update-basic: passed (0.02s)
+    - Test_Facility/delete-user: passed (0.01s)
+    - Test_Facility/delete-admin: passed (0.02s)
+
+
+manifestbus:
+  Status: passed
+  Tests: 9 (Passed: 9, Failed: 0, Skipped: 0)
+  Duration: 1.12s
+  Detailed Tests:
+    - Test_Manifest: passed (1.11s)
+    - Test_Manifest/query-all: passed (0.01s)
+    - Test_Manifest/query-byid: passed (0.01s)
+    - Test_Manifest/create-basic: passed (0.01s)
+    - Test_Manifest/update-basic: passed (0.02s)
+    - Test_Manifest/softDelete-user: passed (0.02s)
+    - Test_Manifest/softDelete-admin: passed (0.02s)
+    - Test_Manifest/hardDelete-user: passed (0.01s)
+    - Test_Manifest/hardDelete-admin: passed (0.01s)
+
+
+userbus:
+  Status: passed
+  Tests: 6 (Passed: 6, Failed: 0, Skipped: 0)
+  Duration: 1.36s
+  Detailed Tests:
+    - Test_User: passed (1.34s)
+    - Test_User/query-all: passed (0.01s)
+    - Test_User/create-basic: passed (0.17s)
+    - Test_User/update-basic: passed (0.20s)
+    - Test_User/delete-user: passed (0.02s)
+    - Test_User/delete-admin: passed (0.03s)
+
+
+gpstrackingbus:
+  Status: passed
+  Tests: 9 (Passed: 9, Failed: 0, Skipped: 0)
+  Duration: 0.96s
+  Detailed Tests:
+    - Test_GPSTracking: passed (0.94s)
+    - Test_GPSTracking/query-all: passed (0.01s)
+    - Test_GPSTracking/query-byid: passed (0.01s)
+    - Test_GPSTracking/create-basic: passed (0.01s)
+    - Test_GPSTracking/update-basic: passed (0.02s)
+    - Test_GPSTracking/softDelete-user: passed (0.01s)
+    - Test_GPSTracking/softDelete-admin: passed (0.01s)
+    - Test_GPSTracking/hardDelete-user: passed (0.01s)
+    - Test_GPSTracking/hardDelete-admin: passed (0.01s)
+
+
+signaturebus:
+  Status: passed
+  Tests: 9 (Passed: 9, Failed: 0, Skipped: 0)
+  Duration: 1.09s
+  Detailed Tests:
+    - Test_Signature: passed (1.08s)
+    - Test_Signature/query-all: passed (0.01s)
+    - Test_Signature/query-byid: passed (0.01s)
+    - Test_Signature/create-basic: passed (0.01s)
+    - Test_Signature/update-basic: passed (0.02s)
+    - Test_Signature/softDelete-user: passed (0.02s)
+    - Test_Signature/softDelete-admin: passed (0.02s)
+    - Test_Signature/hardDelete-user: passed (0.01s)
+    - Test_Signature/hardDelete-admin: passed (0.01s)
+
+
+vehiclebus:
+  Status: passed
+  Tests: 7 (Passed: 7, Failed: 0, Skipped: 0)
+  Duration: 0.87s
+  Detailed Tests:
+    - Test_Vehicle: passed (0.86s)
+    - Test_Vehicle/query-all: passed (0.01s)
+    - Test_Vehicle/query-byid: passed (0.01s)
+    - Test_Vehicle/create-basic: passed (0.01s)
+    - Test_Vehicle/update-basic: passed (0.02s)
+    - Test_Vehicle/delete-user: passed (0.01s)
+    - Test_Vehicle/delete-admin: passed (0.01s)
+
+
+delexceptionbus:
+  Status: passed
+  Tests: 13 (Passed: 13, Failed: 0, Skipped: 0)
+  Duration: 1.36s
+  Detailed Tests:
+    - Test_DeliveryException: passed (1.35s)
+    - Test_DeliveryException/query-all: passed (0.01s)
+    - Test_DeliveryException/query-byid: passed (0.01s)
+    - Test_DeliveryException/create-basic_no_resolved_by: passed (0.01s)
+    - Test_DeliveryException/create-basic_with_resolved_by: passed (0.01s)
+    - Test_DeliveryException/update-basic_no_resolved_by: passed (0.02s)
+    - Test_DeliveryException/update-basic_with_resolved_by: passed (0.02s)
+    - Test_DeliveryException/update-basic_with_escalated_to: passed (0.02s)
+    - Test_DeliveryException/update-basic_without_resolved_by: passed (0.02s)
+    - Test_DeliveryException/softDelete-user: passed (0.02s)
+    - Test_DeliveryException/softDelete-admin: passed (0.02s)
+    - Test_DeliveryException/hardDelete-user: passed (0.01s)
+    - Test_DeliveryException/hardDelete-admin: passed (0.01s)
+
+
+imagebus:
+  Status: passed
+  Tests: 11 (Passed: 11, Failed: 0, Skipped: 0)
+  Duration: 1.31s
+  Detailed Tests:
+    - Test_Image: passed (1.30s)
+    - Test_Image/query-all: passed (0.01s)
+    - Test_Image/query-byid: passed (0.01s)
+    - Test_Image/create-basic_no_exception_id: passed (0.01s)
+    - Test_Image/create-basic_with_exception_id: passed (0.01s)
+    - Test_Image/update-basic_no_exception_id: passed (0.02s)
+    - Test_Image/update-basic_with_exception_id: passed (0.01s)
+    - Test_Image/softDelete-user: passed (0.02s)
+    - Test_Image/softDelete-admin: passed (0.02s)
+    - Test_Image/hardDelete-user: passed (0.01s)
+    - Test_Image/hardDelete-admin: passed (0.01s)
+
+
+qrcodebus:
+  Status: passed
+  Tests: 7 (Passed: 7, Failed: 0, Skipped: 0)
+  Duration: 1.12s
+  Detailed Tests:
+    - Test_QRcode: passed (1.11s)
+    - Test_QRcode/query-all: passed (0.01s)
+    - Test_QRcode/query-byid: passed (0.01s)
+    - Test_QRcode/query-byhash: passed (0.01s)
+    - Test_QRcode/create-basic: passed (0.01s)
+    - Test_QRcode/Delete-user: passed (0.01s)
+    - Test_QRcode/Delete-admin: passed (0.01s)
+
+
+syncbatchbus:
+  Status: passed
+  Tests: 25 (Passed: 25, Failed: 0, Skipped: 0)
+  Duration: 2.22s
+  Detailed Tests:
+    - Test_SyncBatch: passed (2.21s)
+    - Test_SyncBatch/query-byid: passed (0.01s)
+    - Test_SyncBatch/create-basic: passed (0.01s)
+    - Test_SyncBatch/create-basic#01: passed (0.01s)
+    - Test_SyncBatch/query-byid#01: passed (0.01s)
+    - Test_SyncBatch/create-basic#02: passed (0.01s)
+    - Test_SyncBatch/create-basic#03: passed (0.01s)
+    - Test_SyncBatch/query-byid#02: passed (0.01s)
+    - Test_SyncBatch/query-byid#03: passed (0.01s)
+    - Test_SyncBatch/create-basic#04: passed (0.01s)
+    - Test_SyncBatch/query-byid#04: passed (0.01s)
+    - Test_SyncBatch/create-basic#05: passed (0.01s)
+    - Test_SyncBatch/query-byid#05: passed (0.01s)
+    - Test_SyncBatch/create-basic#06: passed (0.01s)
+    - Test_SyncBatch/query-byid#06: passed (0.01s)
+    - Test_SyncBatch/query-basic: passed (0.01s)
+    - Test_SyncBatch/query-byid#07: passed (0.01s)
+    - Test_SyncBatch/create-basic#07: passed (0.01s)
+    - Test_SyncBatch/create-basic#08: passed (0.01s)
+    - Test_SyncBatch/query-byid#08: passed (0.01s)
+    - Test_SyncBatch/query-byid#09: passed (0.02s)
+    - Test_SyncBatch/create-basic#09: passed (0.01s)
+    - Test_SyncBatch/create-basic#10: passed (0.01s)
+    - Test_SyncBatch/query-byid#10: passed (0.01s)
+    - Test_SyncBatch/query-byid#11: passed (0.01s)
+
