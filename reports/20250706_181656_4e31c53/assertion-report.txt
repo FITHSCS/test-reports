@@ -1,0 +1,617 @@
+Assertion Report - 2025-07-06 18:16:44 UTC
+================================================================================
+
+Total Assertions: 238
+Passed: 105
+Failed: 0
+Info: 28
+
+Assertion Types:
+----------------------------------------
+  test_start: 105 (P:0, F:0, I:0)
+  test_pass: 105 (P:105, F:0, I:0)
+  string_comparison: 28 (P:0, F:0, I:28)
+
+Package Breakdown:
+----------------------------------------
+
+auditbus:
+  Total: 4, Passed: 2, Failed: 0, Info: 0
+  Assertions:
+    - Test_Audit: test_start (running)
+    - Test_Audit/query-all: test_start (running)
+    - Test_Audit: test_pass (passed)
+    - Test_Audit/query-all: test_pass (passed)
+
+facilitybus:
+  Total: 14, Passed: 7, Failed: 0, Info: 0
+  Assertions:
+    - Test_Facility: test_start (running)
+    - Test_Facility/query-all: test_start (running)
+    - Test_Facility/query-byid: test_start (running)
+    - Test_Facility/create-basic: test_start (running)
+    - Test_Facility/update-basic: test_start (running)
+    - Test_Facility/delete-user: test_start (running)
+    - Test_Facility/delete-admin: test_start (running)
+    - Test_Facility: test_pass (passed)
+    - Test_Facility/query-all: test_pass (passed)
+    - Test_Facility/query-byid: test_pass (passed)
+    - Test_Facility/create-basic: test_pass (passed)
+    - Test_Facility/update-basic: test_pass (passed)
+    - Test_Facility/delete-user: test_pass (passed)
+    - Test_Facility/delete-admin: test_pass (passed)
+
+manifestbus:
+  Total: 20, Passed: 9, Failed: 0, Info: 2
+  Assertions:
+    - Test_Manifest: test_start (running)
+    - Test_Manifest/query-all: test_start (running)
+    - Test_Manifest/query-all: string_comparison (info)
+    - Test_Manifest/query-all: string_comparison (info)
+    - Test_Manifest/query-byid: test_start (running)
+    - Test_Manifest/create-basic: test_start (running)
+    - Test_Manifest/update-basic: test_start (running)
+    - Test_Manifest/softDelete-user: test_start (running)
+    - Test_Manifest/softDelete-admin: test_start (running)
+    - Test_Manifest/hardDelete-user: test_start (running)
+    - Test_Manifest/hardDelete-admin: test_start (running)
+    - Test_Manifest: test_pass (passed)
+    - Test_Manifest/query-all: test_pass (passed)
+    - Test_Manifest/query-byid: test_pass (passed)
+    - Test_Manifest/create-basic: test_pass (passed)
+    - Test_Manifest/update-basic: test_pass (passed)
+    - Test_Manifest/softDelete-user: test_pass (passed)
+    - Test_Manifest/softDelete-admin: test_pass (passed)
+    - Test_Manifest/hardDelete-user: test_pass (passed)
+    - Test_Manifest/hardDelete-admin: test_pass (passed)
+
+userbus:
+  Total: 12, Passed: 6, Failed: 0, Info: 0
+  Assertions:
+    - Test_User: test_start (running)
+    - Test_User/query-all: test_start (running)
+    - Test_User/create-basic: test_start (running)
+    - Test_User/update-basic: test_start (running)
+    - Test_User/delete-user: test_start (running)
+    - Test_User/delete-admin: test_start (running)
+    - Test_User: test_pass (passed)
+    - Test_User/query-all: test_pass (passed)
+    - Test_User/create-basic: test_pass (passed)
+    - Test_User/update-basic: test_pass (passed)
+    - Test_User/delete-user: test_pass (passed)
+    - Test_User/delete-admin: test_pass (passed)
+
+gpstrackingbus:
+  Total: 18, Passed: 9, Failed: 0, Info: 0
+  Assertions:
+    - Test_GPSTracking: test_start (running)
+    - Test_GPSTracking/query-all: test_start (running)
+    - Test_GPSTracking/query-byid: test_start (running)
+    - Test_GPSTracking/create-basic: test_start (running)
+    - Test_GPSTracking/update-basic: test_start (running)
+    - Test_GPSTracking/softDelete-user: test_start (running)
+    - Test_GPSTracking/softDelete-admin: test_start (running)
+    - Test_GPSTracking/hardDelete-user: test_start (running)
+    - Test_GPSTracking/hardDelete-admin: test_start (running)
+    - Test_GPSTracking: test_pass (passed)
+    - Test_GPSTracking/query-all: test_pass (passed)
+    - Test_GPSTracking/query-byid: test_pass (passed)
+    - Test_GPSTracking/create-basic: test_pass (passed)
+    - Test_GPSTracking/update-basic: test_pass (passed)
+    - Test_GPSTracking/softDelete-user: test_pass (passed)
+    - Test_GPSTracking/softDelete-admin: test_pass (passed)
+    - Test_GPSTracking/hardDelete-user: test_pass (passed)
+    - Test_GPSTracking/hardDelete-admin: test_pass (passed)
+
+signaturebus:
+  Total: 18, Passed: 9, Failed: 0, Info: 0
+  Assertions:
+    - Test_Signature: test_start (running)
+    - Test_Signature/query-all: test_start (running)
+    - Test_Signature/query-byid: test_start (running)
+    - Test_Signature/create-basic: test_start (running)
+    - Test_Signature/update-basic: test_start (running)
+    - Test_Signature/softDelete-user: test_start (running)
+    - Test_Signature/softDelete-admin: test_start (running)
+    - Test_Signature/hardDelete-user: test_start (running)
+    - Test_Signature/hardDelete-admin: test_start (running)
+    - Test_Signature: test_pass (passed)
+    - Test_Signature/query-all: test_pass (passed)
+    - Test_Signature/query-byid: test_pass (passed)
+    - Test_Signature/create-basic: test_pass (passed)
+    - Test_Signature/update-basic: test_pass (passed)
+    - Test_Signature/softDelete-user: test_pass (passed)
+    - Test_Signature/softDelete-admin: test_pass (passed)
+    - Test_Signature/hardDelete-user: test_pass (passed)
+    - Test_Signature/hardDelete-admin: test_pass (passed)
+
+vehiclebus:
+  Total: 14, Passed: 7, Failed: 0, Info: 0
+  Assertions:
+    - Test_Vehicle: test_start (running)
+    - Test_Vehicle/query-all: test_start (running)
+    - Test_Vehicle/query-byid: test_start (running)
+    - Test_Vehicle/create-basic: test_start (running)
+    - Test_Vehicle/update-basic: test_start (running)
+    - Test_Vehicle/delete-user: test_start (running)
+    - Test_Vehicle/delete-admin: test_start (running)
+    - Test_Vehicle: test_pass (passed)
+    - Test_Vehicle/query-all: test_pass (passed)
+    - Test_Vehicle/query-byid: test_pass (passed)
+    - Test_Vehicle/create-basic: test_pass (passed)
+    - Test_Vehicle/update-basic: test_pass (passed)
+    - Test_Vehicle/delete-user: test_pass (passed)
+    - Test_Vehicle/delete-admin: test_pass (passed)
+
+delexceptionbus:
+  Total: 26, Passed: 13, Failed: 0, Info: 0
+  Assertions:
+    - Test_DeliveryException: test_start (running)
+    - Test_DeliveryException/query-all: test_start (running)
+    - Test_DeliveryException/query-byid: test_start (running)
+    - Test_DeliveryException/create-basic_no_resolved_by: test_start (running)
+    - Test_DeliveryException/create-basic_with_resolved_by: test_start (running)
+    - Test_DeliveryException/update-basic_no_resolved_by: test_start (running)
+    - Test_DeliveryException/update-basic_with_resolved_by: test_start (running)
+    - Test_DeliveryException/update-basic_with_escalated_to: test_start (running)
+    - Test_DeliveryException/update-basic_without_resolved_by: test_start (running)
+    - Test_DeliveryException/softDelete-user: test_start (running)
+    - Test_DeliveryException/softDelete-admin: test_start (running)
+    - Test_DeliveryException/hardDelete-user: test_start (running)
+    - Test_DeliveryException/hardDelete-admin: test_start (running)
+    - Test_DeliveryException: test_pass (passed)
+    - Test_DeliveryException/query-all: test_pass (passed)
+    - Test_DeliveryException/query-byid: test_pass (passed)
+    - Test_DeliveryException/create-basic_no_resolved_by: test_pass (passed)
+    - Test_DeliveryException/create-basic_with_resolved_by: test_pass (passed)
+    - Test_DeliveryException/update-basic_no_resolved_by: test_pass (passed)
+    - Test_DeliveryException/update-basic_with_resolved_by: test_pass (passed)
+    - Test_DeliveryException/update-basic_with_escalated_to: test_pass (passed)
+    - Test_DeliveryException/update-basic_without_resolved_by: test_pass (passed)
+    - Test_DeliveryException/softDelete-user: test_pass (passed)
+    - Test_DeliveryException/softDelete-admin: test_pass (passed)
+    - Test_DeliveryException/hardDelete-user: test_pass (passed)
+    - Test_DeliveryException/hardDelete-admin: test_pass (passed)
+
+imagebus:
+  Total: 22, Passed: 11, Failed: 0, Info: 0
+  Assertions:
+    - Test_Image: test_start (running)
+    - Test_Image/query-all: test_start (running)
+    - Test_Image/query-byid: test_start (running)
+    - Test_Image/create-basic_no_exception_id: test_start (running)
+    - Test_Image/create-basic_with_exception_id: test_start (running)
+    - Test_Image/update-basic_no_exception_id: test_start (running)
+    - Test_Image/update-basic_with_exception_id: test_start (running)
+    - Test_Image/softDelete-user: test_start (running)
+    - Test_Image/softDelete-admin: test_start (running)
+    - Test_Image/hardDelete-user: test_start (running)
+    - Test_Image/hardDelete-admin: test_start (running)
+    - Test_Image: test_pass (passed)
+    - Test_Image/query-all: test_pass (passed)
+    - Test_Image/query-byid: test_pass (passed)
+    - Test_Image/create-basic_no_exception_id: test_pass (passed)
+    - Test_Image/create-basic_with_exception_id: test_pass (passed)
+    - Test_Image/update-basic_no_exception_id: test_pass (passed)
+    - Test_Image/update-basic_with_exception_id: test_pass (passed)
+    - Test_Image/softDelete-user: test_pass (passed)
+    - Test_Image/softDelete-admin: test_pass (passed)
+    - Test_Image/hardDelete-user: test_pass (passed)
+    - Test_Image/hardDelete-admin: test_pass (passed)
+
+qrcodebus:
+  Total: 14, Passed: 7, Failed: 0, Info: 0
+  Assertions:
+    - Test_QRcode: test_start (running)
+    - Test_QRcode/query-all: test_start (running)
+    - Test_QRcode/query-byid: test_start (running)
+    - Test_QRcode/query-byhash: test_start (running)
+    - Test_QRcode/create-basic: test_start (running)
+    - Test_QRcode/Delete-user: test_start (running)
+    - Test_QRcode/Delete-admin: test_start (running)
+    - Test_QRcode: test_pass (passed)
+    - Test_QRcode/query-all: test_pass (passed)
+    - Test_QRcode/query-byid: test_pass (passed)
+    - Test_QRcode/query-byhash: test_pass (passed)
+    - Test_QRcode/create-basic: test_pass (passed)
+    - Test_QRcode/Delete-user: test_pass (passed)
+    - Test_QRcode/Delete-admin: test_pass (passed)
+
+syncbatchbus:
+  Total: 76, Passed: 25, Failed: 0, Info: 26
+  Assertions:
+    - Test_SyncBatch: test_start (running)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch: string_comparison (info)
+    - Test_SyncBatch/query-byid: test_start (running)
+    - Test_SyncBatch/create-basic: test_start (running)
+    - Test_SyncBatch/create-basic#01: test_start (running)
+    - Test_SyncBatch/create-basic#01: string_comparison (info)
+    - Test_SyncBatch/create-basic#01: string_comparison (info)
+    - Test_SyncBatch/query-byid#01: test_start (running)
+    - Test_SyncBatch/query-byid#01: string_comparison (info)
+    - Test_SyncBatch/query-byid#01: string_comparison (info)
+    - Test_SyncBatch/create-basic#02: test_start (running)
+    - Test_SyncBatch/create-basic#03: test_start (running)
+    - Test_SyncBatch/create-basic#03: string_comparison (info)
+    - Test_SyncBatch/create-basic#03: string_comparison (info)
+    - Test_SyncBatch/query-byid#02: test_start (running)
+    - Test_SyncBatch/query-byid#03: test_start (running)
+    - Test_SyncBatch/query-byid#03: string_comparison (info)
+    - Test_SyncBatch/query-byid#03: string_comparison (info)
+    - Test_SyncBatch/create-basic#04: test_start (running)
+    - Test_SyncBatch/query-byid#04: test_start (running)
+    - Test_SyncBatch/query-byid#04: string_comparison (info)
+    - Test_SyncBatch/query-byid#04: string_comparison (info)
+    - Test_SyncBatch/create-basic#05: test_start (running)
+    - Test_SyncBatch/create-basic#05: string_comparison (info)
+    - Test_SyncBatch/create-basic#05: string_comparison (info)
+    - Test_SyncBatch/query-byid#05: test_start (running)
+    - Test_SyncBatch/create-basic#06: test_start (running)
+    - Test_SyncBatch/query-byid#06: test_start (running)
+    - Test_SyncBatch/query-byid#06: string_comparison (info)
+    - Test_SyncBatch/query-byid#06: string_comparison (info)
+    - Test_SyncBatch/query-basic: test_start (running)
+    - Test_SyncBatch/query-byid#07: test_start (running)
+    - Test_SyncBatch/create-basic#07: test_start (running)
+    - Test_SyncBatch/create-basic#08: test_start (running)
+    - Test_SyncBatch/query-byid#08: test_start (running)
+    - Test_SyncBatch/query-byid#09: test_start (running)
+    - Test_SyncBatch/create-basic#09: test_start (running)
+    - Test_SyncBatch/create-basic#10: test_start (running)
+    - Test_SyncBatch/query-byid#10: test_start (running)
+    - Test_SyncBatch/query-byid#11: test_start (running)
+    - Test_SyncBatch: test_pass (passed)
+    - Test_SyncBatch/query-byid: test_pass (passed)
+    - Test_SyncBatch/create-basic: test_pass (passed)
+    - Test_SyncBatch/create-basic#01: test_pass (passed)
+    - Test_SyncBatch/query-byid#01: test_pass (passed)
+    - Test_SyncBatch/create-basic#02: test_pass (passed)
+    - Test_SyncBatch/create-basic#03: test_pass (passed)
+    - Test_SyncBatch/query-byid#02: test_pass (passed)
+    - Test_SyncBatch/query-byid#03: test_pass (passed)
+    - Test_SyncBatch/create-basic#04: test_pass (passed)
+    - Test_SyncBatch/query-byid#04: test_pass (passed)
+    - Test_SyncBatch/create-basic#05: test_pass (passed)
+    - Test_SyncBatch/query-byid#05: test_pass (passed)
+    - Test_SyncBatch/create-basic#06: test_pass (passed)
+    - Test_SyncBatch/query-byid#06: test_pass (passed)
+    - Test_SyncBatch/query-basic: test_pass (passed)
+    - Test_SyncBatch/query-byid#07: test_pass (passed)
+    - Test_SyncBatch/create-basic#07: test_pass (passed)
+    - Test_SyncBatch/create-basic#08: test_pass (passed)
+    - Test_SyncBatch/query-byid#08: test_pass (passed)
+    - Test_SyncBatch/query-byid#09: test_pass (passed)
+    - Test_SyncBatch/create-basic#09: test_pass (passed)
+    - Test_SyncBatch/create-basic#10: test_pass (passed)
+    - Test_SyncBatch/query-byid#10: test_pass (passed)
+    - Test_SyncBatch/query-byid#11: test_pass (passed)
+
+
+Test Cases (Table-Driven Tests):
+----------------------------------------
+
+Test_Audit:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Facility:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Audit/query-all:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Facility/query-all:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Facility/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Facility/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Facility/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Facility/delete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Facility/delete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Manifest:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_User:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Manifest/query-all:
+  Total: 4, Passed: 1, Failed: 0
+
+Test_Manifest/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Manifest/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Manifest/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Manifest/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Manifest/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Manifest/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Manifest/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_User/query-all:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_User/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_User/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_User/delete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_User/delete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_GPSTracking:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_GPSTracking/query-all:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_GPSTracking/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_GPSTracking/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_GPSTracking/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_GPSTracking/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_GPSTracking/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_GPSTracking/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_GPSTracking/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Signature:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Signature/query-all:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Signature/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Signature/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Signature/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Signature/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Signature/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Signature/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Signature/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Vehicle:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Vehicle/query-all:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Vehicle/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Vehicle/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Vehicle/update-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Vehicle/delete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Vehicle/delete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/query-all:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/create-basic_no_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/create-basic_with_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/update-basic_no_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/update-basic_with_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/update-basic_with_escalated_to:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/update-basic_without_resolved_by:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_DeliveryException/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/query-all:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/create-basic_no_exception_id:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/create-basic_with_exception_id:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/update-basic_no_exception_id:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/update-basic_with_exception_id:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/softDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/softDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/hardDelete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_Image/hardDelete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_QRcode:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_QRcode/query-all:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_QRcode/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_QRcode/query-byhash:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_QRcode/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_QRcode/Delete-user:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_QRcode/Delete-admin:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch:
+  Total: 14, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#01:
+  Total: 4, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#01:
+  Total: 4, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#02:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#03:
+  Total: 4, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#02:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#03:
+  Total: 4, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#04:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#04:
+  Total: 4, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#05:
+  Total: 4, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#05:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#06:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#06:
+  Total: 4, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-basic:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#07:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#07:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#08:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#08:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#09:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#09:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/create-basic#10:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#10:
+  Total: 2, Passed: 1, Failed: 0
+
+Test_SyncBatch/query-byid#11:
+  Total: 2, Passed: 1, Failed: 0

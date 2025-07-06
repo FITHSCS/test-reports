@@ -1,0 +1,19 @@
+Test Report - 2025-07-06 18:16:44 UTC
+Branch: testing_pipeline_local
+Commit: 4e31c53
+Status: passed
+Duration: 34.47s
+Coverage: 82.6%
+
+Package Results:
+  auditbus: passed (2/2 passed)
+  facilitybus: passed (7/7 passed)
+  manifestbus: passed (9/9 passed)
+  userbus: passed (6/6 passed)
+  gpstrackingbus: passed (9/9 passed)
+  signaturebus: passed (9/9 passed)
+  vehiclebus: passed (7/7 passed)
+  delexceptionbus: passed (13/13 passed)
+  imagebus: passed (11/11 passed)
+  qrcodebus: passed (7/7 passed)
+  syncbatchbus: passed (25/25 passed)
