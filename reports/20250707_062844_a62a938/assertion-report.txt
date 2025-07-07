@@ -1,0 +1,41 @@
+================================================================================
+DETAILED TEST ASSERTION REPORT
+================================================================================
+
+Report Generated: 2025-07-07T06:28:35.362048Z
+Branch: testing_pipeline_local
+Commit: a62a938
+Overall Status: FAILED
+Total Duration: 0.00s
+Coverage: 82.6%
+
+TEST SUMMARY
+----------------------------------------
+Total Tests: 105
+Passed: 103
+Failed: 2
+Skipped: 0
+Success Rate: 98.1%
+Packages Tested: 11
+
+================================================================================
+PACKAGE: auditbus
+================================================================================
+Full Name: github.com/FITHSCS/backend/business/domain/auditbus
+Status: PASSED
+Duration: 0.00s
+Coverage: 82.1%
+Tests: 2 (P:2, F:0, S:0)
+
+DATABASE OPERATIONS:
+----------------------------------------
+ 1. COVERAGE: 82.1
+ 2. COVERAGE: 82.1
+
+DETAILED TEST RESULTS:
+----------------------------------------
+
+Test: Test_Audit
+Status: PASSED
+Duration: 12.270s
+Execution Flow:
