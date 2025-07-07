@@ -1,0 +1,21 @@
+Test Report - 2025-07-07 06:36:15 UTC
+Branch: testing_pipeline_local
+Commit: 8364569
+Status: failed
+Duration: 34.26s
+Coverage: 82.6%
+
+Package Results:
+  tee: passed (0/0 passed)
+  raw-test-output.txt: passed (0/0 passed)
+  auditbus: passed (2/2 passed)
+  facilitybus: passed (7/7 passed)
+  manifestbus: passed (9/9 passed)
+  userbus: passed (6/6 passed)
+  gpstrackingbus: passed (9/9 passed)
+  signaturebus: passed (9/9 passed)
+  vehiclebus: passed (7/7 passed)
+  delexceptionbus: passed (13/13 passed)
+  imagebus: passed (11/11 passed)
+  qrcodebus: passed (7/7 passed)
+  syncbatchbus: failed (23/25 passed)

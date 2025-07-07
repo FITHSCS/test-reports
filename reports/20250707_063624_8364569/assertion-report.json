@@ -1,0 +1,2674 @@
+{
+  "metadata": {
+    "timestamp": "2025-07-07T06:36:15.840989Z",
+    "branch": "testing_pipeline_local",
+    "commit": "8364569e2f40f8926b21bca9a7ef907aa5a36a03",
+    "commit_short": "8364569",
+    "status": "failed",
+    "duration": 0,
+    "total_coverage": 82.6
+  },
+  "summary": {
+    "total_tests": 105,
+    "passed": 103,
+    "failed": 2,
+    "skipped": 0,
+    "packages_tested": 13,
+    "success_rate": 98.09523809523809
+  },
+  "packages": [
+    {
+      "name": "tee",
+      "short_name": "tee",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 0.0,
+      "tests": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [],
+      "detailed_tests": []
+    },
+    {
+      "name": "raw-test-output.txt",
+      "short_name": "raw-test-output.txt",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 0.0,
+      "tests": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [],
+      "detailed_tests": []
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/auditbus",
+      "short_name": "auditbus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 82.1,
+      "tests": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "82.1",
+          "timestamp": "2025-07-07T06:36:15.837015",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "82.1",
+          "timestamp": "2025-07-07T06:36:15.837032",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_Audit",
+          "status": "passed",
+          "duration": 12.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:35:49.107920979Z",
+              "action": "test_start",
+              "message": "Test Test_Audit started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:01.123669281Z",
+              "action": "test_pass",
+              "message": "Test Test_Audit passed",
+              "duration": 12.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Audit/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:01.035974804Z",
+              "action": "test_start",
+              "message": "Test Test_Audit/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:01.123664001Z",
+              "action": "test_pass",
+              "message": "Test Test_Audit/query-all passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/facilitybus",
+      "short_name": "facilitybus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 73.0,
+      "tests": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "73.0",
+          "timestamp": "2025-07-07T06:36:15.837187",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "73.0",
+          "timestamp": "2025-07-07T06:36:15.837200",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_Facility",
+          "status": "passed",
+          "duration": 10.99,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:35:50.304111366Z",
+              "action": "test_start",
+              "message": "Test Test_Facility started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:01.291928437Z",
+              "action": "test_pass",
+              "message": "Test Test_Facility passed",
+              "duration": 10.99
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Facility/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:01.183826838Z",
+              "action": "test_start",
+              "message": "Test Test_Facility/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:01.291563535Z",
+              "action": "test_pass",
+              "message": "Test Test_Facility/query-all passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Facility/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:01.196816367Z",
+              "action": "test_start",
+              "message": "Test Test_Facility/query-byid started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:01.291572812Z",
+              "action": "test_pass",
+              "message": "Test Test_Facility/query-byid passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Facility/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:01.206542161Z",
+              "action": "test_start",
+              "message": "Test Test_Facility/create-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:01.291580366Z",
+              "action": "test_pass",
+              "message": "Test Test_Facility/create-basic passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Facility/update-basic",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:01.214801772Z",
+              "action": "test_start",
+              "message": "Test Test_Facility/update-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:01.291590024Z",
+              "action": "test_pass",
+              "message": "Test Test_Facility/update-basic passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Facility/delete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:01.240073687Z",
+              "action": "test_start",
+              "message": "Test Test_Facility/delete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:01.291597719Z",
+              "action": "test_pass",
+              "message": "Test Test_Facility/delete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Facility/delete-admin",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:01.251094573Z",
+              "action": "test_start",
+              "message": "Test Test_Facility/delete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:01.291912899Z",
+              "action": "test_pass",
+              "message": "Test Test_Facility/delete-admin passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/manifestbus",
+      "short_name": "manifestbus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 84.0,
+      "tests": {
+        "total": 9,
+        "passed": 9,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "84.0",
+          "timestamp": "2025-07-07T06:36:15.837486",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "84.0",
+          "timestamp": "2025-07-07T06:36:15.837500",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_Manifest",
+          "status": "passed",
+          "duration": 1.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:02.524191649Z",
+              "action": "test_start",
+              "message": "Test Test_Manifest started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:03.53936317Z",
+              "action": "test_pass",
+              "message": "Test Test_Manifest passed",
+              "duration": 1.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Manifest/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:03.37613117Z",
+              "action": "test_start",
+              "message": "Test Test_Manifest/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:03.539300753Z",
+              "action": "test_pass",
+              "message": "Test Test_Manifest/query-all passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Manifest/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:03.389693205Z",
+              "action": "test_start",
+              "message": "Test Test_Manifest/query-byid started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:03.539311122Z",
+              "action": "test_pass",
+              "message": "Test Test_Manifest/query-byid passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Manifest/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:03.398842491Z",
+              "action": "test_start",
+              "message": "Test Test_Manifest/create-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:03.539321161Z",
+              "action": "test_pass",
+              "message": "Test Test_Manifest/create-basic passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Manifest/update-basic",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:03.411582757Z",
+              "action": "test_start",
+              "message": "Test Test_Manifest/update-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:03.539328244Z",
+              "action": "test_pass",
+              "message": "Test Test_Manifest/update-basic passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Manifest/softDelete-user",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:03.430205726Z",
+              "action": "test_start",
+              "message": "Test Test_Manifest/softDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:03.539335979Z",
+              "action": "test_pass",
+              "message": "Test Test_Manifest/softDelete-user passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Manifest/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:03.447287488Z",
+              "action": "test_start",
+              "message": "Test Test_Manifest/softDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:03.539343162Z",
+              "action": "test_pass",
+              "message": "Test Test_Manifest/softDelete-admin passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Manifest/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:03.463918214Z",
+              "action": "test_start",
+              "message": "Test Test_Manifest/hardDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:03.539350265Z",
+              "action": "test_pass",
+              "message": "Test Test_Manifest/hardDelete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Manifest/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:03.475144342Z",
+              "action": "test_start",
+              "message": "Test Test_Manifest/hardDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:03.539356657Z",
+              "action": "test_pass",
+              "message": "Test Test_Manifest/hardDelete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/userbus",
+      "short_name": "userbus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 59.2,
+      "tests": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "59.2",
+          "timestamp": "2025-07-07T06:36:15.837676",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "59.2",
+          "timestamp": "2025-07-07T06:36:15.837690",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_User",
+          "status": "passed",
+          "duration": 1.33,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:03.378960742Z",
+              "action": "test_start",
+              "message": "Test Test_User started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:04.70225545Z",
+              "action": "test_pass",
+              "message": "Test Test_User passed",
+              "duration": 1.33
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_User/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:04.263670304Z",
+              "action": "test_start",
+              "message": "Test Test_User/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:04.702102433Z",
+              "action": "test_pass",
+              "message": "Test Test_User/query-all passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_User/create-basic",
+          "status": "passed",
+          "duration": 0.16,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:04.277605589Z",
+              "action": "test_start",
+              "message": "Test Test_User/create-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:04.702114496Z",
+              "action": "test_pass",
+              "message": "Test Test_User/create-basic passed",
+              "duration": 0.16
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_User/update-basic",
+          "status": "passed",
+          "duration": 0.22,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:04.43312759Z",
+              "action": "test_start",
+              "message": "Test Test_User/update-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:04.702129795Z",
+              "action": "test_pass",
+              "message": "Test Test_User/update-basic passed",
+              "duration": 0.22
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_User/delete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:04.654146323Z",
+              "action": "test_start",
+              "message": "Test Test_User/delete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:04.702238899Z",
+              "action": "test_pass",
+              "message": "Test Test_User/delete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_User/delete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:04.664834032Z",
+              "action": "test_start",
+              "message": "Test Test_User/delete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:04.702252334Z",
+              "action": "test_pass",
+              "message": "Test Test_User/delete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/gpstrackingbus",
+      "short_name": "gpstrackingbus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 83.1,
+      "tests": {
+        "total": 9,
+        "passed": 9,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "83.1",
+          "timestamp": "2025-07-07T06:36:15.837920",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "83.1",
+          "timestamp": "2025-07-07T06:36:15.837933",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_GPSTracking",
+          "status": "passed",
+          "duration": 1.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:04.89538556Z",
+              "action": "test_start",
+              "message": "Test Test_GPSTracking started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:05.904216224Z",
+              "action": "test_pass",
+              "message": "Test Test_GPSTracking passed",
+              "duration": 1.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_GPSTracking/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:05.810012454Z",
+              "action": "test_start",
+              "message": "Test Test_GPSTracking/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:05.903935368Z",
+              "action": "test_pass",
+              "message": "Test Test_GPSTracking/query-all passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_GPSTracking/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:05.820288883Z",
+              "action": "test_start",
+              "message": "Test Test_GPSTracking/query-byid started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:05.903946599Z",
+              "action": "test_pass",
+              "message": "Test Test_GPSTracking/query-byid passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_GPSTracking/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:05.827455954Z",
+              "action": "test_start",
+              "message": "Test Test_GPSTracking/create-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:05.903955185Z",
+              "action": "test_pass",
+              "message": "Test Test_GPSTracking/create-basic passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_GPSTracking/update-basic",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:05.836259702Z",
+              "action": "test_start",
+              "message": "Test Test_GPSTracking/update-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:05.90396308Z",
+              "action": "test_pass",
+              "message": "Test Test_GPSTracking/update-basic passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_GPSTracking/softDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:05.850666601Z",
+              "action": "test_start",
+              "message": "Test Test_GPSTracking/softDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:05.903972808Z",
+              "action": "test_pass",
+              "message": "Test Test_GPSTracking/softDelete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_GPSTracking/softDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:05.859045603Z",
+              "action": "test_start",
+              "message": "Test Test_GPSTracking/softDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:05.904196447Z",
+              "action": "test_pass",
+              "message": "Test Test_GPSTracking/softDelete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_GPSTracking/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:05.868007017Z",
+              "action": "test_start",
+              "message": "Test Test_GPSTracking/hardDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:05.904205184Z",
+              "action": "test_pass",
+              "message": "Test Test_GPSTracking/hardDelete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_GPSTracking/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:05.875310114Z",
+              "action": "test_start",
+              "message": "Test Test_GPSTracking/hardDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:05.904212718Z",
+              "action": "test_pass",
+              "message": "Test Test_GPSTracking/hardDelete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/signaturebus",
+      "short_name": "signaturebus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 85.0,
+      "tests": {
+        "total": 9,
+        "passed": 9,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "85.0",
+          "timestamp": "2025-07-07T06:36:15.838161",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "85.0",
+          "timestamp": "2025-07-07T06:36:15.838174",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_Signature",
+          "status": "passed",
+          "duration": 1.04,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:06.397692299Z",
+              "action": "test_start",
+              "message": "Test Test_Signature started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:07.441228875Z",
+              "action": "test_pass",
+              "message": "Test Test_Signature passed",
+              "duration": 1.04
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Signature/query-all",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:07.299070288Z",
+              "action": "test_start",
+              "message": "Test Test_Signature/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:07.441168522Z",
+              "action": "test_pass",
+              "message": "Test Test_Signature/query-all passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Signature/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:07.315665677Z",
+              "action": "test_start",
+              "message": "Test Test_Signature/query-byid started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:07.441178992Z",
+              "action": "test_pass",
+              "message": "Test Test_Signature/query-byid passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Signature/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:07.325964337Z",
+              "action": "test_start",
+              "message": "Test Test_Signature/create-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:07.441189462Z",
+              "action": "test_pass",
+              "message": "Test Test_Signature/create-basic passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Signature/update-basic",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:07.339070348Z",
+              "action": "test_start",
+              "message": "Test Test_Signature/update-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:07.441196765Z",
+              "action": "test_pass",
+              "message": "Test Test_Signature/update-basic passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Signature/softDelete-user",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:07.36260877Z",
+              "action": "test_start",
+              "message": "Test Test_Signature/softDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:07.441203848Z",
+              "action": "test_pass",
+              "message": "Test Test_Signature/softDelete-user passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Signature/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:07.385009459Z",
+              "action": "test_start",
+              "message": "Test Test_Signature/softDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:07.441212575Z",
+              "action": "test_pass",
+              "message": "Test Test_Signature/softDelete-admin passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Signature/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:07.402519183Z",
+              "action": "test_start",
+              "message": "Test Test_Signature/hardDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:07.441219578Z",
+              "action": "test_pass",
+              "message": "Test Test_Signature/hardDelete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Signature/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:07.410142108Z",
+              "action": "test_start",
+              "message": "Test Test_Signature/hardDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:07.4412259Z",
+              "action": "test_pass",
+              "message": "Test Test_Signature/hardDelete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/vehiclebus",
+      "short_name": "vehiclebus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 80.0,
+      "tests": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "80.0",
+          "timestamp": "2025-07-07T06:36:15.838351",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "80.0",
+          "timestamp": "2025-07-07T06:36:15.838363",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_Vehicle",
+          "status": "passed",
+          "duration": 0.87,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:07.562465214Z",
+              "action": "test_start",
+              "message": "Test Test_Vehicle started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:08.436215165Z",
+              "action": "test_pass",
+              "message": "Test Test_Vehicle passed",
+              "duration": 0.87
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Vehicle/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:08.357819356Z",
+              "action": "test_start",
+              "message": "Test Test_Vehicle/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:08.435533059Z",
+              "action": "test_pass",
+              "message": "Test Test_Vehicle/query-all passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Vehicle/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:08.367371429Z",
+              "action": "test_start",
+              "message": "Test Test_Vehicle/query-byid started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:08.435598812Z",
+              "action": "test_pass",
+              "message": "Test Test_Vehicle/query-byid passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Vehicle/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:08.373888634Z",
+              "action": "test_start",
+              "message": "Test Test_Vehicle/create-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:08.435654516Z",
+              "action": "test_pass",
+              "message": "Test Test_Vehicle/create-basic passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Vehicle/update-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:08.383975438Z",
+              "action": "test_start",
+              "message": "Test Test_Vehicle/update-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:08.435706404Z",
+              "action": "test_pass",
+              "message": "Test Test_Vehicle/update-basic passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Vehicle/delete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:08.398346448Z",
+              "action": "test_start",
+              "message": "Test Test_Vehicle/delete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:08.435757539Z",
+              "action": "test_pass",
+              "message": "Test Test_Vehicle/delete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Vehicle/delete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:08.406732299Z",
+              "action": "test_start",
+              "message": "Test Test_Vehicle/delete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:08.436157017Z",
+              "action": "test_pass",
+              "message": "Test Test_Vehicle/delete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/delexceptionbus",
+      "short_name": "delexceptionbus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 83.3,
+      "tests": {
+        "total": 13,
+        "passed": 13,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "83.3",
+          "timestamp": "2025-07-07T06:36:15.838683",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "83.3",
+          "timestamp": "2025-07-07T06:36:15.838695",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_DeliveryException",
+          "status": "passed",
+          "duration": 1.26,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:08.912423293Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171995373Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException passed",
+              "duration": 1.26
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:09.979360249Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171736168Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/query-all passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:09.990767243Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/query-byid started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.17174804Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/query-byid passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/create-basic_no_resolved_by",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:09.998376942Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/create-basic_no_resolved_by started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171759602Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/create-basic_no_resolved_by passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/create-basic_with_resolved_by",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.007237461Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/create-basic_with_resolved_by started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171880168Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/create-basic_with_resolved_by passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_no_resolved_by",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.015156198Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/update-basic_no_resolved_by started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171890738Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/update-basic_no_resolved_by passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_with_resolved_by",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.035153393Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/update-basic_with_resolved_by started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171900365Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/update-basic_with_resolved_by passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_with_escalated_to",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.054366855Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/update-basic_with_escalated_to started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171911526Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/update-basic_with_escalated_to passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/update-basic_without_resolved_by",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.073329639Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/update-basic_without_resolved_by started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171920173Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/update-basic_without_resolved_by passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/softDelete-user",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.091033505Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/softDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.17196664Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/softDelete-user passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/softDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.109968735Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/softDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171975065Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/softDelete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.126848587Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/hardDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171982679Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/hardDelete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_DeliveryException/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.136141185Z",
+              "action": "test_start",
+              "message": "Test Test_DeliveryException/hardDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:10.171991987Z",
+              "action": "test_pass",
+              "message": "Test Test_DeliveryException/hardDelete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/imagebus",
+      "short_name": "imagebus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 82.9,
+      "tests": {
+        "total": 11,
+        "passed": 11,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "82.9",
+          "timestamp": "2025-07-07T06:36:15.838960",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "82.9",
+          "timestamp": "2025-07-07T06:36:15.838974",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_Image",
+          "status": "passed",
+          "duration": 1.3,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:10.126330238Z",
+              "action": "test_start",
+              "message": "Test Test_Image started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426936821Z",
+              "action": "test_pass",
+              "message": "Test Test_Image passed",
+              "duration": 1.3
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.272961977Z",
+              "action": "test_start",
+              "message": "Test Test_Image/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426586845Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/query-all passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.281834835Z",
+              "action": "test_start",
+              "message": "Test Test_Image/query-byid started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426599719Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/query-byid passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/create-basic_no_exception_id",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.289842972Z",
+              "action": "test_start",
+              "message": "Test Test_Image/create-basic_no_exception_id started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426609107Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/create-basic_no_exception_id passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/create-basic_with_exception_id",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.298841625Z",
+              "action": "test_start",
+              "message": "Test Test_Image/create-basic_with_exception_id started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426617623Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/create-basic_with_exception_id passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/update-basic_no_exception_id",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.30785194Z",
+              "action": "test_start",
+              "message": "Test Test_Image/update-basic_no_exception_id started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426627511Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/update-basic_no_exception_id passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/update-basic_with_exception_id",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.324688942Z",
+              "action": "test_start",
+              "message": "Test Test_Image/update-basic_with_exception_id started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426897337Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/update-basic_with_exception_id passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/softDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.341216083Z",
+              "action": "test_start",
+              "message": "Test Test_Image/softDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426910892Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/softDelete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/softDelete-admin",
+          "status": "passed",
+          "duration": 0.02,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.354065362Z",
+              "action": "test_start",
+              "message": "Test Test_Image/softDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426918346Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/softDelete-admin passed",
+              "duration": 0.02
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/hardDelete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.376328452Z",
+              "action": "test_start",
+              "message": "Test Test_Image/hardDelete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.42692573Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/hardDelete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_Image/hardDelete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.383549374Z",
+              "action": "test_start",
+              "message": "Test Test_Image/hardDelete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:11.426933865Z",
+              "action": "test_pass",
+              "message": "Test Test_Image/hardDelete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/qrcodebus",
+      "short_name": "qrcodebus",
+      "status": "passed",
+      "duration": 0,
+      "coverage": 80.5,
+      "tests": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "80.5",
+          "timestamp": "2025-07-07T06:36:15.839167",
+          "test": ""
+        },
+        {
+          "type": "coverage",
+          "value": "80.5",
+          "timestamp": "2025-07-07T06:36:15.839180",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_QRcode",
+          "status": "passed",
+          "duration": 1.13,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:11.580546873Z",
+              "action": "test_start",
+              "message": "Test Test_QRcode started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:12.711822333Z",
+              "action": "test_pass",
+              "message": "Test Test_QRcode passed",
+              "duration": 1.13
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_QRcode/query-all",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:12.641350349Z",
+              "action": "test_start",
+              "message": "Test Test_QRcode/query-all started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:12.708983202Z",
+              "action": "test_pass",
+              "message": "Test Test_QRcode/query-all passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_QRcode/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:12.651060916Z",
+              "action": "test_start",
+              "message": "Test Test_QRcode/query-byid started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:12.708994443Z",
+              "action": "test_pass",
+              "message": "Test Test_QRcode/query-byid passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_QRcode/query-byhash",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:12.659333861Z",
+              "action": "test_start",
+              "message": "Test Test_QRcode/query-byhash started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:12.709001767Z",
+              "action": "test_pass",
+              "message": "Test Test_QRcode/query-byhash passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_QRcode/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:12.66650483Z",
+              "action": "test_start",
+              "message": "Test Test_QRcode/create-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:12.70900866Z",
+              "action": "test_pass",
+              "message": "Test Test_QRcode/create-basic passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_QRcode/Delete-user",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:12.673232246Z",
+              "action": "test_start",
+              "message": "Test Test_QRcode/Delete-user started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:12.709015783Z",
+              "action": "test_pass",
+              "message": "Test Test_QRcode/Delete-user passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_QRcode/Delete-admin",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:12.681464092Z",
+              "action": "test_start",
+              "message": "Test Test_QRcode/Delete-admin started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:12.711810781Z",
+              "action": "test_pass",
+              "message": "Test Test_QRcode/Delete-admin passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    },
+    {
+      "name": "github.com/FITHSCS/backend/business/domain/syncbatchbus",
+      "short_name": "syncbatchbus",
+      "status": "failed",
+      "duration": 0,
+      "coverage": 93.3,
+      "tests": {
+        "total": 25,
+        "passed": 23,
+        "failed": 2,
+        "skipped": 0
+      },
+      "database_operations": [
+        {
+          "type": "coverage",
+          "value": "93.3",
+          "timestamp": "2025-07-07T06:36:15.840743",
+          "test": ""
+        }
+      ],
+      "detailed_tests": [
+        {
+          "name": "Test_SyncBatch",
+          "status": "failed",
+          "duration": 2.18,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:13.179959065Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364739733Z",
+              "action": "test_fail",
+              "message": "Test Test_SyncBatch failed",
+              "duration": 2.18
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.197508295Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364530751Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.203703795Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364541171Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#01",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.209598201Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#01 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364558674Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic#01 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#01",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.216200082Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#01 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364566508Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#01 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#02",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.223603606Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#02 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364574493Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic#02 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#03",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.229814616Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#03 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364582308Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic#03 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#02",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.236280224Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#02 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364591906Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#02 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#03",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.241443309Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#03 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364601224Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#03 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#04",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.24716444Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#04 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364610681Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic#04 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#04",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.254075842Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#04 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364618636Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#04 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#05",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.259446236Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#05 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364626841Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic#05 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#05",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.266348028Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#05 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364634816Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#05 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#06",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.271830684Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#06 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364645997Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic#06 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#06",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.278637237Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#06 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364653792Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#06 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-basic",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.284076991Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-basic started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364661717Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-basic passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#07",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.290321293Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#07 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364669662Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#07 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#07",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.296068223Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#07 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364677536Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic#07 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#08",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.30322195Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#08 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364686132Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic#08 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#08",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.308073552Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#08 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364694047Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#08 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#09",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.315761189Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#09 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364702583Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#09 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#09",
+          "status": "failed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.320214073Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#09 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364711951Z",
+              "action": "test_fail",
+              "message": "Test Test_SyncBatch/create-basic#09 failed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/create-basic#10",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.329273238Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/create-basic#10 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364720357Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/create-basic#10 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#10",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.336218774Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#10 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364728432Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#10 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        },
+        {
+          "name": "Test_SyncBatch/query-byid#11",
+          "status": "passed",
+          "duration": 0.01,
+          "execution_flow": [
+            {
+              "timestamp": "2025-07-07T06:36:15.342351747Z",
+              "action": "test_start",
+              "message": "Test Test_SyncBatch/query-byid#11 started"
+            },
+            {
+              "timestamp": "2025-07-07T06:36:15.364736377Z",
+              "action": "test_pass",
+              "message": "Test Test_SyncBatch/query-byid#11 passed",
+              "duration": 0.01
+            }
+          ],
+          "database_operations": [],
+          "sub_tests": [],
+          "has_database_ops": false,
+          "operation_count": 0
+        }
+      ]
+    }
+  ]
+}

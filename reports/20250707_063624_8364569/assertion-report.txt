@@ -1,0 +1,65 @@
+================================================================================
+DETAILED TEST ASSERTION REPORT
+================================================================================
+
+Report Generated: 2025-07-07T06:36:15.840989Z
+Branch: testing_pipeline_local
+Commit: 8364569
+Overall Status: FAILED
+Total Duration: 0.00s
+Coverage: 82.6%
+
+TEST SUMMARY
+----------------------------------------
+Total Tests: 105
+Passed: 103
+Failed: 2
+Skipped: 0
+Success Rate: 98.1%
+Packages Tested: 13
+
+================================================================================
+PACKAGE: tee
+================================================================================
+Full Name: tee
+Status: PASSED
+Duration: 0.00s
+Coverage: 0.0%
+Tests: 0 (P:0, F:0, S:0)
+
+DETAILED TEST RESULTS:
+----------------------------------------
+
+================================================================================
+PACKAGE: raw-test-output.txt
+================================================================================
+Full Name: raw-test-output.txt
+Status: PASSED
+Duration: 0.00s
+Coverage: 0.0%
+Tests: 0 (P:0, F:0, S:0)
+
+DETAILED TEST RESULTS:
+----------------------------------------
+
+================================================================================
+PACKAGE: auditbus
+================================================================================
+Full Name: github.com/FITHSCS/backend/business/domain/auditbus
+Status: PASSED
+Duration: 0.00s
+Coverage: 82.1%
+Tests: 2 (P:2, F:0, S:0)
+
+DATABASE OPERATIONS:
+----------------------------------------
+ 1. COVERAGE: 82.1
+ 2. COVERAGE: 82.1
+
+DETAILED TEST RESULTS:
+----------------------------------------
+
+Test: Test_Audit
+Status: PASSED
+Duration: 12.010s
+Execution Flow:
