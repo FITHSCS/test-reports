@@ -1,0 +1,8 @@
+Detailed Test Report - 2025-07-08 14:04:28 UTC
+Branch: testing_pipeline_local
+Commit: f8494b1
+Status: passed
+Duration: 0.00s
+Coverage: 82.6%
+
+Package Results:
