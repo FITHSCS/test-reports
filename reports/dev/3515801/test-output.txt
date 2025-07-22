@@ -1,0 +1,790 @@
+=== RUN   Test_Audit
+=== PAUSE Test_Audit
+=== CONT  Test_Audit
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: tsko
+    dbtest.go:88: Migrate Database: tsko
+=== RUN   Test_Audit/query-all
+=== NAME  Test_Audit
+    dbtest.go:106: Drop Database: tsko
+    dbtest.go:106: ******************** LOGS (Test_Audit) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_Audit) ********************
+--- PASS: Test_Audit (12.55s)
+    --- PASS: Test_Audit/query-all (0.01s)
+PASS
+coverage: 82.1% of statements
+ok  	github.com/FITHSCS/backend/business/domain/auditbus	12.554s	coverage: 82.1% of statements
+	github.com/FITHSCS/backend/business/domain/auditbus/stores/auditdb		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/dashboardbus		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/dashboardbus/store/dashboarddb		coverage: 0.0% of statements
+=== RUN   Test_DeliveryException
+=== PAUSE Test_DeliveryException
+=== CONT  Test_DeliveryException
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: mlyt
+    dbtest.go:88: Migrate Database: mlyt
+{1d5fb1ce-c2ab-4e36-bd57-dbdb1a42aa2c 03-B-122325 Truck 2325 25 active 2025-07-22 08:49:07.021084 +0000 UTC 2025-07-22 08:49:07.021084 +0000 UTC}
+{54c1da15-a237-4620-ae34-20fbac66ae52 03-B-122326 Truck 2326 26 active 2025-07-22 08:49:07.030192 +0000 UTC 2025-07-22 08:49:07.030192 +0000 UTC}
+I am going to write DB:  {b905dc2e-3abe-43b5-8f48-c9b7d2f20ab5 b6d24f26-16e3-4f70-ac32-c5a638434dbe 8f65aab5-bac8-4b8c-9e76-ffa3b3196b5b 1d5fb1ce-c2ab-4e36-bd57-dbdb1a42aa2c 079bb520-1216-4f41-ad57-06fe7ca974aa pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:07.03960786 +0000 UTC 2025-07-22 08:49:07.03960786 +0000 UTC 2025-07-22 08:49:07.03960786 +0000 UTC}
+I am going to write DB:  {c27fbbdf-ab32-4c34-a16c-e7c7020aa71f b6d24f26-16e3-4f70-ac32-c5a638434dbe 8f65aab5-bac8-4b8c-9e76-ffa3b3196b5b 1d5fb1ce-c2ab-4e36-bd57-dbdb1a42aa2c 079bb520-1216-4f41-ad57-06fe7ca974aa picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:07.052070827 +0000 UTC 2025-07-22 08:49:07.052070827 +0000 UTC 2025-07-22 08:49:07.052070827 +0000 UTC}
+{3ca0bdf9-dfc2-44a1-b073-291851cbb387 03-B-122651 Truck 2651 51 active 2025-07-22 08:49:07.375075 +0000 UTC 2025-07-22 08:49:07.375075 +0000 UTC}
+{b9b00bf8-724a-459c-a072-040473d076d7 03-B-122652 Truck 2652 52 active 2025-07-22 08:49:07.387139 +0000 UTC 2025-07-22 08:49:07.387139 +0000 UTC}
+I am going to write DB:  {f620b898-d971-4e97-9fe0-486d0bd8abf1 d93583c0-bd00-4b3a-9733-fe19372a3517 802604af-dc7b-44ae-a6dd-c1c2dad38d9a 3ca0bdf9-dfc2-44a1-b073-291851cbb387 25e6d2ed-539e-45f8-9a08-c31027481dca pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:07.40007876 +0000 UTC 2025-07-22 08:49:07.40007876 +0000 UTC 2025-07-22 08:49:07.40007876 +0000 UTC}
+I am going to write DB:  {49798634-6174-4374-965f-1c21d7b9f15d d93583c0-bd00-4b3a-9733-fe19372a3517 802604af-dc7b-44ae-a6dd-c1c2dad38d9a 3ca0bdf9-dfc2-44a1-b073-291851cbb387 25e6d2ed-539e-45f8-9a08-c31027481dca picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:07.411713462 +0000 UTC 2025-07-22 08:49:07.411713462 +0000 UTC 2025-07-22 08:49:07.411713462 +0000 UTC}
+=== RUN   Test_DeliveryException/query-all
+[{2e7126c9-b10a-43a6-b215-eed49fe52419 8c2bada1-a6e5-404c-b16d-033f4f7ca439 25e6d2ed-539e-45f8-9a08-c31027481dca low damaged This is the description for this exception 2025-06-10 12:59:33 +0000 UTC pending {599c3ad2-e02d-4579-b93e-c5ca19cb2d10 true} {599c3ad2-e02d-4579-b93e-c5ca19cb2d10 true} false true 2025-06-10 13:00:33 +0000 UTC 2025-07-22 08:49:07.457811 +0000 UTC 2025-07-22 08:49:07.457811 +0000 UTC} {a21b27d3-1edd-4495-8b46-853ec7f7518b 8c2bada1-a6e5-404c-b16d-033f4f7ca439 25e6d2ed-539e-45f8-9a08-c31027481dca medium descripancy This is the description for this exception 2025-06-10 12:59:33 +0000 UTC resolved {00000000-0000-0000-0000-000000000000 false} {00000000-0000-0000-0000-000000000000 false} false true 2025-06-10 13:00:33 +0000 UTC 2025-07-22 08:49:07.47009 +0000 UTC 2025-07-22 08:49:07.47009 +0000 UTC} {f2f7230b-800d-4fb9-9c94-832be2b9a4ec e5ecfdae-0ca1-4379-beab-47903b148bf3 079bb520-1216-4f41-ad57-06fe7ca974aa medium descripancy This is the description for this exception 2025-06-10 12:59:33 +0000 UTC resolved {00000000-0000-0000-0000-000000000000 false} {00000000-0000-0000-0000-000000000000 false} false true 2025-06-10 13:00:33 +0000 UTC 2025-07-22 08:49:07.10006 +0000 UTC 2025-07-22 08:49:07.10006 +0000 UTC} {facc51c5-a44b-421e-a99e-1bc1609431c4 e5ecfdae-0ca1-4379-beab-47903b148bf3 079bb520-1216-4f41-ad57-06fe7ca974aa low damaged This is the description for this exception 2025-06-10 12:59:33 +0000 UTC pending {886cfafb-e4d0-41d0-bcea-1af67b3a030f true} {886cfafb-e4d0-41d0-bcea-1af67b3a030f true} false true 2025-06-10 13:00:33 +0000 UTC 2025-07-22 08:49:07.09088 +0000 UTC 2025-07-22 08:49:07.09088 +0000 UTC}]
+=== RUN   Test_DeliveryException/query-byid
+=== RUN   Test_DeliveryException/create-basic_no_resolved_by
+=== RUN   Test_DeliveryException/create-basic_with_resolved_by
+=== RUN   Test_DeliveryException/sync-basic
+=== RUN   Test_DeliveryException/update-basic_no_resolved_by
+=== RUN   Test_DeliveryException/update-basic_with_resolved_by
+=== RUN   Test_DeliveryException/update-basic_with_escalated_to
+=== RUN   Test_DeliveryException/update-basic_without_resolved_by
+=== RUN   Test_DeliveryException/softDelete-user
+=== RUN   Test_DeliveryException/softDelete-admin
+=== RUN   Test_DeliveryException/hardDelete-user
+=== RUN   Test_DeliveryException/hardDelete-admin
+=== NAME  Test_DeliveryException
+    dbtest.go:106: Drop Database: mlyt
+    dbtest.go:106: ******************** LOGS (Test_DeliveryException) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_DeliveryException) ********************
+--- PASS: Test_DeliveryException (10.84s)
+    --- PASS: Test_DeliveryException/query-all (0.01s)
+    --- PASS: Test_DeliveryException/query-byid (0.01s)
+    --- PASS: Test_DeliveryException/create-basic_no_resolved_by (0.01s)
+    --- PASS: Test_DeliveryException/create-basic_with_resolved_by (0.01s)
+    --- PASS: Test_DeliveryException/sync-basic (0.01s)
+    --- PASS: Test_DeliveryException/update-basic_no_resolved_by (0.02s)
+    --- PASS: Test_DeliveryException/update-basic_with_resolved_by (0.02s)
+    --- PASS: Test_DeliveryException/update-basic_with_escalated_to (0.03s)
+    --- PASS: Test_DeliveryException/update-basic_without_resolved_by (0.02s)
+    --- PASS: Test_DeliveryException/softDelete-user (0.02s)
+    --- PASS: Test_DeliveryException/softDelete-admin (0.02s)
+    --- PASS: Test_DeliveryException/hardDelete-user (0.01s)
+    --- PASS: Test_DeliveryException/hardDelete-admin (0.01s)
+PASS
+coverage: 81.0% of statements
+ok  	github.com/FITHSCS/backend/business/domain/delexceptionbus	10.856s	coverage: 81.0% of statements
+	github.com/FITHSCS/backend/business/domain/delexceptionbus/extensions/delexceptionaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/delexceptionbus/store/delexceptiondb		coverage: 0.0% of statements
+=== RUN   Test_Facility
+=== PAUSE Test_Facility
+=== CONT  Test_Facility
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: rbix
+    dbtest.go:88: Migrate Database: rbix
+=== RUN   Test_Facility/query-all
+[{4382c19f-0f2c-4f2b-96c6-9142e3eb76b9 Name9777 health_facility FacName9777 Region:9777 9.019499778747559 38.739200592041016 10 c429b976-2f46-4529-9c68-8ef86c01fa93 922333322 false 2025-07-22 08:49:09.147365 +0000 UTC 2025-07-22 08:49:09.147365 +0000 UTC} {4e3b2cbb-19a9-47f0-805f-35db86514222 Name9775 health_facility FacName9775 Region:9775 9.019499778747559 38.739200592041016 10 c429b976-2f46-4529-9c68-8ef86c01fa93 922333322 false 2025-07-22 08:49:09.130288 +0000 UTC 2025-07-22 08:49:09.130288 +0000 UTC} {5408379f-a152-4153-a27d-14dece3b79e4 Name8611 warehouse FacName8611 Region:8611 9.019499778747559 38.739200592041016 10 9e022e97-2385-4d0f-afca-f2aad5810202 922333322 false 2025-07-22 08:49:09.005306 +0000 UTC 2025-07-22 08:49:09.005306 +0000 UTC} {621893e7-24db-43b9-9f7c-60a7a00f6f7a Name9774 warehouse FacName9774 Region:9774 9.019499778747559 38.739200592041016 10 c429b976-2f46-4529-9c68-8ef86c01fa93 922333322 false 2025-07-22 08:49:09.121681 +0000 UTC 2025-07-22 08:49:09.121681 +0000 UTC} {6479f28f-bd15-4611-9a50-2c4f6a5a6f64 Name9776 warehouse FacName9776 Region:9776 9.019499778747559 38.739200592041016 10 c429b976-2f46-4529-9c68-8ef86c01fa93 922333322 false 2025-07-22 08:49:09.140634 +0000 UTC 2025-07-22 08:49:09.140634 +0000 UTC} {78e3471e-231a-41be-9b81-1f2119c273ee Name8613 warehouse FacName8613 Region:8613 9.019499778747559 38.739200592041016 10 9e022e97-2385-4d0f-afca-f2aad5810202 922333322 false 2025-07-22 08:49:09.022414 +0000 UTC 2025-07-22 08:49:09.022414 +0000 UTC} {8b6487dc-ff36-4330-862c-82928cd51a5f Name8614 health_facility FacName8614 Region:8614 9.019499778747559 38.739200592041016 10 9e022e97-2385-4d0f-afca-f2aad5810202 922333322 false 2025-07-22 08:49:09.03166 +0000 UTC 2025-07-22 08:49:09.03166 +0000 UTC} {f5568e84-d6d2-4f6a-8511-1c5d84ac08a1 Name8612 health_facility FacName8612 Region:8612 9.019499778747559 38.739200592041016 10 9e022e97-2385-4d0f-afca-f2aad5810202 922333322 false 2025-07-22 08:49:09.015073 +0000 UTC 2025-07-22 08:49:09.015073 +0000 UTC}]
+=== RUN   Test_Facility/query-byid
+=== RUN   Test_Facility/create-basic
+=== RUN   Test_Facility/update-basic
+=== RUN   Test_Facility/delete-user
+=== RUN   Test_Facility/delete-admin
+=== NAME  Test_Facility
+    dbtest.go:106: Drop Database: rbix
+    dbtest.go:106: ******************** LOGS (Test_Facility) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_Facility) ********************
+--- PASS: Test_Facility (0.98s)
+    --- PASS: Test_Facility/query-all (0.01s)
+    --- PASS: Test_Facility/query-byid (0.01s)
+    --- PASS: Test_Facility/create-basic (0.01s)
+    --- PASS: Test_Facility/update-basic (0.02s)
+    --- PASS: Test_Facility/delete-user (0.01s)
+    --- PASS: Test_Facility/delete-admin (0.01s)
+PASS
+coverage: 73.0% of statements
+ok  	github.com/FITHSCS/backend/business/domain/facilitybus	0.990s	coverage: 73.0% of statements
+	github.com/FITHSCS/backend/business/domain/facilitybus/extensions/facilityaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/facilitybus/stores/facilitydb		coverage: 0.0% of statements
+=== RUN   Test_FacilityPersonnel
+=== PAUSE Test_FacilityPersonnel
+=== CONT  Test_FacilityPersonnel
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: lclw
+    dbtest.go:88: Migrate Database: lclw
+=== RUN   Test_FacilityPersonnel/query-all
+=== RUN   Test_FacilityPersonnel/query-byid
+=== RUN   Test_FacilityPersonnel/create-basic
+=== RUN   Test_FacilityPersonnel/update-basic
+=== RUN   Test_FacilityPersonnel/Delete-user
+=== RUN   Test_FacilityPersonnel/Delete-admin
+=== NAME  Test_FacilityPersonnel
+    dbtest.go:106: Drop Database: lclw
+    dbtest.go:106: ******************** LOGS (Test_FacilityPersonnel) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_FacilityPersonnel) ********************
+--- PASS: Test_FacilityPersonnel (0.97s)
+    --- PASS: Test_FacilityPersonnel/query-all (0.01s)
+    --- PASS: Test_FacilityPersonnel/query-byid (0.01s)
+    --- PASS: Test_FacilityPersonnel/create-basic (0.01s)
+    --- PASS: Test_FacilityPersonnel/update-basic (0.02s)
+    --- PASS: Test_FacilityPersonnel/Delete-user (0.01s)
+    --- PASS: Test_FacilityPersonnel/Delete-admin (0.01s)
+PASS
+coverage: 73.8% of statements
+ok  	github.com/FITHSCS/backend/business/domain/facilitypersonnelbus	0.982s	coverage: 73.8% of statements
+	github.com/FITHSCS/backend/business/domain/facilitypersonnelbus/extensions/facilitypersonnelaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/facilitypersonnelbus/stores/facilitypersonneldb		coverage: 0.0% of statements
+=== RUN   Test_GPSTracking
+=== PAUSE Test_GPSTracking
+=== CONT  Test_GPSTracking
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: kwpb
+    dbtest.go:88: Migrate Database: kwpb
+{82bb48e5-4224-4e69-a55b-5c4df5f9b982 03-B-125223 Truck 5223 23 active 2025-07-22 08:49:11.694148 +0000 UTC 2025-07-22 08:49:11.694148 +0000 UTC}
+{298d5b0b-1972-4abe-9a57-e0547abde225 03-B-125224 Truck 5224 24 active 2025-07-22 08:49:11.703051 +0000 UTC 2025-07-22 08:49:11.703051 +0000 UTC}
+{a4a20947-6a6f-427c-8755-dbc45f37ce44 03-B-125757 Truck 5757 57 active 2025-07-22 08:49:11.876853 +0000 UTC 2025-07-22 08:49:11.876853 +0000 UTC}
+{b17f90ae-198e-42f5-ae2c-61c7d5639117 03-B-125758 Truck 5758 58 active 2025-07-22 08:49:11.885303 +0000 UTC 2025-07-22 08:49:11.885303 +0000 UTC}
+=== RUN   Test_GPSTracking/query-all
+=== RUN   Test_GPSTracking/query-byid
+=== RUN   Test_GPSTracking/create-basic
+=== RUN   Test_GPSTracking/sync-basic
+=== RUN   Test_GPSTracking/update-basic
+=== RUN   Test_GPSTracking/softDelete-user
+=== RUN   Test_GPSTracking/softDelete-admin
+=== RUN   Test_GPSTracking/hardDelete-user
+=== RUN   Test_GPSTracking/hardDelete-admin
+=== NAME  Test_GPSTracking
+    dbtest.go:106: Drop Database: kwpb
+    dbtest.go:106: ******************** LOGS (Test_GPSTracking) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_GPSTracking) ********************
+--- PASS: Test_GPSTracking (1.11s)
+    --- PASS: Test_GPSTracking/query-all (0.01s)
+    --- PASS: Test_GPSTracking/query-byid (0.01s)
+    --- PASS: Test_GPSTracking/create-basic (0.01s)
+    --- PASS: Test_GPSTracking/sync-basic (0.01s)
+    --- PASS: Test_GPSTracking/update-basic (0.02s)
+    --- PASS: Test_GPSTracking/softDelete-user (0.01s)
+    --- PASS: Test_GPSTracking/softDelete-admin (0.01s)
+    --- PASS: Test_GPSTracking/hardDelete-user (0.01s)
+    --- PASS: Test_GPSTracking/hardDelete-admin (0.01s)
+PASS
+coverage: 79.1% of statements
+ok  	github.com/FITHSCS/backend/business/domain/gpstrackingbus	1.117s	coverage: 79.1% of statements
+	github.com/FITHSCS/backend/business/domain/gpstrackingbus/extensions/gpstrackingaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/gpstrackingbus/stores/gpstrackingdb		coverage: 0.0% of statements
+=== RUN   Test_Image
+=== PAUSE Test_Image
+=== CONT  Test_Image
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: umqw
+    dbtest.go:88: Migrate Database: umqw
+{7b18ab61-c728-4f57-abf5-4132ec419f8a 03-B-126292 Truck 6292 92 active 2025-07-22 08:49:13.291115 +0000 UTC 2025-07-22 08:49:13.291115 +0000 UTC}
+{ee757e37-da75-44d1-afcb-90b5b9da770b 03-B-126293 Truck 6293 93 active 2025-07-22 08:49:13.299227 +0000 UTC 2025-07-22 08:49:13.299227 +0000 UTC}
+I am going to write DB:  {7365800c-9211-4e22-bdad-3526030583e0 29479db3-c354-4be0-af15-bd2f931a2277 a23b0de6-7374-4842-b64a-290bd85dac0f 7b18ab61-c728-4f57-abf5-4132ec419f8a 126cdc47-3bee-4d48-b103-6e71954dbd3d pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:13.307647407 +0000 UTC 2025-07-22 08:49:13.307647407 +0000 UTC 2025-07-22 08:49:13.307647407 +0000 UTC}
+I am going to write DB:  {a6774c19-f806-49f9-8462-1e67bfb76746 29479db3-c354-4be0-af15-bd2f931a2277 a23b0de6-7374-4842-b64a-290bd85dac0f 7b18ab61-c728-4f57-abf5-4132ec419f8a 126cdc47-3bee-4d48-b103-6e71954dbd3d picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:13.316782571 +0000 UTC 2025-07-22 08:49:13.316782571 +0000 UTC 2025-07-22 08:49:13.316782571 +0000 UTC}
+{3ffe0518-4a38-4ae0-90ab-dedb581c6dbb 03-B-123485 Truck 3485 85 active 2025-07-22 08:49:13.615078 +0000 UTC 2025-07-22 08:49:13.615078 +0000 UTC}
+{f25281c6-2b87-4877-a9a2-84db50c805d1 03-B-123486 Truck 3486 86 active 2025-07-22 08:49:13.621467 +0000 UTC 2025-07-22 08:49:13.621467 +0000 UTC}
+I am going to write DB:  {4bdbb50c-e21c-4c05-9c14-4f1ff3ec701a 7e026555-e614-4ee6-a82b-2ae37f149633 3b468858-1291-43a2-aeb1-ec723e140b49 3ffe0518-4a38-4ae0-90ab-dedb581c6dbb e12783d5-b718-4bc7-a9c8-f0700a4a9a4c pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:13.629720489 +0000 UTC 2025-07-22 08:49:13.629720489 +0000 UTC 2025-07-22 08:49:13.629720489 +0000 UTC}
+I am going to write DB:  {f6ec6da2-2172-44f3-9c56-e500c058da60 7e026555-e614-4ee6-a82b-2ae37f149633 3b468858-1291-43a2-aeb1-ec723e140b49 3ffe0518-4a38-4ae0-90ab-dedb581c6dbb e12783d5-b718-4bc7-a9c8-f0700a4a9a4c picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:13.643055061 +0000 UTC 2025-07-22 08:49:13.643055061 +0000 UTC 2025-07-22 08:49:13.643055061 +0000 UTC}
+=== RUN   Test_Image/query-all
+=== RUN   Test_Image/query-byid
+=== RUN   Test_Image/create-basic_no_exception_id
+=== RUN   Test_Image/create-basic_with_exception_id
+=== RUN   Test_Image/sync-basic
+=== RUN   Test_Image/update-basic_no_exception_id
+=== RUN   Test_Image/update-basic_with_exception_id
+=== RUN   Test_Image/softDelete-user
+=== RUN   Test_Image/softDelete-admin
+=== RUN   Test_Image/hardDelete-user
+=== RUN   Test_Image/hardDelete-admin
+=== NAME  Test_Image
+    dbtest.go:106: Drop Database: umqw
+    dbtest.go:106: ******************** LOGS (Test_Image) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_Image) ********************
+--- PASS: Test_Image (1.52s)
+    --- PASS: Test_Image/query-all (0.01s)
+    --- PASS: Test_Image/query-byid (0.01s)
+    --- PASS: Test_Image/create-basic_no_exception_id (0.01s)
+    --- PASS: Test_Image/create-basic_with_exception_id (0.02s)
+    --- PASS: Test_Image/sync-basic (0.01s)
+    --- PASS: Test_Image/update-basic_no_exception_id (0.02s)
+    --- PASS: Test_Image/update-basic_with_exception_id (0.02s)
+    --- PASS: Test_Image/softDelete-user (0.02s)
+    --- PASS: Test_Image/softDelete-admin (0.02s)
+    --- PASS: Test_Image/hardDelete-user (0.01s)
+    --- PASS: Test_Image/hardDelete-admin (0.01s)
+PASS
+coverage: 79.5% of statements
+ok  	github.com/FITHSCS/backend/business/domain/imagebus	1.532s	coverage: 79.5% of statements
+	github.com/FITHSCS/backend/business/domain/imagebus/extensions/imageaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/imagebus/stores/imagedb		coverage: 0.0% of statements
+=== RUN   Test_Manifest
+=== PAUSE Test_Manifest
+=== CONT  Test_Manifest
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: bqgn
+    dbtest.go:88: Migrate Database: bqgn
+{df9aa098-e9ff-4400-bed9-d98eb1d0b184 03-B-121330 Truck 1330 30 active 2025-07-22 08:49:14.785757 +0000 UTC 2025-07-22 08:49:14.785757 +0000 UTC}
+{a3fac789-848c-4bff-bfe6-424dd667acea 03-B-121331 Truck 1331 31 active 2025-07-22 08:49:14.794517 +0000 UTC 2025-07-22 08:49:14.794517 +0000 UTC}
+I am going to write DB:  {e3f972a6-61c2-4331-a599-c11421f1be75 5aff8d3f-fff6-46a6-a3d8-1a91434514c4 25baf9eb-2fac-46fa-9d28-45b940a6ac00 df9aa098-e9ff-4400-bed9-d98eb1d0b184 6937cf75-0fcd-4177-88e8-402922cf73c3 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:14.802505134 +0000 UTC 2025-07-22 08:49:14.802505134 +0000 UTC 2025-07-22 08:49:14.802505134 +0000 UTC}
+I am going to write DB:  {9b35fbad-1845-4c0f-8a03-8562a59e63ac 5aff8d3f-fff6-46a6-a3d8-1a91434514c4 25baf9eb-2fac-46fa-9d28-45b940a6ac00 df9aa098-e9ff-4400-bed9-d98eb1d0b184 6937cf75-0fcd-4177-88e8-402922cf73c3 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:14.813072927 +0000 UTC 2025-07-22 08:49:14.813072927 +0000 UTC 2025-07-22 08:49:14.813072927 +0000 UTC}
+{787ba28c-3cc2-481a-bf9b-ec97f0ffb5d0 03-B-129918 Truck 9918 18 active 2025-07-22 08:49:14.972552 +0000 UTC 2025-07-22 08:49:14.972552 +0000 UTC}
+{27003058-131c-40bd-95a3-aa97a46ce164 03-B-129919 Truck 9919 19 active 2025-07-22 08:49:14.98013 +0000 UTC 2025-07-22 08:49:14.98013 +0000 UTC}
+I am going to write DB:  {357f399f-20f0-4fa1-87ea-1f3dc41d5bbd 6f93d191-6040-4e97-8253-922008e231d8 926ba40e-19f1-4e5f-af97-e5326339af93 787ba28c-3cc2-481a-bf9b-ec97f0ffb5d0 2db9c148-73c7-4bb1-92c2-44b0a8aa9ee6 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:14.987166823 +0000 UTC 2025-07-22 08:49:14.987166823 +0000 UTC 2025-07-22 08:49:14.987166823 +0000 UTC}
+I am going to write DB:  {430ab71a-2e3a-47bd-ad7b-495fcfabd24d 6f93d191-6040-4e97-8253-922008e231d8 926ba40e-19f1-4e5f-af97-e5326339af93 787ba28c-3cc2-481a-bf9b-ec97f0ffb5d0 2db9c148-73c7-4bb1-92c2-44b0a8aa9ee6 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:14.995526635 +0000 UTC 2025-07-22 08:49:14.995526635 +0000 UTC 2025-07-22 08:49:14.995526635 +0000 UTC}
+=== RUN   Test_Manifest/query-all
+[{010d6df8-f19b-49ad-81b8-cb3641380665 357f399f-20f0-4fa1-87ea-1f3dc41d5bbd 926ba40e-19f1-4e5f-af97-e5326339af93 c066368c-0eee-4bb3-a23f-1e506781eb9e OrderID:2446 DeliveryID:2446 pending {"items": {"Code": 2, "Type": 3}, "total_items": 5, "total_weight_kg": 3.95, "contains_fragile": true} 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC false false 2025-07-22 08:49:15.005 +0000 UTC 2025-07-22 08:49:15.005 +0000 UTC 2025-07-22 08:49:15.005 +0000 UTC} {74495ea6-f605-49d6-a677-2c8409f6c226 357f399f-20f0-4fa1-87ea-1f3dc41d5bbd 926ba40e-19f1-4e5f-af97-e5326339af93 c066368c-0eee-4bb3-a23f-1e506781eb9e OrderID:2447 DeliveryID:2447 picked_up {"items": {"Code": 4, "Type": 6}, "total_items": 10, "total_weight_kg": 9.68, "contains_fragile": false} 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC false false 2025-07-22 08:49:15.016 +0000 UTC 2025-07-22 08:49:15.016 +0000 UTC 2025-07-22 08:49:15.016 +0000 UTC} {a1cb7725-597a-4d1b-adc4-4a07a8e01086 e3f972a6-61c2-4331-a599-c11421f1be75 25baf9eb-2fac-46fa-9d28-45b940a6ac00 38ec5376-59f7-49d4-a7ec-1d76b3bc6930 OrderID:7800 DeliveryID:7800 picked_up {"items": {"Code": 4, "Type": 6}, "total_items": 10, "total_weight_kg": 13.15, "contains_fragile": false} 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC false false 2025-07-22 08:49:14.831 +0000 UTC 2025-07-22 08:49:14.831 +0000 UTC 2025-07-22 08:49:14.831 +0000 UTC} {b379b7de-d0a2-4312-9532-2f966930902e e3f972a6-61c2-4331-a599-c11421f1be75 25baf9eb-2fac-46fa-9d28-45b940a6ac00 38ec5376-59f7-49d4-a7ec-1d76b3bc6930 OrderID:7799 DeliveryID:7799 pending {"items": {"Code": 2, "Type": 3}, "total_items": 5, "total_weight_kg": 16.72, "contains_fragile": true} 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC false false 2025-07-22 08:49:14.824 +0000 UTC 2025-07-22 08:49:14.824 +0000 UTC 2025-07-22 08:49:14.824 +0000 UTC}]
+=== RUN   Test_Manifest/query-byid
+=== RUN   Test_Manifest/create-basic
+=== RUN   Test_Manifest/sync-basic
+=== RUN   Test_Manifest/update-basic
+=== RUN   Test_Manifest/softDelete-user
+=== RUN   Test_Manifest/softDelete-admin
+=== RUN   Test_Manifest/hardDelete-user
+=== RUN   Test_Manifest/hardDelete-admin
+=== NAME  Test_Manifest
+    dbtest.go:106: Drop Database: bqgn
+    dbtest.go:106: ******************** LOGS (Test_Manifest) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_Manifest) ********************
+--- PASS: Test_Manifest (1.14s)
+    --- PASS: Test_Manifest/query-all (0.01s)
+    --- PASS: Test_Manifest/query-byid (0.01s)
+    --- PASS: Test_Manifest/create-basic (0.01s)
+    --- PASS: Test_Manifest/sync-basic (0.01s)
+    --- PASS: Test_Manifest/update-basic (0.02s)
+    --- PASS: Test_Manifest/softDelete-user (0.02s)
+    --- PASS: Test_Manifest/softDelete-admin (0.02s)
+    --- PASS: Test_Manifest/hardDelete-user (0.01s)
+    --- PASS: Test_Manifest/hardDelete-admin (0.01s)
+PASS
+coverage: 77.9% of statements
+ok  	github.com/FITHSCS/backend/business/domain/manifestbus	1.150s	coverage: 77.9% of statements
+	github.com/FITHSCS/backend/business/domain/manifestbus/extensions/manifestaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/manifestbus/stores/manifestdb		coverage: 0.0% of statements
+=== RUN   Test_Message
+=== PAUSE Test_Message
+=== CONT  Test_Message
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: dwkb
+    dbtest.go:88: Migrate Database: dwkb
+{da55f0d8-5d03-49c4-aee2-b2e7bb9d5d76 03-B-121013 Truck 1013 13 active 2025-07-22 08:49:16.327169 +0000 UTC 2025-07-22 08:49:16.327169 +0000 UTC}
+{9923d8b2-bdd3-4102-8829-5225b334e856 03-B-121014 Truck 1014 14 active 2025-07-22 08:49:16.336158 +0000 UTC 2025-07-22 08:49:16.336158 +0000 UTC}
+I am going to write DB:  {23328c8b-3140-4dc2-8d6f-5cf937896280 7e1d5a53-a8cb-4c58-9552-35ca13fa8f54 00651dcc-7614-4789-874d-692a4de5f598 da55f0d8-5d03-49c4-aee2-b2e7bb9d5d76 7d572bd3-74d7-4bb0-9c6e-dee3fbd175c0 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:16.344167723 +0000 UTC 2025-07-22 08:49:16.344167723 +0000 UTC 2025-07-22 08:49:16.344167723 +0000 UTC}
+I am going to write DB:  {0f5f8fae-79ee-422f-a541-f02583b60e5e 7e1d5a53-a8cb-4c58-9552-35ca13fa8f54 00651dcc-7614-4789-874d-692a4de5f598 da55f0d8-5d03-49c4-aee2-b2e7bb9d5d76 7d572bd3-74d7-4bb0-9c6e-dee3fbd175c0 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:16.358192279 +0000 UTC 2025-07-22 08:49:16.358192279 +0000 UTC 2025-07-22 08:49:16.358192279 +0000 UTC}
+{5baadcd1-2832-4911-9c48-8b6addb9d4e1 03-B-124261 Truck 4261 61 active 2025-07-22 08:49:16.635644 +0000 UTC 2025-07-22 08:49:16.635644 +0000 UTC}
+{c273931b-078b-4930-bd60-e8a7cd57c9a7 03-B-124262 Truck 4262 62 active 2025-07-22 08:49:16.643953 +0000 UTC 2025-07-22 08:49:16.643953 +0000 UTC}
+I am going to write DB:  {55c857a7-e258-44ba-a9ef-9f39ad694972 39e7a5be-d7a3-4da9-9a0d-42a767ff0cfc 890b8cb2-2ff4-4963-a18b-80c6f3add7af 5baadcd1-2832-4911-9c48-8b6addb9d4e1 d533bf99-89a2-4ae9-a200-2c25bf1c85fe pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:16.654309202 +0000 UTC 2025-07-22 08:49:16.654309202 +0000 UTC 2025-07-22 08:49:16.654309202 +0000 UTC}
+I am going to write DB:  {8fefa276-589d-4666-a0d5-aaa6feb86835 39e7a5be-d7a3-4da9-9a0d-42a767ff0cfc 890b8cb2-2ff4-4963-a18b-80c6f3add7af 5baadcd1-2832-4911-9c48-8b6addb9d4e1 d533bf99-89a2-4ae9-a200-2c25bf1c85fe picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:16.66458543 +0000 UTC 2025-07-22 08:49:16.66458543 +0000 UTC 2025-07-22 08:49:16.66458543 +0000 UTC}
+=== RUN   Test_Message/query-all
+=== RUN   Test_Message/query-byid
+=== RUN   Test_Message/create-basic
+=== RUN   Test_Message/Delete-user
+=== RUN   Test_Message/Delete-admin
+=== NAME  Test_Message
+    dbtest.go:106: Drop Database: dwkb
+    dbtest.go:106: ******************** LOGS (Test_Message) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_Message) ********************
+--- PASS: Test_Message (1.36s)
+    --- PASS: Test_Message/query-all (0.01s)
+    --- PASS: Test_Message/query-byid (0.01s)
+    --- PASS: Test_Message/create-basic (0.01s)
+    --- PASS: Test_Message/Delete-user (0.01s)
+    --- PASS: Test_Message/Delete-admin (0.01s)
+PASS
+coverage: 75.0% of statements
+ok  	github.com/FITHSCS/backend/business/domain/messagebus	1.378s	coverage: 75.0% of statements
+	github.com/FITHSCS/backend/business/domain/messagebus/extensions/messageaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/messagebus/stores/messagedb		coverage: 0.0% of statements
+=== RUN   Test_PickupBatch
+=== PAUSE Test_PickupBatch
+=== CONT  Test_PickupBatch
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: deai
+    dbtest.go:88: Migrate Database: deai
+{741982a3-c683-443b-a7be-1d23052522ec 03-B-128632 Truck 8632 32 active 2025-07-22 08:49:17.991862 +0000 UTC 2025-07-22 08:49:17.991862 +0000 UTC}
+{0675708c-c71b-440c-8877-941170a4267b 03-B-128633 Truck 8633 33 active 2025-07-22 08:49:18.002735 +0000 UTC 2025-07-22 08:49:18.002735 +0000 UTC}
+I am going to write DB:  {2038fd67-d078-48e8-b805-91652d897089 2b415166-5b24-4103-80b7-77bf0188daf0 2abf3a0b-98e3-4891-a4ff-e7c0c05ba403 741982a3-c683-443b-a7be-1d23052522ec 65aad508-a036-48f7-ade1-2a7fb459a5c9 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:18.008751357 +0000 UTC 2025-07-22 08:49:18.008751357 +0000 UTC 2025-07-22 08:49:18.008751357 +0000 UTC}
+I am going to write DB:  {42c00df2-7491-4352-96de-4fde18c23b22 2b415166-5b24-4103-80b7-77bf0188daf0 2abf3a0b-98e3-4891-a4ff-e7c0c05ba403 741982a3-c683-443b-a7be-1d23052522ec 65aad508-a036-48f7-ade1-2a7fb459a5c9 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:18.02321502 +0000 UTC 2025-07-22 08:49:18.02321502 +0000 UTC 2025-07-22 08:49:18.02321502 +0000 UTC}
+{df54ac07-c1c8-402b-92a9-d187bd4ffd43 03-B-126958 Truck 6958 58 active 2025-07-22 08:49:18.170672 +0000 UTC 2025-07-22 08:49:18.170672 +0000 UTC}
+{28f130c3-7d9d-4227-ab71-98a83b0ae184 03-B-126959 Truck 6959 59 active 2025-07-22 08:49:18.179763 +0000 UTC 2025-07-22 08:49:18.179763 +0000 UTC}
+I am going to write DB:  {aff3a863-44f4-4907-8ec6-a5ce23dd447b 482ceb7e-d25d-4d76-b4fd-189301e78994 6a80cf2c-6e3a-4919-addc-cc6572dd5d6f df54ac07-c1c8-402b-92a9-d187bd4ffd43 72fad537-84d6-49ed-8589-5e369043855d pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:18.188784176 +0000 UTC 2025-07-22 08:49:18.188784176 +0000 UTC 2025-07-22 08:49:18.188784176 +0000 UTC}
+I am going to write DB:  {0b72d119-c6a4-468c-97f5-493ccd3cb614 482ceb7e-d25d-4d76-b4fd-189301e78994 6a80cf2c-6e3a-4919-addc-cc6572dd5d6f df54ac07-c1c8-402b-92a9-d187bd4ffd43 72fad537-84d6-49ed-8589-5e369043855d picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:18.198666561 +0000 UTC 2025-07-22 08:49:18.198666561 +0000 UTC 2025-07-22 08:49:18.198666561 +0000 UTC}
+=== RUN   Test_PickupBatch/query-all
+[{0b72d119-c6a4-468c-97f5-493ccd3cb614 482ceb7e-d25d-4d76-b4fd-189301e78994 6a80cf2c-6e3a-4919-addc-cc6572dd5d6f df54ac07-c1c8-402b-92a9-d187bd4ffd43 72fad537-84d6-49ed-8589-5e369043855d picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:18.198666 +0000 UTC 2025-07-22 08:49:18.198666 +0000 UTC 2025-07-22 08:49:18.198666 +0000 UTC} {2038fd67-d078-48e8-b805-91652d897089 2b415166-5b24-4103-80b7-77bf0188daf0 2abf3a0b-98e3-4891-a4ff-e7c0c05ba403 741982a3-c683-443b-a7be-1d23052522ec 65aad508-a036-48f7-ade1-2a7fb459a5c9 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:18.008751 +0000 UTC 2025-07-22 08:49:18.008751 +0000 UTC 2025-07-22 08:49:18.008751 +0000 UTC} {42c00df2-7491-4352-96de-4fde18c23b22 2b415166-5b24-4103-80b7-77bf0188daf0 2abf3a0b-98e3-4891-a4ff-e7c0c05ba403 741982a3-c683-443b-a7be-1d23052522ec 65aad508-a036-48f7-ade1-2a7fb459a5c9 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:18.023215 +0000 UTC 2025-07-22 08:49:18.023215 +0000 UTC 2025-07-22 08:49:18.023215 +0000 UTC} {aff3a863-44f4-4907-8ec6-a5ce23dd447b 482ceb7e-d25d-4d76-b4fd-189301e78994 6a80cf2c-6e3a-4919-addc-cc6572dd5d6f df54ac07-c1c8-402b-92a9-d187bd4ffd43 72fad537-84d6-49ed-8589-5e369043855d pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:18.188784 +0000 UTC 2025-07-22 08:49:18.188784 +0000 UTC 2025-07-22 08:49:18.188784 +0000 UTC}]
+=== RUN   Test_PickupBatch/query-byid
+=== RUN   Test_PickupBatch/create-basic
+I am going to write DB:  {99ca84ab-a59a-4b15-b78b-687a786503dc 2b415166-5b24-4103-80b7-77bf0188daf0 2abf3a0b-98e3-4891-a4ff-e7c0c05ba403 741982a3-c683-443b-a7be-1d23052522ec 65aad508-a036-48f7-ade1-2a7fb459a5c9 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC false false 2025-07-22 08:49:18.226473714 +0000 UTC 2025-07-22 08:49:18.226473714 +0000 UTC 2025-07-22 08:49:18.226473714 +0000 UTC}
+=== RUN   Test_PickupBatch/sync-basic
+=== RUN   Test_PickupBatch/update-basic
+=== RUN   Test_PickupBatch/softDelete-user
+=== RUN   Test_PickupBatch/softDelete-admin
+=== RUN   Test_PickupBatch/hardDelete-user
+=== RUN   Test_PickupBatch/hardDelete-admin
+=== NAME  Test_PickupBatch
+    dbtest.go:106: Drop Database: deai
+    dbtest.go:106: ******************** LOGS (Test_Facility) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_Facility) ********************
+--- PASS: Test_PickupBatch (1.15s)
+    --- PASS: Test_PickupBatch/query-all (0.01s)
+    --- PASS: Test_PickupBatch/query-byid (0.01s)
+    --- PASS: Test_PickupBatch/create-basic (0.01s)
+    --- PASS: Test_PickupBatch/sync-basic (0.01s)
+    --- PASS: Test_PickupBatch/update-basic (0.02s)
+    --- PASS: Test_PickupBatch/softDelete-user (0.02s)
+    --- PASS: Test_PickupBatch/softDelete-admin (0.02s)
+    --- PASS: Test_PickupBatch/hardDelete-user (0.01s)
+    --- PASS: Test_PickupBatch/hardDelete-admin (0.01s)
+PASS
+coverage: 76.2% of statements
+ok  	github.com/FITHSCS/backend/business/domain/pickupbatchbus	1.163s	coverage: 76.2% of statements
+	github.com/FITHSCS/backend/business/domain/pickupbatchbus/extensions/pickupbatchaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/pickupbatchbus/stores/pickupbatchdb		coverage: 0.0% of statements
+=== RUN   Test_QRcode
+=== PAUSE Test_QRcode
+=== CONT  Test_QRcode
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: pqlb
+    dbtest.go:88: Migrate Database: pqlb
+{6b35ad1e-446c-4bfa-ba98-f97143344188 03-B-123229 Truck 3229 29 active 2025-07-22 08:49:19.408271 +0000 UTC 2025-07-22 08:49:19.408271 +0000 UTC}
+{8253fddc-80f8-40ca-9b60-1cde006b9d82 03-B-123230 Truck 3230 30 active 2025-07-22 08:49:19.417744 +0000 UTC 2025-07-22 08:49:19.417744 +0000 UTC}
+I am going to write DB:  {a0addc95-7bdf-4ce4-a68e-d4c35b66c0ee b98389d9-daf3-41c7-986f-a415facd2c7c 52438857-cc88-48e4-8bdc-6e40062a99e9 6b35ad1e-446c-4bfa-ba98-f97143344188 2db5896a-e9e3-45c0-8037-44962ca00e78 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:19.426577645 +0000 UTC 2025-07-22 08:49:19.426577645 +0000 UTC 2025-07-22 08:49:19.426577645 +0000 UTC}
+I am going to write DB:  {39fb0468-f0a7-4760-b615-6fc5ddcd6038 b98389d9-daf3-41c7-986f-a415facd2c7c 52438857-cc88-48e4-8bdc-6e40062a99e9 6b35ad1e-446c-4bfa-ba98-f97143344188 2db5896a-e9e3-45c0-8037-44962ca00e78 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:19.439100456 +0000 UTC 2025-07-22 08:49:19.439100456 +0000 UTC 2025-07-22 08:49:19.439100456 +0000 UTC}
+{17ef4b36-04e8-4e29-932f-4e7cb602d307 03-B-124987 Truck 4987 87 active 2025-07-22 08:49:19.628732 +0000 UTC 2025-07-22 08:49:19.628732 +0000 UTC}
+{273f2535-5ce8-4bc4-a381-4304bc85dc6b 03-B-124988 Truck 4988 88 active 2025-07-22 08:49:19.636902 +0000 UTC 2025-07-22 08:49:19.636902 +0000 UTC}
+I am going to write DB:  {4d07cee1-56a2-4863-924f-f0f0ab6bef7e 1e2e7f2e-f333-4a20-9873-475b35983aee a1256c7e-92c0-4684-a40a-1963bfaa7631 17ef4b36-04e8-4e29-932f-4e7cb602d307 934a4377-3b51-4a5d-96e6-27df8ea6394e pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:19.644684979 +0000 UTC 2025-07-22 08:49:19.644684979 +0000 UTC 2025-07-22 08:49:19.644684979 +0000 UTC}
+I am going to write DB:  {c4ae5336-d2e9-4b55-8cca-ce595cb403c8 1e2e7f2e-f333-4a20-9873-475b35983aee a1256c7e-92c0-4684-a40a-1963bfaa7631 17ef4b36-04e8-4e29-932f-4e7cb602d307 934a4377-3b51-4a5d-96e6-27df8ea6394e picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:19.653888471 +0000 UTC 2025-07-22 08:49:19.653888471 +0000 UTC 2025-07-22 08:49:19.653888471 +0000 UTC}
+=== RUN   Test_QRcode/query-all
+=== RUN   Test_QRcode/query-byid
+=== RUN   Test_QRcode/query-byhash
+=== RUN   Test_QRcode/create-basic
+=== RUN   Test_QRcode/Delete-user
+=== RUN   Test_QRcode/Delete-admin
+=== NAME  Test_QRcode
+    dbtest.go:106: Drop Database: pqlb
+    dbtest.go:106: ******************** LOGS (Test_QRcode) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_QRcode) ********************
+--- PASS: Test_QRcode (1.18s)
+    --- PASS: Test_QRcode/query-all (0.01s)
+    --- PASS: Test_QRcode/query-byid (0.01s)
+    --- PASS: Test_QRcode/query-byhash (0.01s)
+    --- PASS: Test_QRcode/create-basic (0.01s)
+    --- PASS: Test_QRcode/Delete-user (0.01s)
+    --- PASS: Test_QRcode/Delete-admin (0.01s)
+PASS
+coverage: 80.5% of statements
+ok  	github.com/FITHSCS/backend/business/domain/qrcodebus	1.187s	coverage: 80.5% of statements
+	github.com/FITHSCS/backend/business/domain/qrcodebus/stores/qrcodedb		coverage: 0.0% of statements
+=== RUN   Test_Routes
+=== PAUSE Test_Routes
+=== CONT  Test_Routes
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: wfgh
+    dbtest.go:88: Migrate Database: wfgh
+=== RUN   Test_Routes/query-all
+=== RUN   Test_Routes/query-byid
+=== RUN   Test_Routes/create-basic
+=== RUN   Test_Routes/update-basic
+=== RUN   Test_Routes/delete-user
+=== RUN   Test_Routes/delete-admin
+=== NAME  Test_Routes
+    dbtest.go:106: Drop Database: wfgh
+    dbtest.go:106: ******************** LOGS (Test_Routes) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_Routes) ********************
+--- PASS: Test_Routes (1.07s)
+    --- PASS: Test_Routes/query-all (0.01s)
+    --- PASS: Test_Routes/query-byid (0.01s)
+    --- PASS: Test_Routes/create-basic (0.01s)
+    --- PASS: Test_Routes/update-basic (0.01s)
+    --- PASS: Test_Routes/delete-user (0.02s)
+    --- PASS: Test_Routes/delete-admin (0.02s)
+PASS
+coverage: 80.6% of statements
+ok  	github.com/FITHSCS/backend/business/domain/routebus	1.086s	coverage: 80.6% of statements
+	github.com/FITHSCS/backend/business/domain/routebus/extensions/routeaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/routebus/stores/routedb		coverage: 0.0% of statements
+=== RUN   Test_Signature
+=== PAUSE Test_Signature
+=== CONT  Test_Signature
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: zrzs
+    dbtest.go:88: Migrate Database: zrzs
+{d0a07a7c-14ff-43de-98f5-4252a658c75e 03-B-124621 Truck 4621 21 active 2025-07-22 08:49:22.333256 +0000 UTC 2025-07-22 08:49:22.333256 +0000 UTC}
+{abb20efc-ce17-4874-9fd4-bf4453454a5b 03-B-124622 Truck 4622 22 active 2025-07-22 08:49:22.349714 +0000 UTC 2025-07-22 08:49:22.349714 +0000 UTC}
+I am going to write DB:  {8e23500e-29bd-4be9-bdcd-0dd6ccda7180 088947c9-db8c-4cfe-be7e-07187d3676ed 6fd23cef-ef36-4fff-acf3-3caeea1cfbe3 d0a07a7c-14ff-43de-98f5-4252a658c75e 2e26f72c-4142-457e-b20d-c23cfc7e08d2 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:22.360096048 +0000 UTC 2025-07-22 08:49:22.360096048 +0000 UTC 2025-07-22 08:49:22.360096048 +0000 UTC}
+I am going to write DB:  {e317c4b9-017e-488f-821d-4fa89d95f29c 088947c9-db8c-4cfe-be7e-07187d3676ed 6fd23cef-ef36-4fff-acf3-3caeea1cfbe3 d0a07a7c-14ff-43de-98f5-4252a658c75e 2e26f72c-4142-457e-b20d-c23cfc7e08d2 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:22.376034356 +0000 UTC 2025-07-22 08:49:22.376034356 +0000 UTC 2025-07-22 08:49:22.376034356 +0000 UTC}
+{8274a8d4-b7a4-4974-ae7b-14c7f7ddc06b 03-B-124861 Truck 4861 61 active 2025-07-22 08:49:22.658949 +0000 UTC 2025-07-22 08:49:22.658949 +0000 UTC}
+{9c98f03a-85d4-4b9b-aa83-732ebede086f 03-B-124862 Truck 4862 62 active 2025-07-22 08:49:22.667107 +0000 UTC 2025-07-22 08:49:22.667107 +0000 UTC}
+I am going to write DB:  {8d9ef0c5-4a7b-48ef-b7e5-a1a996eed8a1 91d781c1-4bc5-493d-84d3-0e8bd5ec406c 8dc2939e-b334-479c-8947-a17cb6965df4 8274a8d4-b7a4-4974-ae7b-14c7f7ddc06b 83466858-3526-46ff-95d4-6036cd77b0d9 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:22.67606769 +0000 UTC 2025-07-22 08:49:22.67606769 +0000 UTC 2025-07-22 08:49:22.67606769 +0000 UTC}
+I am going to write DB:  {20323128-036e-4c9a-a998-fc9a7c7d67fe 91d781c1-4bc5-493d-84d3-0e8bd5ec406c 8dc2939e-b334-479c-8947-a17cb6965df4 8274a8d4-b7a4-4974-ae7b-14c7f7ddc06b 83466858-3526-46ff-95d4-6036cd77b0d9 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:22.685574707 +0000 UTC 2025-07-22 08:49:22.685574707 +0000 UTC 2025-07-22 08:49:22.685574707 +0000 UTC}
+=== RUN   Test_Signature/query-all
+=== RUN   Test_Signature/query-byid
+=== RUN   Test_Signature/create-basic
+=== RUN   Test_Signature/sync-basic
+=== RUN   Test_Signature/update-basic
+=== RUN   Test_Signature/softDelete-user
+=== RUN   Test_Signature/softDelete-admin
+=== RUN   Test_Signature/hardDelete-user
+=== RUN   Test_Signature/hardDelete-admin
+=== NAME  Test_Signature
+    dbtest.go:106: Drop Database: zrzs
+    dbtest.go:106: ******************** LOGS (Test_Signature) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_Signature) ********************
+--- PASS: Test_Signature (1.37s)
+    --- PASS: Test_Signature/query-all (0.01s)
+    --- PASS: Test_Signature/query-byid (0.01s)
+    --- PASS: Test_Signature/create-basic (0.01s)
+    --- PASS: Test_Signature/sync-basic (0.01s)
+    --- PASS: Test_Signature/update-basic (0.02s)
+    --- PASS: Test_Signature/softDelete-user (0.02s)
+    --- PASS: Test_Signature/softDelete-admin (0.02s)
+    --- PASS: Test_Signature/hardDelete-user (0.01s)
+    --- PASS: Test_Signature/hardDelete-admin (0.01s)
+PASS
+coverage: 81.8% of statements
+ok  	github.com/FITHSCS/backend/business/domain/signaturebus	1.378s	coverage: 81.8% of statements
+	github.com/FITHSCS/backend/business/domain/signaturebus/extensions/signatureaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/signaturebus/stores/signaturedb		coverage: 0.0% of statements
+=== RUN   Test_SyncBatch
+=== PAUSE Test_SyncBatch
+=== CONT  Test_SyncBatch
+    dbtest.go:141: Name    : servicetestSync
+    dbtest.go:142: HostPort: 0.0.0.0:32769
+    dbtest.go:171: Create Database: kbqm
+    dbtest.go:189: Migrate Database: kbqm
+{67031a7f-dbd0-4414-abb1-b95f553676bf 03-B-129163 Truck 9163 63 active 2025-07-22 08:49:25.891372 +0000 UTC 2025-07-22 08:49:25.891372 +0000 UTC}
+{cad89d06-ae71-451f-8851-a402c5680c82 03-B-129164 Truck 9164 64 active 2025-07-22 08:49:25.899343 +0000 UTC 2025-07-22 08:49:25.899343 +0000 UTC}
+I am going to write DB:  {b2d80da6-0b5d-40e6-aad4-8f717d863ab9 1ad7ed02-4644-424a-b2da-69dc2c07a32b a26cea1b-e2dc-48c2-bcd8-ef70b46d777f 67031a7f-dbd0-4414-abb1-b95f553676bf e33a31a9-58bf-43c6-bc86-2e3039937f04 pending 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:25.908113728 +0000 UTC 2025-07-22 08:49:25.908113728 +0000 UTC 2025-07-22 08:49:25.908113728 +0000 UTC}
+I am going to write DB:  {e8dcaf68-5be4-4532-85d5-6f238ebd58ba 1ad7ed02-4644-424a-b2da-69dc2c07a32b a26cea1b-e2dc-48c2-bcd8-ef70b46d777f 67031a7f-dbd0-4414-abb1-b95f553676bf e33a31a9-58bf-43c6-bc86-2e3039937f04 picked_up 2025-06-10 12:59:33 +0000 UTC 2025-06-10 22:59:33 +0000 UTC true false 2025-07-22 08:49:25.916231499 +0000 UTC 2025-07-22 08:49:25.916231499 +0000 UTC 2025-07-22 08:49:25.916231499 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:25.948178475 +0000 UTC m=-57.328570405 and My type is time.Time
+{e4a8b953-ce0a-4587-a3eb-2b2cca1637cf 2d46bf43-ece3-48e1-9a29-15091e794764 4518ae39-513b-4d8a-a86c-f2febc33764c 216c6e17-f850-4d5e-a156-f5eb268795e9 e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:48:25.948178475 +0000 UTC m=-57.328570405 [{map[batch_status:pending created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f picked_completed_at: pickup_batch_id:bd293078-0f91-4372-8308-4977bd9d4633 pickup_started_at:2025-07-22T08:49:25Z route_id:ba10c0f7-7bc1-49cc-9818-e339a1dde749 time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:25.94818638 +0000 UTC m=+2.671437500 Recieved 2025-07-22 08:49:25.94818638 +0000 UTC m=+2.671437500}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:e4a8b953-ce0a-4587-a3eb-2b2cca1637cf SessionID:4518ae39-513b-4d8a-a86c-f2febc33764c BatchID:2d46bf43-ece3-48e1-9a29-15091e794764 DeviceID:216c6e17-f850-4d5e-a156-f5eb268795e9 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:pickup_batch ClientTimeStamp:2025-07-22 08:48:25.948178475 +0000 UTC ProcessedRecords:[{Data:map[batch_status:pending created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f picked_completed_at: pickup_batch_id:bd293078-0f91-4372-8308-4977bd9d4633 pickup_started_at:2025-07-22T08:49:25Z route_id:ba10c0f7-7bc1-49cc-9818-e339a1dde749 time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:25.94818638 +0000 UTC Status:Recieved CreatedAt:2025-07-22 08:49:25.94818638 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:25.948182653 +0000 UTC m=-117.328566227 and My type is time.Time
+{4e951878-a208-4f9b-a06b-b0a601c558a4 62c3bd48-8a61-4592-a98c-6e00f0bc25a3 3bc642c4-88fe-4d7b-90e9-735df019c713 a3fde61e-af69-4601-af8f-7ebd9e5e45d0 e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:47:25.948182653 +0000 UTC m=-117.328566227 [{map[batch_status:pending created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f picked_completed_at: pickup_batch_id:07763279-598a-4701-8196-e3ae575f0117 pickup_started_at:2025-07-22T08:49:25Z route_id:f68a7e33-3a43-4098-a851-577c969a11c4 time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:25.958262946 +0000 UTC m=+2.681514067 Recieved 2025-07-22 08:49:25.958262946 +0000 UTC m=+2.681514067}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:4e951878-a208-4f9b-a06b-b0a601c558a4 SessionID:3bc642c4-88fe-4d7b-90e9-735df019c713 BatchID:62c3bd48-8a61-4592-a98c-6e00f0bc25a3 DeviceID:a3fde61e-af69-4601-af8f-7ebd9e5e45d0 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:pickup_batch ClientTimeStamp:2025-07-22 08:47:25.948182653 +0000 UTC ProcessedRecords:[{Data:map[batch_status:pending created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f picked_completed_at: pickup_batch_id:07763279-598a-4701-8196-e3ae575f0117 pickup_started_at:2025-07-22T08:49:25Z route_id:f68a7e33-3a43-4098-a851-577c969a11c4 time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:25.958262946 +0000 UTC Status:Recieved CreatedAt:2025-07-22 08:49:25.958262946 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:25.968398743 +0000 UTC m=-57.308350147 and My type is time.Time
+{dca9750d-a43c-41be-b30c-f54aa9007f6f a9261caf-6084-4a08-ba2e-cd10d51f81cf 6e77b21f-4182-4ec9-9cca-d0d787762aec 806ae818-dfa9-4e69-a00e-ccf244de560f e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:48:25.968398743 +0000 UTC m=-57.308350147 [] [{pickup_batch map[batch_status:pendi created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 pickup_batch_ID:cbf7aa24-1547-47cd-bb8e-bf779c95432d pickup_completed_at: pickup_started_at:2025-07-22T08:49:25Z route_id:1f6573f1-3435-464d-a3d2-8afd92c4516f time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:cad89d06-ae71-451f-8851-a402c5680c82] batch Status Does not contain "pending", "picked_up", "in_transit" or "delviered " }] 0 1 2025-07-22 08:49:25.968405796 +0000 UTC m=+2.691656916 Recieved 2025-07-22 08:49:25.968405796 +0000 UTC m=+2.691656916}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:dca9750d-a43c-41be-b30c-f54aa9007f6f SessionID:6e77b21f-4182-4ec9-9cca-d0d787762aec BatchID:a9261caf-6084-4a08-ba2e-cd10d51f81cf DeviceID:806ae818-dfa9-4e69-a00e-ccf244de560f UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:pickup_batch ClientTimeStamp:2025-07-22 08:48:25.968398743 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:pickup_batch Data:map[batch_status:pendi created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 pickup_batch_ID:cbf7aa24-1547-47cd-bb8e-bf779c95432d pickup_completed_at: pickup_started_at:2025-07-22T08:49:25Z route_id:1f6573f1-3435-464d-a3d2-8afd92c4516f time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:cad89d06-ae71-451f-8851-a402c5680c82] Reason:batch Status Does not contain "pending", "picked_up", "in_transit" or "delviered " }] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:25.968405796 +0000 UTC Status:Recieved CreatedAt:2025-07-22 08:49:25.968405796 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:25.968403201 +0000 UTC m=-117.308345678 and My type is time.Time
+{83e386cd-d0a8-4285-b1f8-f3f088d72c71 9e80bf5b-95f8-4c20-8397-4a54a54ca0a8 14fde547-84c7-460d-936f-538cb3988a7a c6b941f8-d9f9-4686-8224-ea57aaf0b649 e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:47:25.968403201 +0000 UTC m=-117.308345678 [] [{pickup_batch map[batch_status:pendi created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 pickup_batch_ID:0375a7cb-fb80-4a42-9817-9795726e48a0 pickup_completed_at: pickup_started_at:2025-07-22T08:49:25Z route_id:a049363e-8dd4-4c82-9657-fde9d82328bf time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:cad89d06-ae71-451f-8851-a402c5680c82] batch Status Does not contain "pending", "picked_up", "in_transit" or "delviered " }] 0 1 2025-07-22 08:49:25.978205127 +0000 UTC m=+2.701456247 Recieved 2025-07-22 08:49:25.978205127 +0000 UTC m=+2.701456247}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:83e386cd-d0a8-4285-b1f8-f3f088d72c71 SessionID:14fde547-84c7-460d-936f-538cb3988a7a BatchID:9e80bf5b-95f8-4c20-8397-4a54a54ca0a8 DeviceID:c6b941f8-d9f9-4686-8224-ea57aaf0b649 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:pickup_batch ClientTimeStamp:2025-07-22 08:47:25.968403201 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:pickup_batch Data:map[batch_status:pendi created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 pickup_batch_ID:0375a7cb-fb80-4a42-9817-9795726e48a0 pickup_completed_at: pickup_started_at:2025-07-22T08:49:25Z route_id:a049363e-8dd4-4c82-9657-fde9d82328bf time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:cad89d06-ae71-451f-8851-a402c5680c82] Reason:batch Status Does not contain "pending", "picked_up", "in_transit" or "delviered " }] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:25.978205127 +0000 UTC Status:Recieved CreatedAt:2025-07-22 08:49:25.978205127 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:25.987776022 +0000 UTC m=-57.288972857 and My type is time.Time
+{659330e3-4f7c-4b66-ad0e-cf7863bd1dd1 eed48a4f-14d6-4638-b767-a60223f1eec3 2793d18e-0798-4b06-b683-4a8634085a34 95d11a14-32c1-43ff-8d42-e80caf2ecb3f e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:48:25.987776022 +0000 UTC m=-57.288972857 [{map[created_at:2025-07-22T08:49:25Z delivery_id:Delivery-4627 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:2c4dc927-f6f2-4c0b-94df-74d7fba588d3 order_id:Order-4627 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:25Z status:picked_up time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z]}] [] 1 0 2025-07-22 08:49:25.987781403 +0000 UTC m=+2.711032522  2025-07-22 08:49:25.987781403 +0000 UTC m=+2.711032522}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:659330e3-4f7c-4b66-ad0e-cf7863bd1dd1 SessionID:2793d18e-0798-4b06-b683-4a8634085a34 BatchID:eed48a4f-14d6-4638-b767-a60223f1eec3 DeviceID:95d11a14-32c1-43ff-8d42-e80caf2ecb3f UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:manifest ClientTimeStamp:2025-07-22 08:48:25.987776022 +0000 UTC ProcessedRecords:[{Data:map[created_at:2025-07-22T08:49:25Z delivery_id:Delivery-4627 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:2c4dc927-f6f2-4c0b-94df-74d7fba588d3 order_id:Order-4627 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:25Z status:picked_up time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:25.987781403 +0000 UTC Status: CreatedAt:2025-07-22 08:49:25.987781403 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:25.987780541 +0000 UTC m=-117.288968339 and My type is time.Time
+{70be7752-c7a3-4fe8-a3f9-b3a72c5d5642 3cca5ddf-317e-4926-ac84-76c0b7c31513 d0295ebe-34d5-4e71-8bcd-b5c4d481af73 c2375f6c-d81f-4eda-aa2d-270d724a80c6 e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:47:25.987780541 +0000 UTC m=-117.288968339 [{map[created_at:2025-07-22T08:49:25Z delivery_id:Delivery-4628 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:81a1a494-780c-4135-9140-9a4f02c49e08 order_id:Order-4628 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:25Z status:picked_up time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z]}] [] 1 0 2025-07-22 08:49:25.998151896 +0000 UTC m=+2.721403026  2025-07-22 08:49:25.998151896 +0000 UTC m=+2.721403026}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:70be7752-c7a3-4fe8-a3f9-b3a72c5d5642 SessionID:d0295ebe-34d5-4e71-8bcd-b5c4d481af73 BatchID:3cca5ddf-317e-4926-ac84-76c0b7c31513 DeviceID:c2375f6c-d81f-4eda-aa2d-270d724a80c6 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:manifest ClientTimeStamp:2025-07-22 08:47:25.987780541 +0000 UTC ProcessedRecords:[{Data:map[created_at:2025-07-22T08:49:25Z delivery_id:Delivery-4628 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:81a1a494-780c-4135-9140-9a4f02c49e08 order_id:Order-4628 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:25Z status:picked_up time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:25.998151896 +0000 UTC Status: CreatedAt:2025-07-22 08:49:25.998151896 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:26.006094471 +0000 UTC m=-57.270654409 and My type is time.Time
+{1dee1ae6-0642-4bf5-8c50-80fe43c73cca f2474609-6b61-4b46-837f-bf69c40dc3c9 dd8017cf-faaa-4a2a-9bed-5aa61f632405 8c0bb402-1128-4848-bff4-453613486fe0 e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:48:26.006094471 +0000 UTC m=-57.270654409 [] [{manifest map[created_at:2025-07-22T08:49:26Z delivery_id:Delivery-118 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:fad11857-5e21-40ed-a4a4-f401f3423fe8 order_id:Order-118 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:26Z status:picked time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] 0 1 2025-07-22 08:49:26.00609966 +0000 UTC m=+2.729350770  2025-07-22 08:49:26.00609966 +0000 UTC m=+2.729350770}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:1dee1ae6-0642-4bf5-8c50-80fe43c73cca SessionID:dd8017cf-faaa-4a2a-9bed-5aa61f632405 BatchID:f2474609-6b61-4b46-837f-bf69c40dc3c9 DeviceID:8c0bb402-1128-4848-bff4-453613486fe0 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:manifest ClientTimeStamp:2025-07-22 08:48:26.006094471 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:manifest Data:map[created_at:2025-07-22T08:49:26Z delivery_id:Delivery-118 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:fad11857-5e21-40ed-a4a4-f401f3423fe8 order_id:Order-118 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:26Z status:picked time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] Reason:manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.00609966 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.00609966 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:26.006099059 +0000 UTC m=-117.270649821 and My type is time.Time
+{acc19e8e-c05c-406a-9148-630a8f5017fb bff753fc-a05c-4abb-8514-86ddbeab342a 0431f0a9-9ea0-4878-a51f-9d8babe9ce14 a7b5ebbb-f7a2-4846-a4e4-fc95875e3eff e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:47:26.006099059 +0000 UTC m=-117.270649821 [] [{manifest map[created_at:2025-07-22T08:49:26Z delivery_id:Delivery-119 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:4dc6a774-4bdf-4ec6-a477-3b0a073df5f5 order_id:Order-119 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:26Z status:picked time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] 0 1 2025-07-22 08:49:26.017169155 +0000 UTC m=+2.740420275  2025-07-22 08:49:26.017169155 +0000 UTC m=+2.740420275}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:acc19e8e-c05c-406a-9148-630a8f5017fb SessionID:0431f0a9-9ea0-4878-a51f-9d8babe9ce14 BatchID:bff753fc-a05c-4abb-8514-86ddbeab342a DeviceID:a7b5ebbb-f7a2-4846-a4e4-fc95875e3eff UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:manifest ClientTimeStamp:2025-07-22 08:47:26.006099059 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:manifest Data:map[created_at:2025-07-22T08:49:26Z delivery_id:Delivery-119 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:4dc6a774-4bdf-4ec6-a477-3b0a073df5f5 order_id:Order-119 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:26Z status:picked time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] Reason:manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.017169155 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.017169155 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:26.050247798 +0000 UTC m=-57.226501082 and My type is time.Time
+{90f5191a-2736-4688-b1db-9ebc95c30575 4b3566ef-accd-4406-b807-c7f0d8f52bed 98ae362b-7db7-4936-9459-a114f08acfa2 1f5e19c1-8689-458c-8015-2a457102fb82 e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:48:26.050247798 +0000 UTC m=-57.226501082 [{map[created_at:2025-07-22T08:49:26Z device_id:2f1f384b-c3f0-4c2b-885d-4414584d1591 event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:3b67e388-8131-49ee-8cd7-9b4da1a22d0f signature_type:PIN signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.050253338 +0000 UTC m=+2.773504449  2025-07-22 08:49:26.050253338 +0000 UTC m=+2.773504449}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:90f5191a-2736-4688-b1db-9ebc95c30575 SessionID:98ae362b-7db7-4936-9459-a114f08acfa2 BatchID:4b3566ef-accd-4406-b807-c7f0d8f52bed DeviceID:1f5e19c1-8689-458c-8015-2a457102fb82 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:signature ClientTimeStamp:2025-07-22 08:48:26.050247798 +0000 UTC ProcessedRecords:[{Data:map[created_at:2025-07-22T08:49:26Z device_id:2f1f384b-c3f0-4c2b-885d-4414584d1591 event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:3b67e388-8131-49ee-8cd7-9b4da1a22d0f signature_type:PIN signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.050253338 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.050253338 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:26.050251936 +0000 UTC m=-117.226496944 and My type is time.Time
+{b7abee1e-4d06-40aa-ab0b-5accefadeb30 4a6592f3-c8cb-4164-a3e8-6307acc1a185 ff22f0d7-f460-4257-8944-b43d5b02a377 4d2aca46-dbda-45c2-ad5c-2733a21bde5b e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:47:26.050251936 +0000 UTC m=-117.226496944 [{map[created_at:2025-07-22T08:49:26Z device_id:668488b9-a01d-4d5b-ac40-94352724e92c event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:acd36a7f-5393-4ae0-8188-06e97c3f1c75 signature_type:PIN signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.058583184 +0000 UTC m=+2.781834304  2025-07-22 08:49:26.058583184 +0000 UTC m=+2.781834304}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:b7abee1e-4d06-40aa-ab0b-5accefadeb30 SessionID:ff22f0d7-f460-4257-8944-b43d5b02a377 BatchID:4a6592f3-c8cb-4164-a3e8-6307acc1a185 DeviceID:4d2aca46-dbda-45c2-ad5c-2733a21bde5b UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:signature ClientTimeStamp:2025-07-22 08:47:26.050251936 +0000 UTC ProcessedRecords:[{Data:map[created_at:2025-07-22T08:49:26Z device_id:668488b9-a01d-4d5b-ac40-94352724e92c event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:acd36a7f-5393-4ae0-8188-06e97c3f1c75 signature_type:PIN signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.058583184 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.058583184 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:26.067892713 +0000 UTC m=-57.208856167 and My type is time.Time
+{59e2a54a-84d6-4801-8035-50ab732cd642 53fbbbdc-70f0-4653-90f5-39e8bcb927b9 cb39c9fd-98c0-429a-a43c-bc9c9d120c3e 5f571d50-f34b-47e1-9d2e-16c788f88f2f e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:48:26.067892713 +0000 UTC m=-57.208856167 [] [{signature map[created_at:2025-07-22T08:49:26Z device_id:964bf1f6-040e-44d0-8ef3-37622fc2498d event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:d44845cd-3b1d-4aeb-90a2-9da51c2f2bc7 signature_type:Password signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 singed_at:2025-07-22T08:29:26Z time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] signature Type is Empty or Signature Type is "PIN" or "Freehand " "Fingerprint " "FaceID "}] 0 1 2025-07-22 08:49:26.067897552 +0000 UTC m=+2.791148672  2025-07-22 08:49:26.067897552 +0000 UTC m=+2.791148672}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:59e2a54a-84d6-4801-8035-50ab732cd642 SessionID:cb39c9fd-98c0-429a-a43c-bc9c9d120c3e BatchID:53fbbbdc-70f0-4653-90f5-39e8bcb927b9 DeviceID:5f571d50-f34b-47e1-9d2e-16c788f88f2f UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:signature ClientTimeStamp:2025-07-22 08:48:26.067892713 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:signature Data:map[created_at:2025-07-22T08:49:26Z device_id:964bf1f6-040e-44d0-8ef3-37622fc2498d event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:d44845cd-3b1d-4aeb-90a2-9da51c2f2bc7 signature_type:Password signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 singed_at:2025-07-22T08:29:26Z time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] Reason:signature Type is Empty or Signature Type is "PIN" or "Freehand " "Fingerprint " "FaceID "}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.067897552 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.067897552 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:26.067896931 +0000 UTC m=-117.208851959 and My type is time.Time
+{93b65b7f-5cc8-4e57-9e82-d86d7e8819cc 0dcdc4f5-fcd2-42a4-9c90-a37aa6905e74 4892b1e2-6e01-42cd-824d-eb7c28bffc0d 2372289c-c59e-4189-8617-489602c9dc47 e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:47:26.067896931 +0000 UTC m=-117.208851959 [] [{signature map[created_at:2025-07-22T08:49:26Z device_id:e74699e9-f11c-45c6-9fc9-aab73eec920d event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:4239d889-5256-4a55-a4d4-34dd37d4a6a6 signature_type:Password signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 singed_at:2025-07-22T08:29:26Z time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] signature Type is Empty or Signature Type is "PIN" or "Freehand " "Fingerprint " "FaceID "}] 0 1 2025-07-22 08:49:26.077196311 +0000 UTC m=+2.800447431  2025-07-22 08:49:26.077196311 +0000 UTC m=+2.800447431}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:93b65b7f-5cc8-4e57-9e82-d86d7e8819cc SessionID:4892b1e2-6e01-42cd-824d-eb7c28bffc0d BatchID:0dcdc4f5-fcd2-42a4-9c90-a37aa6905e74 DeviceID:2372289c-c59e-4189-8617-489602c9dc47 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:signature ClientTimeStamp:2025-07-22 08:47:26.067896931 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:signature Data:map[created_at:2025-07-22T08:49:26Z device_id:e74699e9-f11c-45c6-9fc9-aab73eec920d event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:4239d889-5256-4a55-a4d4-34dd37d4a6a6 signature_type:Password signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 singed_at:2025-07-22T08:29:26Z time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] Reason:signature Type is Empty or Signature Type is "PIN" or "Freehand " "Fingerprint " "FaceID "}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.077196311 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.077196311 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:26.087094094 +0000 UTC m=-57.189654796 and My type is time.Time
+{1ad32607-d29d-45cc-8696-40326adf8ce7 e8f88f3e-bfb0-4b08-a211-4e2fd20f3de6 d4481415-63fc-4022-a022-136d8b3f055c 80c0ef0a-a706-492f-b105-b3e7d17fd706 e33a31a9-58bf-43c6-bc86-2e3039937f04 images 2025-07-22 08:48:26.087094094 +0000 UTC m=-57.189654796 [{map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:38cd7684-3b4d-452a-a13e-3e636206ecc4 image_hash:img_hash_pickup_002 image_type:model19 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.087098012 +0000 UTC m=+2.810349132  2025-07-22 08:49:26.087098012 +0000 UTC m=+2.810349132}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:1ad32607-d29d-45cc-8696-40326adf8ce7 SessionID:d4481415-63fc-4022-a022-136d8b3f055c BatchID:e8f88f3e-bfb0-4b08-a211-4e2fd20f3de6 DeviceID:80c0ef0a-a706-492f-b105-b3e7d17fd706 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:images ClientTimeStamp:2025-07-22 08:48:26.087094094 +0000 UTC ProcessedRecords:[{Data:map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:38cd7684-3b4d-452a-a13e-3e636206ecc4 image_hash:img_hash_pickup_002 image_type:model19 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.087098012 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.087098012 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:26.087097411 +0000 UTC m=-117.189651479 and My type is time.Time
+{276b72e4-08a3-4ac8-8807-848c41f129eb e8f28cf6-8838-47e3-a84f-8ff72b04e39d 2c5d20af-920c-4b1e-b36c-cc2ecd69713d 86d92e69-f206-48a1-ae40-1e237b4a4ec8 e33a31a9-58bf-43c6-bc86-2e3039937f04 images 2025-07-22 08:47:26.087097411 +0000 UTC m=-117.189651479 [{map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:3912c3e2-0136-40d0-b4ba-91ff9c4f653e image_hash:img_hash_pickup_002 image_type:model19 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.093729165 +0000 UTC m=+2.816980285  2025-07-22 08:49:26.093729165 +0000 UTC m=+2.816980285}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:276b72e4-08a3-4ac8-8807-848c41f129eb SessionID:2c5d20af-920c-4b1e-b36c-cc2ecd69713d BatchID:e8f28cf6-8838-47e3-a84f-8ff72b04e39d DeviceID:86d92e69-f206-48a1-ae40-1e237b4a4ec8 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:images ClientTimeStamp:2025-07-22 08:47:26.087097411 +0000 UTC ProcessedRecords:[{Data:map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:3912c3e2-0136-40d0-b4ba-91ff9c4f653e image_hash:img_hash_pickup_002 image_type:model19 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.093729165 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.093729165 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:26.10312237 +0000 UTC m=-57.173626510 and My type is time.Time
+{25188901-2882-461c-b1ea-35fd995f97bd cda221a2-73d3-4f1e-98a3-58fadc228e99 cc86b6e8-a9e5-4c69-a73e-a6f50f56a19f ee9fc4be-e8cb-4b08-9737-015027fbaeb4 e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:48:26.10312237 +0000 UTC m=-57.173626510 [{map[accuracy:0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:75466807-de01-4a53-b408-6f611af1c0a7 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:26.103126257 +0000 UTC m=+2.826377377  2025-07-22 08:49:26.103126257 +0000 UTC m=+2.826377377}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:25188901-2882-461c-b1ea-35fd995f97bd SessionID:cc86b6e8-a9e5-4c69-a73e-a6f50f56a19f BatchID:cda221a2-73d3-4f1e-98a3-58fadc228e99 DeviceID:ee9fc4be-e8cb-4b08-9737-015027fbaeb4 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:gpstracking ClientTimeStamp:2025-07-22 08:48:26.10312237 +0000 UTC ProcessedRecords:[{Data:map[accuracy:0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:75466807-de01-4a53-b408-6f611af1c0a7 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.103126257 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.103126257 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:26.103125726 +0000 UTC m=-117.173623154 and My type is time.Time
+{e6d18c1c-1bc4-4f7b-9486-637c36d4ec4f b898e280-87aa-4025-ba16-fed8262b7d14 cb151b4e-9d38-4bbd-a3e0-1707ece1e3e3 a49d2cdc-bc6a-41fb-a58e-89ff92cdb929 e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:47:26.103125726 +0000 UTC m=-117.173623154 [{map[accuracy:0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:57c6b4b2-8419-4009-9d9a-625c22b8b85b updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:26.110703912 +0000 UTC m=+2.833955032  2025-07-22 08:49:26.110703912 +0000 UTC m=+2.833955032}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:e6d18c1c-1bc4-4f7b-9486-637c36d4ec4f SessionID:cb151b4e-9d38-4bbd-a3e0-1707ece1e3e3 BatchID:b898e280-87aa-4025-ba16-fed8262b7d14 DeviceID:a49d2cdc-bc6a-41fb-a58e-89ff92cdb929 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:gpstracking ClientTimeStamp:2025-07-22 08:47:26.103125726 +0000 UTC ProcessedRecords:[{Data:map[accuracy:0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:57c6b4b2-8419-4009-9d9a-625c22b8b85b updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.110703912 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.110703912 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:26.119211268 +0000 UTC m=-57.157537612 and My type is time.Time
+{5ec797de-b400-4008-9b26-a0970fb0eb9b 5cf38828-5f4c-4f2b-9647-9f852056368e 25138712-2060-4378-bec0-df9ef8e5645c d5a0d549-779e-4b51-9f05-31b99524dd5b e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:48:26.119211268 +0000 UTC m=-57.157537612 [] [{gpstracking map[accuracy:-0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:fffc3d03-f19d-4dbd-84ef-45bbaa241ea5 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf] invalid Accuracy Range must be >= 0.00 and <= 100.00}] 0 1 2025-07-22 08:49:26.119216508 +0000 UTC m=+2.842467628  2025-07-22 08:49:26.119216508 +0000 UTC m=+2.842467628}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:5ec797de-b400-4008-9b26-a0970fb0eb9b SessionID:25138712-2060-4378-bec0-df9ef8e5645c BatchID:5cf38828-5f4c-4f2b-9647-9f852056368e DeviceID:d5a0d549-779e-4b51-9f05-31b99524dd5b UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:gpstracking ClientTimeStamp:2025-07-22 08:48:26.119211268 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:gpstracking Data:map[accuracy:-0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:fffc3d03-f19d-4dbd-84ef-45bbaa241ea5 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf] Reason:invalid Accuracy Range must be >= 0.00 and <= 100.00}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.119216508 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.119216508 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:26.119216037 +0000 UTC m=-117.157532843 and My type is time.Time
+{e4058ffb-124d-42d8-98c8-2e264681ac9a 709dbaee-9f51-4d4b-b0e5-48e123bb9ec9 28177efc-686f-45d2-9f58-639523e9b92b b068de84-9c89-4ba3-997e-0aed534330df e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:47:26.119216037 +0000 UTC m=-117.157532843 [] [{gpstracking map[accuracy:-0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:03ce2c47-ce1d-4fa4-bce0-afb292d7e5d1 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf] invalid Accuracy Range must be >= 0.00 and <= 100.00}] 0 1 2025-07-22 08:49:26.128579306 +0000 UTC m=+2.851830436  2025-07-22 08:49:26.128579306 +0000 UTC m=+2.851830436}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:e4058ffb-124d-42d8-98c8-2e264681ac9a SessionID:28177efc-686f-45d2-9f58-639523e9b92b BatchID:709dbaee-9f51-4d4b-b0e5-48e123bb9ec9 DeviceID:b068de84-9c89-4ba3-997e-0aed534330df UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:gpstracking ClientTimeStamp:2025-07-22 08:47:26.119216037 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:gpstracking Data:map[accuracy:-0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:03ce2c47-ce1d-4fa4-bce0-afb292d7e5d1 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf] Reason:invalid Accuracy Range must be >= 0.00 and <= 100.00}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.128579306 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.128579306 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:26.137298997 +0000 UTC m=-57.139449893 and My type is time.Time
+{548ef26c-06bf-4e18-938d-a5932c317612 2db80dd3-1b9b-4792-97bb-524482cf0297 687df660-60f7-4cb5-96de-cae5e688e9fe 19774b29-8c43-4135-97b3-09062f159922 f988c3d5-07a3-49aa-a19b-80522cd0ea22 delivery_exception 2025-07-22 08:48:26.137298997 +0000 UTC m=-57.139449893 [{map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:0be7c289-ef74-4bd1-9bf6-7bef7a4098c7 exception_type:damaged is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.137303194 +0000 UTC m=+2.860554314  2025-07-22 08:49:26.137303194 +0000 UTC m=+2.860554314}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:548ef26c-06bf-4e18-938d-a5932c317612 SessionID:687df660-60f7-4cb5-96de-cae5e688e9fe BatchID:2db80dd3-1b9b-4792-97bb-524482cf0297 DeviceID:19774b29-8c43-4135-97b3-09062f159922 UserID:f988c3d5-07a3-49aa-a19b-80522cd0ea22 EntityType:delivery_exception ClientTimeStamp:2025-07-22 08:48:26.137298997 +0000 UTC ProcessedRecords:[{Data:map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:0be7c289-ef74-4bd1-9bf6-7bef7a4098c7 exception_type:damaged is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.137303194 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.137303194 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:26.137302683 +0000 UTC m=-117.139446197 and My type is time.Time
+{80218809-c459-40f1-aa03-17dd3557b71c bc878ac3-c664-49e6-841c-2d20456d4250 4c0d0376-9833-4c59-83bd-7d84410e219e 2e3783c9-03c4-48ec-befa-099ee870e77c f988c3d5-07a3-49aa-a19b-80522cd0ea22 delivery_exception 2025-07-22 08:47:26.137302683 +0000 UTC m=-117.139446197 [{map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:f197e609-c69e-486b-b303-f5a346bc0996 exception_type:damaged is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.146217307 +0000 UTC m=+2.869468427  2025-07-22 08:49:26.146217307 +0000 UTC m=+2.869468427}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:80218809-c459-40f1-aa03-17dd3557b71c SessionID:4c0d0376-9833-4c59-83bd-7d84410e219e BatchID:bc878ac3-c664-49e6-841c-2d20456d4250 DeviceID:2e3783c9-03c4-48ec-befa-099ee870e77c UserID:f988c3d5-07a3-49aa-a19b-80522cd0ea22 EntityType:delivery_exception ClientTimeStamp:2025-07-22 08:47:26.137302683 +0000 UTC ProcessedRecords:[{Data:map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:f197e609-c69e-486b-b303-f5a346bc0996 exception_type:damaged is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.146217307 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.146217307 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:26.154294152 +0000 UTC m=-57.122454728 and My type is time.Time
+{d34ff95b-dfc6-4f2b-b821-55034d9a51c8 d79b2298-a305-4a5c-a245-ee746f47bb42 de4c50db-0269-4725-bcac-579a2d122c74 4f1f8458-582f-4d6e-8cbd-80efa588cbaa f988c3d5-07a3-49aa-a19b-80522cd0ea22 delivery_exception 2025-07-22 08:48:26.154294152 +0000 UTC m=-57.122454728 [] [{delivery_exception map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:e595e3b7-8f6f-47d3-a783-3fbacd97f8f6 exception_type:address_issue is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] exception Type is Empty or not one of the following: damaged, descripancy, refused, no_recipient, wrong_address, other}] 0 1 2025-07-22 08:49:26.154298169 +0000 UTC m=+2.877549289  2025-07-22 08:49:26.154298169 +0000 UTC m=+2.877549289}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:d34ff95b-dfc6-4f2b-b821-55034d9a51c8 SessionID:de4c50db-0269-4725-bcac-579a2d122c74 BatchID:d79b2298-a305-4a5c-a245-ee746f47bb42 DeviceID:4f1f8458-582f-4d6e-8cbd-80efa588cbaa UserID:f988c3d5-07a3-49aa-a19b-80522cd0ea22 EntityType:delivery_exception ClientTimeStamp:2025-07-22 08:48:26.154294152 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:delivery_exception Data:map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:e595e3b7-8f6f-47d3-a783-3fbacd97f8f6 exception_type:address_issue is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] Reason:exception Type is Empty or not one of the following: damaged, descripancy, refused, no_recipient, wrong_address, other}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.154298169 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.154298169 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:26.154297638 +0000 UTC m=-117.122451242 and My type is time.Time
+{6c075890-7f2d-4e3f-8632-c05b9404e3b4 7ec29c0c-2b0a-4ff6-b3ec-311ede8266ff feec3b42-bb29-4624-823b-bafc06fd62e2 760b3c3c-8b27-4327-8e6f-3aebe17fb4f1 f988c3d5-07a3-49aa-a19b-80522cd0ea22 delivery_exception 2025-07-22 08:47:26.154297638 +0000 UTC m=-117.122451242 [] [{delivery_exception map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:190d348d-2036-4554-afd3-672430566ef7 exception_type:address_issue is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] exception Type is Empty or not one of the following: damaged, descripancy, refused, no_recipient, wrong_address, other}] 0 1 2025-07-22 08:49:26.162126872 +0000 UTC m=+2.885377991  2025-07-22 08:49:26.162126872 +0000 UTC m=+2.885377991}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:6c075890-7f2d-4e3f-8632-c05b9404e3b4 SessionID:feec3b42-bb29-4624-823b-bafc06fd62e2 BatchID:7ec29c0c-2b0a-4ff6-b3ec-311ede8266ff DeviceID:760b3c3c-8b27-4327-8e6f-3aebe17fb4f1 UserID:f988c3d5-07a3-49aa-a19b-80522cd0ea22 EntityType:delivery_exception ClientTimeStamp:2025-07-22 08:47:26.154297638 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:delivery_exception Data:map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:190d348d-2036-4554-afd3-672430566ef7 exception_type:address_issue is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] Reason:exception Type is Empty or not one of the following: damaged, descripancy, refused, no_recipient, wrong_address, other}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.162126872 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.162126872 +0000 UTC}
+I am picked up here: 2025-07-22 08:48:26.170528571 +0000 UTC m=-57.106220309 and My type is time.Time
+{a5848c07-447f-4a28-ba8f-40dd342f0ad2 54bb6daf-a3d4-439a-b05f-7cb2a34dd393 8e8484c8-f4c9-4d80-85b2-bab19e61caa9 e776ffc1-1cc1-425f-bf77-422c9c924318 e33a31a9-58bf-43c6-bc86-2e3039937f04 images 2025-07-22 08:48:26.170528571 +0000 UTC m=-57.106220309 [] [{images map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:ae989114-027a-40ea-bf2c-d0867083fef6 image_hash:img_hash_pickup_002 image_type:model9 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] image type is Empty or not one of the following: model19, model19_dicripancy, exception}] 0 1 2025-07-22 08:49:26.170532728 +0000 UTC m=+2.893783849  2025-07-22 08:49:26.170532728 +0000 UTC m=+2.893783849}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:a5848c07-447f-4a28-ba8f-40dd342f0ad2 SessionID:8e8484c8-f4c9-4d80-85b2-bab19e61caa9 BatchID:54bb6daf-a3d4-439a-b05f-7cb2a34dd393 DeviceID:e776ffc1-1cc1-425f-bf77-422c9c924318 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:images ClientTimeStamp:2025-07-22 08:48:26.170528571 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:images Data:map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:ae989114-027a-40ea-bf2c-d0867083fef6 image_hash:img_hash_pickup_002 image_type:model9 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] Reason:image type is Empty or not one of the following: model19, model19_dicripancy, exception}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.170532728 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.170532728 +0000 UTC}
+I am picked up here: 2025-07-22 08:47:26.170532177 +0000 UTC m=-117.106216703 and My type is time.Time
+{ada9c791-5370-49a1-aab5-e2c82c098ac3 10bccc0c-d8e2-4558-a534-070951fdf2bd 9d0974d6-9d35-4e0b-8905-7fcf6ebb84cf 953540af-742d-44df-925a-15963cc4a399 e33a31a9-58bf-43c6-bc86-2e3039937f04 images 2025-07-22 08:47:26.170532177 +0000 UTC m=-117.106216703 [] [{images map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:9685f8bd-249c-4c89-b8ca-c1648a0c78c8 image_hash:img_hash_pickup_002 image_type:model9 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] image type is Empty or not one of the following: model19, model19_dicripancy, exception}] 0 1 2025-07-22 08:49:26.178765082 +0000 UTC m=+2.902016202  2025-07-22 08:49:26.178765082 +0000 UTC m=+2.902016202}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:ada9c791-5370-49a1-aab5-e2c82c098ac3 SessionID:9d0974d6-9d35-4e0b-8905-7fcf6ebb84cf BatchID:10bccc0c-d8e2-4558-a534-070951fdf2bd DeviceID:953540af-742d-44df-925a-15963cc4a399 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:images ClientTimeStamp:2025-07-22 08:47:26.170532177 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:images Data:map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:9685f8bd-249c-4c89-b8ca-c1648a0c78c8 image_hash:img_hash_pickup_002 image_type:model9 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] Reason:image type is Empty or not one of the following: model19, model19_dicripancy, exception}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.178765082 +0000 UTC Status: CreatedAt:2025-07-22 08:49:26.178765082 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid
+I am query ID:  2d46bf43-ece3-48e1-9a29-15091e794764
+Fetch values: {e4a8b953-ce0a-4587-a3eb-2b2cca1637cf 4518ae39-513b-4d8a-a86c-f2febc33764c 2d46bf43-ece3-48e1-9a29-15091e794764 216c6e17-f850-4d5e-a156-f5eb268795e9 e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:48:25.948178 +0000 UTC [{map[batch_status:pending created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f picked_completed_at: pickup_batch_id:bd293078-0f91-4372-8308-4977bd9d4633 pickup_started_at:2025-07-22T08:49:25Z route_id:ba10c0f7-7bc1-49cc-9818-e339a1dde749 time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:25.948186 +0000 UTC Recieved 2025-07-22 08:49:25.948186 +0000 UTC}
+I am fetched: {e4a8b953-ce0a-4587-a3eb-2b2cca1637cf 2d46bf43-ece3-48e1-9a29-15091e794764 4518ae39-513b-4d8a-a86c-f2febc33764c 216c6e17-f850-4d5e-a156-f5eb268795e9 e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:48:25.948178 +0000 UTC [{map[batch_status:pending created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f picked_completed_at: pickup_batch_id:bd293078-0f91-4372-8308-4977bd9d4633 pickup_started_at:2025-07-22T08:49:25Z route_id:ba10c0f7-7bc1-49cc-9818-e339a1dde749 time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:25.948186 +0000 UTC Recieved 2025-07-22 08:49:25.948186 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic
+I am picked up here: 2025-07-22 08:44:26.19665381 +0000 UTC m=-297.080095060 and My type is time.Time
+{a33827f8-3fc0-4651-8b3b-5a63ae8f2966 096ac829-6259-476c-8f3f-25bf321c15af 09b32efb-96ea-425d-a27b-b5a89d0e756e e578cacd-0c52-4824-914d-9ef59ca1bcef e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:44:26.19665381 +0000 UTC m=-297.080095060 [{map[batch_status:pending created_at:2025-07-22 08:49:26.196655123 +0000 UTC m=+2.919906233 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:e41ab884-d531-45d2-a60b-57c821040220 pickup_completed_at:0001-01-01T00:00:00Z pickup_started_at:2025-07-22T07:49:26Z route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b time_stamp:2025-07-22 08:49:26.196655183 +0000 UTC m=+2.919906303 updated_at:2025-07-22 08:49:26.196655123 +0000 UTC m=+2.919906233 vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:26.196692783 +0000 UTC m=+2.919943903 Received 2025-07-22 08:49:26.196692783 +0000 UTC m=+2.919943903}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:a33827f8-3fc0-4651-8b3b-5a63ae8f2966 SessionID:09b32efb-96ea-425d-a27b-b5a89d0e756e BatchID:096ac829-6259-476c-8f3f-25bf321c15af DeviceID:e578cacd-0c52-4824-914d-9ef59ca1bcef UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:pickup_batch ClientTimeStamp:2025-07-22 08:44:26.19665381 +0000 UTC ProcessedRecords:[{Data:map[batch_status:pending created_at:2025-07-22 08:49:26.196655123 +0000 UTC m=+2.919906233 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:e41ab884-d531-45d2-a60b-57c821040220 pickup_completed_at:0001-01-01T00:00:00Z pickup_started_at:2025-07-22T07:49:26Z route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b time_stamp:2025-07-22 08:49:26.196655183 +0000 UTC m=+2.919906303 updated_at:2025-07-22 08:49:26.196655123 +0000 UTC m=+2.919906233 vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.196692783 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.196692783 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#01
+I am picked up here: 2025-07-22 08:44:26.2053028 +0000 UTC m=-297.071446080 and My type is time.Time
+{aa55bc10-3367-478f-ab9f-5da0118a2972 87d5eda3-4718-4dd6-8c74-92f45896cc6c a9b51daa-ee48-4c0c-9d67-bb7ced96d53f 69382de2-e785-41fc-8dd5-ce9c99735677 e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:44:26.2053028 +0000 UTC m=-297.071446080 [] [{pickup_batch map[batch_status:pendi created_at:2025-07-22 08:49:26.205304203 +0000 UTC m=+2.928555322 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 pickup_batch_id:5456ee3d-366f-4ee1-8c0e-7274ae3986ee pickup_completed_at:0001-01-01T00:00:00Z pickup_started_at:2025-07-22T07:49:26Z route_id:e2833cea-c84f-4ffd-bf2e-63c91504a34e time_stamp:2025-07-22 08:49:26.205304263 +0000 UTC m=+2.928555383 updated_at:2025-07-22 08:49:26.205304203 +0000 UTC m=+2.928555322 vehicle_id:cad89d06-ae71-451f-8851-a402c5680c82] batch Status Does not contain "pending", "picked_up", "in_transit" or "delviered " }] 0 1 2025-07-22 08:49:26.205340851 +0000 UTC m=+2.928591971 Received 2025-07-22 08:49:26.205340851 +0000 UTC m=+2.928591971}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:aa55bc10-3367-478f-ab9f-5da0118a2972 SessionID:a9b51daa-ee48-4c0c-9d67-bb7ced96d53f BatchID:87d5eda3-4718-4dd6-8c74-92f45896cc6c DeviceID:69382de2-e785-41fc-8dd5-ce9c99735677 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:pickup_batch ClientTimeStamp:2025-07-22 08:44:26.2053028 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:pickup_batch Data:map[batch_status:pendi created_at:2025-07-22 08:49:26.205304203 +0000 UTC m=+2.928555322 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 pickup_batch_id:5456ee3d-366f-4ee1-8c0e-7274ae3986ee pickup_completed_at:0001-01-01T00:00:00Z pickup_started_at:2025-07-22T07:49:26Z route_id:e2833cea-c84f-4ffd-bf2e-63c91504a34e time_stamp:2025-07-22 08:49:26.205304263 +0000 UTC m=+2.928555383 updated_at:2025-07-22 08:49:26.205304203 +0000 UTC m=+2.928555322 vehicle_id:cad89d06-ae71-451f-8851-a402c5680c82] Reason:batch Status Does not contain "pending", "picked_up", "in_transit" or "delviered " }] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.205340851 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.205340851 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#01
+I am query ID:  a9261caf-6084-4a08-ba2e-cd10d51f81cf
+Fetch values: {dca9750d-a43c-41be-b30c-f54aa9007f6f 6e77b21f-4182-4ec9-9cca-d0d787762aec a9261caf-6084-4a08-ba2e-cd10d51f81cf 806ae818-dfa9-4e69-a00e-ccf244de560f e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:48:25.968398 +0000 UTC [] [{pickup_batch map[batch_status:pendi created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 pickup_batch_ID:cbf7aa24-1547-47cd-bb8e-bf779c95432d pickup_completed_at: pickup_started_at:2025-07-22T08:49:25Z route_id:1f6573f1-3435-464d-a3d2-8afd92c4516f time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:cad89d06-ae71-451f-8851-a402c5680c82] batch Status Does not contain "pending", "picked_up", "in_transit" or "delviered " }] 0 1 2025-07-22 08:49:25.968405 +0000 UTC Recieved 2025-07-22 08:49:25.968405 +0000 UTC}
+I am fetched: {dca9750d-a43c-41be-b30c-f54aa9007f6f a9261caf-6084-4a08-ba2e-cd10d51f81cf 6e77b21f-4182-4ec9-9cca-d0d787762aec 806ae818-dfa9-4e69-a00e-ccf244de560f e33a31a9-58bf-43c6-bc86-2e3039937f04 pickup_batch 2025-07-22 08:48:25.968398 +0000 UTC [] [{pickup_batch map[batch_status:pendi created_at:2025-07-22T08:49:25Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false origin_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 pickup_batch_ID:cbf7aa24-1547-47cd-bb8e-bf779c95432d pickup_completed_at: pickup_started_at:2025-07-22T08:49:25Z route_id:1f6573f1-3435-464d-a3d2-8afd92c4516f time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z vehicle_id:cad89d06-ae71-451f-8851-a402c5680c82] batch Status Does not contain "pending", "picked_up", "in_transit" or "delviered " }] 0 1 2025-07-22 08:49:25.968405 +0000 UTC Recieved 2025-07-22 08:49:25.968405 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#02
+I am picked up here: 2025-07-22 08:44:26.225478053 +0000 UTC m=-297.051270827 and My type is time.Time
+{db8799b1-f2d1-4e30-961b-dc3c1f734a14 f189abd6-a1bf-4082-9b34-276db66a7bd1 bd2ffc56-8d8e-4c03-a2dc-2bc40fb7c108 94e46fb8-64a2-44cd-90bd-fd1d96a19522 e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:44:26.225478053 +0000 UTC m=-297.051270827 [{map[created_at:2025-07-22 08:49:26.225479065 +0000 UTC m=+2.948730185 delivery_id:Delivery-2025-06 delivery_time:0001-01-01T00:00:00Z destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:d04f1768-785e-4526-acfe-fb5c3721210f order_id:Order-2025-06 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T07:49:26Z status:picked_up time_stamp:2025-07-22 08:49:26.225479135 +0000 UTC m=+2.948730255 updated_at:2025-07-22 08:49:26.225479065 +0000 UTC m=+2.948730185]}] [] 1 0 2025-07-22 08:49:26.225553063 +0000 UTC m=+2.948804183 Received 2025-07-22 08:49:26.225553063 +0000 UTC m=+2.948804183}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:db8799b1-f2d1-4e30-961b-dc3c1f734a14 SessionID:bd2ffc56-8d8e-4c03-a2dc-2bc40fb7c108 BatchID:f189abd6-a1bf-4082-9b34-276db66a7bd1 DeviceID:94e46fb8-64a2-44cd-90bd-fd1d96a19522 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:manifest ClientTimeStamp:2025-07-22 08:44:26.225478053 +0000 UTC ProcessedRecords:[{Data:map[created_at:2025-07-22 08:49:26.225479065 +0000 UTC m=+2.948730185 delivery_id:Delivery-2025-06 delivery_time:0001-01-01T00:00:00Z destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:d04f1768-785e-4526-acfe-fb5c3721210f order_id:Order-2025-06 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T07:49:26Z status:picked_up time_stamp:2025-07-22 08:49:26.225479135 +0000 UTC m=+2.948730255 updated_at:2025-07-22 08:49:26.225479065 +0000 UTC m=+2.948730185]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.225553063 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.225553063 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#03
+I am picked up here: 2025-07-22 08:44:26.234392446 +0000 UTC m=-297.042356434 and My type is time.Time
+{b753f88d-849a-4eb0-bc56-14867f737b72 b7246612-1d9a-4107-b0f2-b89e5e14db69 38fa0cc3-80c8-43c8-a2c6-3358b6e5238f 1a2ceda5-a5c2-455b-b709-ecb5b90427ff e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:44:26.234392446 +0000 UTC m=-297.042356434 [] [{manifest map[created_at:2025-07-22 08:49:26.234393508 +0000 UTC m=+2.957644618 delivery_id:Delivery-2025-06 delivery_time:0001-01-01T00:00:00Z destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:f7431463-490d-4fd2-b015-aa9b51666af5 order_id:Order-2025-06 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T07:49:26Z status:picked time_stamp:2025-07-22 08:49:26.234393568 +0000 UTC m=+2.957644689 updated_at:2025-07-22 08:49:26.234393508 +0000 UTC m=+2.957644618] manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] 0 1 2025-07-22 08:49:26.234476132 +0000 UTC m=+2.957727252 Received 2025-07-22 08:49:26.234476132 +0000 UTC m=+2.957727252}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:b753f88d-849a-4eb0-bc56-14867f737b72 SessionID:38fa0cc3-80c8-43c8-a2c6-3358b6e5238f BatchID:b7246612-1d9a-4107-b0f2-b89e5e14db69 DeviceID:1a2ceda5-a5c2-455b-b709-ecb5b90427ff UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:manifest ClientTimeStamp:2025-07-22 08:44:26.234392446 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:manifest Data:map[created_at:2025-07-22 08:49:26.234393508 +0000 UTC m=+2.957644618 delivery_id:Delivery-2025-06 delivery_time:0001-01-01T00:00:00Z destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:f7431463-490d-4fd2-b015-aa9b51666af5 order_id:Order-2025-06 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T07:49:26Z status:picked time_stamp:2025-07-22 08:49:26.234393568 +0000 UTC m=+2.957644689 updated_at:2025-07-22 08:49:26.234393508 +0000 UTC m=+2.957644618] Reason:manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.234476132 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.234476132 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#02
+I am query ID:  eed48a4f-14d6-4638-b767-a60223f1eec3
+Fetch values: {659330e3-4f7c-4b66-ad0e-cf7863bd1dd1 2793d18e-0798-4b06-b683-4a8634085a34 eed48a4f-14d6-4638-b767-a60223f1eec3 95d11a14-32c1-43ff-8d42-e80caf2ecb3f e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:48:25.987776 +0000 UTC [{map[created_at:2025-07-22T08:49:25Z delivery_id:Delivery-4627 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:2c4dc927-f6f2-4c0b-94df-74d7fba588d3 order_id:Order-4627 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:25Z status:picked_up time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z]}] [] 1 0 2025-07-22 08:49:25.987781 +0000 UTC  2025-07-22 08:49:25.987781 +0000 UTC}
+I am fetched: {659330e3-4f7c-4b66-ad0e-cf7863bd1dd1 eed48a4f-14d6-4638-b767-a60223f1eec3 2793d18e-0798-4b06-b683-4a8634085a34 95d11a14-32c1-43ff-8d42-e80caf2ecb3f e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:48:25.987776 +0000 UTC [{map[created_at:2025-07-22T08:49:25Z delivery_id:Delivery-4627 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:2c4dc927-f6f2-4c0b-94df-74d7fba588d3 order_id:Order-4627 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:25Z status:picked_up time_stamp:2025-07-22T08:49:25Z updated_at:2025-07-22T08:49:25Z]}] [] 1 0 2025-07-22 08:49:25.987781 +0000 UTC  2025-07-22 08:49:25.987781 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#03
+I am query ID:  f2474609-6b61-4b46-837f-bf69c40dc3c9
+Fetch values: {1dee1ae6-0642-4bf5-8c50-80fe43c73cca dd8017cf-faaa-4a2a-9bed-5aa61f632405 f2474609-6b61-4b46-837f-bf69c40dc3c9 8c0bb402-1128-4848-bff4-453613486fe0 e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:48:26.006094 +0000 UTC [] [{manifest map[created_at:2025-07-22T08:49:26Z delivery_id:Delivery-118 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:fad11857-5e21-40ed-a4a4-f401f3423fe8 order_id:Order-118 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:26Z status:picked time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] 0 1 2025-07-22 08:49:26.006099 +0000 UTC  2025-07-22 08:49:26.006099 +0000 UTC}
+I am fetched: {1dee1ae6-0642-4bf5-8c50-80fe43c73cca f2474609-6b61-4b46-837f-bf69c40dc3c9 dd8017cf-faaa-4a2a-9bed-5aa61f632405 8c0bb402-1128-4848-bff4-453613486fe0 e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:48:26.006094 +0000 UTC [] [{manifest map[created_at:2025-07-22T08:49:26Z delivery_id:Delivery-118 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:fad11857-5e21-40ed-a4a4-f401f3423fe8 order_id:Order-118 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:26Z status:picked time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] 0 1 2025-07-22 08:49:26.006099 +0000 UTC  2025-07-22 08:49:26.006099 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#04
+I am picked up here: 2025-07-22 08:44:26.258845684 +0000 UTC m=-297.017903196 and My type is time.Time
+{2e658fcd-feff-4699-a4f6-bd6e8e9d6054 d28a2ee9-47a8-49b4-9500-d3858226f41f 7484a8f5-c1ab-4456-bcea-bb66eb22a4fd 703ff89c-c45a-47a9-98d7-0a79127337f1 e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:44:26.258845684 +0000 UTC m=-297.017903196 [{map[Signature_ID:da3a9822-efe7-472e-b0fe-524b9d45e6f4 created_at:2025-07-22 08:49:26.258845784 +0000 UTC m=+2.982096904 device_id:703ff89c-c45a-47a9-98d7-0a79127337f1 event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:9 longitude:38 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 signature_type:PIN signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 time_stamp:2025-07-22 08:49:26.258845854 +0000 UTC m=+2.982096974 updated_at:2025-07-22 08:49:26.258845784 +0000 UTC m=+2.982096904]}] [] 1 0 2025-07-22 08:49:26.258920293 +0000 UTC m=+2.982171403 Received 2025-07-22 08:49:26.258920293 +0000 UTC m=+2.982171403}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:2e658fcd-feff-4699-a4f6-bd6e8e9d6054 SessionID:7484a8f5-c1ab-4456-bcea-bb66eb22a4fd BatchID:d28a2ee9-47a8-49b4-9500-d3858226f41f DeviceID:703ff89c-c45a-47a9-98d7-0a79127337f1 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:signature ClientTimeStamp:2025-07-22 08:44:26.258845684 +0000 UTC ProcessedRecords:[{Data:map[Signature_ID:da3a9822-efe7-472e-b0fe-524b9d45e6f4 created_at:2025-07-22 08:49:26.258845784 +0000 UTC m=+2.982096904 device_id:703ff89c-c45a-47a9-98d7-0a79127337f1 event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:9 longitude:38 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 signature_type:PIN signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 time_stamp:2025-07-22 08:49:26.258845854 +0000 UTC m=+2.982096974 updated_at:2025-07-22 08:49:26.258845784 +0000 UTC m=+2.982096904]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.258920293 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.258920293 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#04
+I am query ID:  f2474609-6b61-4b46-837f-bf69c40dc3c9
+Fetch values: {1dee1ae6-0642-4bf5-8c50-80fe43c73cca dd8017cf-faaa-4a2a-9bed-5aa61f632405 f2474609-6b61-4b46-837f-bf69c40dc3c9 8c0bb402-1128-4848-bff4-453613486fe0 e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:48:26.006094 +0000 UTC [] [{manifest map[created_at:2025-07-22T08:49:26Z delivery_id:Delivery-118 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:fad11857-5e21-40ed-a4a4-f401f3423fe8 order_id:Order-118 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:26Z status:picked time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] 0 1 2025-07-22 08:49:26.006099 +0000 UTC  2025-07-22 08:49:26.006099 +0000 UTC}
+I am fetched: {1dee1ae6-0642-4bf5-8c50-80fe43c73cca f2474609-6b61-4b46-837f-bf69c40dc3c9 dd8017cf-faaa-4a2a-9bed-5aa61f632405 8c0bb402-1128-4848-bff4-453613486fe0 e33a31a9-58bf-43c6-bc86-2e3039937f04 manifest 2025-07-22 08:48:26.006094 +0000 UTC [] [{manifest map[created_at:2025-07-22T08:49:26Z delivery_id:Delivery-118 delivery_time: destination_facility_id:f0d183be-3c46-4882-9523-8bbe67eed339 is_deleted:false is_synced:false items_summary:map[Medical_supply1:5 Medical_supply2:10] manifest_ID:fad11857-5e21-40ed-a4a4-f401f3423fe8 order_id:Order-118 origin_facility_id:a26cea1b-e2dc-48c2-bcd8-ef70b46d777f pickup_batch_id:b2d80da6-0b5d-40e6-aad4-8f717d863ab9 pickup_time:2025-07-22T08:49:26Z status:picked time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] manifest Status Doesnot contain "pending", "picked_up", "in_transit" or "delviered " or "exceptio " }] 0 1 2025-07-22 08:49:26.006099 +0000 UTC  2025-07-22 08:49:26.006099 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#05
+I am picked up here: 2025-07-22 08:44:26.278508685 +0000 UTC m=-296.998240205 and My type is time.Time
+{f44a52d8-5c7d-4b78-8bfe-aa442628aee1 7ebc5ec9-2bb1-4f84-91df-005992247cb7 cc92e751-d815-40f4-a00f-e8395cbc0b73 5e056577-dc03-4786-8c97-d9b279293299 e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:44:26.278508685 +0000 UTC m=-296.998240205 [] [{signature map[Signature_ID:32b57ddc-4f3f-4979-938f-d8bcaab037d6 created_at:2025-07-22 08:49:26.278508765 +0000 UTC m=+3.001759885 device_id:5e056577-dc03-4786-8c97-d9b279293299 event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:9 longitude:38 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 signature_type:Password signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 time_stamp:2025-07-22 08:49:26.278508825 +0000 UTC m=+3.001759945 updated_at:2025-07-22 08:49:26.278508765 +0000 UTC m=+3.001759885] signature Type is Empty or Signature Type is "PIN" or "Freehand " "Fingerprint " "FaceID "}] 0 1 2025-07-22 08:49:26.278583163 +0000 UTC m=+3.001834293 Received 2025-07-22 08:49:26.278583163 +0000 UTC m=+3.001834293}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:f44a52d8-5c7d-4b78-8bfe-aa442628aee1 SessionID:cc92e751-d815-40f4-a00f-e8395cbc0b73 BatchID:7ebc5ec9-2bb1-4f84-91df-005992247cb7 DeviceID:5e056577-dc03-4786-8c97-d9b279293299 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:signature ClientTimeStamp:2025-07-22 08:44:26.278508685 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:signature Data:map[Signature_ID:32b57ddc-4f3f-4979-938f-d8bcaab037d6 created_at:2025-07-22 08:49:26.278508765 +0000 UTC m=+3.001759885 device_id:5e056577-dc03-4786-8c97-d9b279293299 event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:9 longitude:38 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 signature_type:Password signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 time_stamp:2025-07-22 08:49:26.278508825 +0000 UTC m=+3.001759945 updated_at:2025-07-22 08:49:26.278508765 +0000 UTC m=+3.001759885] Reason:signature Type is Empty or Signature Type is "PIN" or "Freehand " "Fingerprint " "FaceID "}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.278583163 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.278583163 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#05
+I am query ID:  4b3566ef-accd-4406-b807-c7f0d8f52bed
+Fetch values: {90f5191a-2736-4688-b1db-9ebc95c30575 98ae362b-7db7-4936-9459-a114f08acfa2 4b3566ef-accd-4406-b807-c7f0d8f52bed 1f5e19c1-8689-458c-8015-2a457102fb82 e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:48:26.050247 +0000 UTC [{map[created_at:2025-07-22T08:49:26Z device_id:2f1f384b-c3f0-4c2b-885d-4414584d1591 event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:3b67e388-8131-49ee-8cd7-9b4da1a22d0f signature_type:PIN signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.050253 +0000 UTC  2025-07-22 08:49:26.050253 +0000 UTC}
+I am fetched: {90f5191a-2736-4688-b1db-9ebc95c30575 4b3566ef-accd-4406-b807-c7f0d8f52bed 98ae362b-7db7-4936-9459-a114f08acfa2 1f5e19c1-8689-458c-8015-2a457102fb82 e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:48:26.050247 +0000 UTC [{map[created_at:2025-07-22T08:49:26Z device_id:2f1f384b-c3f0-4c2b-885d-4414584d1591 event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:3b67e388-8131-49ee-8cd7-9b4da1a22d0f signature_type:PIN signed_at:2025-07-22T08:29:26Z signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.050253 +0000 UTC  2025-07-22 08:49:26.050253 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#06
+I am picked up here: 2025-07-22 08:44:26.294239056 +0000 UTC m=-296.982509824 and My type is time.Time
+{e048507d-3f9f-44cc-accd-0dbb06d6ec40 88d4ebe1-0e03-4068-a6ac-62cbdeacb090 419c6e52-28ee-4180-8658-8487829645c9 da9d5d2b-a78c-45ed-bbfd-0587fbcfbb17 e33a31a9-58bf-43c6-bc86-2e3039937f04 images 2025-07-22 08:44:26.294239056 +0000 UTC m=-296.982509824 [{map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22 08:49:26.294239216 +0000 UTC m=+3.017490336 event_type:pickup exception_id: image_ID:e192db2c-ef42-4dd8-bbbf-ce418c23b9d1 image_hash:img_hash_pickup_001 image_type:model19 image_url:https://example.com/pickup_confirmation_001.jpg is_deleted:false is_synced:false manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22 08:49:26.294239286 +0000 UTC m=+3.017490406 updated_at:2025-07-22 08:49:26.294239216 +0000 UTC m=+3.017490336]}] [] 1 0 2025-07-22 08:49:26.294320087 +0000 UTC m=+3.017571206 Received 2025-07-22 08:49:26.294320087 +0000 UTC m=+3.017571206}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:e048507d-3f9f-44cc-accd-0dbb06d6ec40 SessionID:419c6e52-28ee-4180-8658-8487829645c9 BatchID:88d4ebe1-0e03-4068-a6ac-62cbdeacb090 DeviceID:da9d5d2b-a78c-45ed-bbfd-0587fbcfbb17 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:images ClientTimeStamp:2025-07-22 08:44:26.294239056 +0000 UTC ProcessedRecords:[{Data:map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22 08:49:26.294239216 +0000 UTC m=+3.017490336 event_type:pickup exception_id: image_ID:e192db2c-ef42-4dd8-bbbf-ce418c23b9d1 image_hash:img_hash_pickup_001 image_type:model19 image_url:https://example.com/pickup_confirmation_001.jpg is_deleted:false is_synced:false manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22 08:49:26.294239286 +0000 UTC m=+3.017490406 updated_at:2025-07-22 08:49:26.294239216 +0000 UTC m=+3.017490336]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.294320087 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.294320087 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#06
+I am query ID:  53fbbbdc-70f0-4653-90f5-39e8bcb927b9
+Fetch values: {59e2a54a-84d6-4801-8035-50ab732cd642 cb39c9fd-98c0-429a-a43c-bc9c9d120c3e 53fbbbdc-70f0-4653-90f5-39e8bcb927b9 5f571d50-f34b-47e1-9d2e-16c788f88f2f e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:48:26.067892 +0000 UTC [] [{signature map[created_at:2025-07-22T08:49:26Z device_id:964bf1f6-040e-44d0-8ef3-37622fc2498d event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:d44845cd-3b1d-4aeb-90a2-9da51c2f2bc7 signature_type:Password signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 singed_at:2025-07-22T08:29:26Z time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] signature Type is Empty or Signature Type is "PIN" or "Freehand " "Fingerprint " "FaceID "}] 0 1 2025-07-22 08:49:26.067897 +0000 UTC  2025-07-22 08:49:26.067897 +0000 UTC}
+I am fetched: {59e2a54a-84d6-4801-8035-50ab732cd642 53fbbbdc-70f0-4653-90f5-39e8bcb927b9 cb39c9fd-98c0-429a-a43c-bc9c9d120c3e 5f571d50-f34b-47e1-9d2e-16c788f88f2f e33a31a9-58bf-43c6-bc86-2e3039937f04 signature 2025-07-22 08:48:26.067892 +0000 UTC [] [{signature map[created_at:2025-07-22T08:49:26Z device_id:964bf1f6-040e-44d0-8ef3-37622fc2498d event_type:pickup inside_geofence:true is_deleted:false is_synced:false is_verified:true latitude:7 longitude:40 mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 signature_ID:d44845cd-3b1d-4aeb-90a2-9da51c2f2bc7 signature_type:Password signed_by_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 singature_hash:a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890 singed_at:2025-07-22T08:29:26Z time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] signature Type is Empty or Signature Type is "PIN" or "Freehand " "Fingerprint " "FaceID "}] 0 1 2025-07-22 08:49:26.067897 +0000 UTC  2025-07-22 08:49:26.067897 +0000 UTC}
+=== RUN   Test_SyncBatch/query-basic
+I am picked up here: 2025-07-22 08:44:26.313329852 +0000 UTC m=-296.963419029 and My type is time.Time
+{3c6f3517-8890-43f3-bedc-92d04dbc91ea 3fe10221-e720-4587-a70d-aa6e48b5276a 39c3f98f-d7b7-4212-b9bb-97bf98f8ad13 9d5eceda-e31b-4094-b5a4-1294d0df3f15 e33a31a9-58bf-43c6-bc86-2e3039937f04 images 2025-07-22 08:44:26.313329852 +0000 UTC m=-296.963419029 [] [{images map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22 08:49:26.313330012 +0000 UTC m=+3.036581132 event_type:pickup exception_id: image_ID:7b9759a3-fd45-455f-b3b2-b69987d490fb image_hash:img_hash_pickup_001 image_type:model image_url:https://example.com/pickup_confirmation_001.jpg is_deleted:false is_synced:false manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22 08:49:26.313330072 +0000 UTC m=+3.036581192 updated_at:2025-07-22 08:49:26.313330012 +0000 UTC m=+3.036581132] image type is Empty or not one of the following: model19, model19_dicripancy, exception}] 0 1 2025-07-22 08:49:26.314096929 +0000 UTC m=+3.037348070 Received 2025-07-22 08:49:26.314096929 +0000 UTC m=+3.037348070}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:3c6f3517-8890-43f3-bedc-92d04dbc91ea SessionID:39c3f98f-d7b7-4212-b9bb-97bf98f8ad13 BatchID:3fe10221-e720-4587-a70d-aa6e48b5276a DeviceID:9d5eceda-e31b-4094-b5a4-1294d0df3f15 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:images ClientTimeStamp:2025-07-22 08:44:26.313329852 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:images Data:map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22 08:49:26.313330012 +0000 UTC m=+3.036581132 event_type:pickup exception_id: image_ID:7b9759a3-fd45-455f-b3b2-b69987d490fb image_hash:img_hash_pickup_001 image_type:model image_url:https://example.com/pickup_confirmation_001.jpg is_deleted:false is_synced:false manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22 08:49:26.313330072 +0000 UTC m=+3.036581192 updated_at:2025-07-22 08:49:26.313330012 +0000 UTC m=+3.036581132] Reason:image type is Empty or not one of the following: model19, model19_dicripancy, exception}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.314096929 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.314096929 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#07
+I am query ID:  d79b2298-a305-4a5c-a245-ee746f47bb42
+Fetch values: {d34ff95b-dfc6-4f2b-b821-55034d9a51c8 de4c50db-0269-4725-bcac-579a2d122c74 d79b2298-a305-4a5c-a245-ee746f47bb42 4f1f8458-582f-4d6e-8cbd-80efa588cbaa f988c3d5-07a3-49aa-a19b-80522cd0ea22 delivery_exception 2025-07-22 08:48:26.154294 +0000 UTC [] [{delivery_exception map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:e595e3b7-8f6f-47d3-a783-3fbacd97f8f6 exception_type:address_issue is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] exception Type is Empty or not one of the following: damaged, descripancy, refused, no_recipient, wrong_address, other}] 0 1 2025-07-22 08:49:26.154298 +0000 UTC  2025-07-22 08:49:26.154298 +0000 UTC}
+I am fetched: {d34ff95b-dfc6-4f2b-b821-55034d9a51c8 d79b2298-a305-4a5c-a245-ee746f47bb42 de4c50db-0269-4725-bcac-579a2d122c74 4f1f8458-582f-4d6e-8cbd-80efa588cbaa f988c3d5-07a3-49aa-a19b-80522cd0ea22 delivery_exception 2025-07-22 08:48:26.154294 +0000 UTC [] [{delivery_exception map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:e595e3b7-8f6f-47d3-a783-3fbacd97f8f6 exception_type:address_issue is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z] exception Type is Empty or not one of the following: damaged, descripancy, refused, no_recipient, wrong_address, other}] 0 1 2025-07-22 08:49:26.154298 +0000 UTC  2025-07-22 08:49:26.154298 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#07
+I am picked up here: 2025-07-22 08:44:26.33091246 +0000 UTC m=-296.945836420 and My type is time.Time
+{20d7c1bb-9432-4621-8c75-a4d24f7aa004 91697261-2fd9-4779-8e1d-578499505f25 9dfe1383-e606-4d0d-90d7-25baf56f6d58 1dbafe12-b8f3-49c8-a375-8ac9a316e44a e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:44:26.33091246 +0000 UTC m=-296.945836420 [{map[accuracy:0.93 battery_level:0.92 created_at:2025-07-22 08:49:26.33091261 +0000 UTC m=+3.054163730 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:9 longitued:38 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:75 time_stamp:2025-07-22 08:49:26.33091267 +0000 UTC m=+3.054163791 tracking_ID:783e85e6-4e03-4c1a-85d5-ee48fe70bd35 updated_at:2025-07-22 08:49:26.33091261 +0000 UTC m=+3.054163730 vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:26.330937016 +0000 UTC m=+3.054188136 Received 2025-07-22 08:49:26.330937016 +0000 UTC m=+3.054188136}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:20d7c1bb-9432-4621-8c75-a4d24f7aa004 SessionID:9dfe1383-e606-4d0d-90d7-25baf56f6d58 BatchID:91697261-2fd9-4779-8e1d-578499505f25 DeviceID:1dbafe12-b8f3-49c8-a375-8ac9a316e44a UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:gpstracking ClientTimeStamp:2025-07-22 08:44:26.33091246 +0000 UTC ProcessedRecords:[{Data:map[accuracy:0.93 battery_level:0.92 created_at:2025-07-22 08:49:26.33091261 +0000 UTC m=+3.054163730 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:9 longitued:38 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:75 time_stamp:2025-07-22 08:49:26.33091267 +0000 UTC m=+3.054163791 tracking_ID:783e85e6-4e03-4c1a-85d5-ee48fe70bd35 updated_at:2025-07-22 08:49:26.33091261 +0000 UTC m=+3.054163730 vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.330937016 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.330937016 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#08
+I am picked up here: 2025-07-22 08:44:26.337620817 +0000 UTC m=-296.939128063 and My type is time.Time
+{695eb1aa-ae62-4ccc-9066-389b19b501ba 20169a5f-f4bf-4827-8b46-a4eb5bd9304c 298656c0-ea05-4489-866e-a25691d042c6 e3f78736-8665-4b5f-a521-56edd81b6831 e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:44:26.337620817 +0000 UTC m=-296.939128063 [] [{gpstracking map[accuracy:-0.93 battery_level:0.92 created_at:2025-07-22 08:49:26.337620977 +0000 UTC m=+3.060872087 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:9 longitued:38 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:75 time_stamp:2025-07-22 08:49:26.337621037 +0000 UTC m=+3.060872147 tracking_ID:3eae8e58-1344-4c8a-bf4b-e1f209306552 updated_at:2025-07-22 08:49:26.337620977 +0000 UTC m=+3.060872087 vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf] invalid Accuracy Range must be >= 0.00 and <= 100.00}] 0 1 2025-07-22 08:49:26.337649741 +0000 UTC m=+3.060900861 Received 2025-07-22 08:49:26.337649741 +0000 UTC m=+3.060900861}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:695eb1aa-ae62-4ccc-9066-389b19b501ba SessionID:298656c0-ea05-4489-866e-a25691d042c6 BatchID:20169a5f-f4bf-4827-8b46-a4eb5bd9304c DeviceID:e3f78736-8665-4b5f-a521-56edd81b6831 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:gpstracking ClientTimeStamp:2025-07-22 08:44:26.337620817 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:gpstracking Data:map[accuracy:-0.93 battery_level:0.92 created_at:2025-07-22 08:49:26.337620977 +0000 UTC m=+3.060872087 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:9 longitued:38 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:75 time_stamp:2025-07-22 08:49:26.337621037 +0000 UTC m=+3.060872147 tracking_ID:3eae8e58-1344-4c8a-bf4b-e1f209306552 updated_at:2025-07-22 08:49:26.337620977 +0000 UTC m=+3.060872087 vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf] Reason:invalid Accuracy Range must be >= 0.00 and <= 100.00}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.337649741 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.337649741 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#08
+I am query ID:  e8f88f3e-bfb0-4b08-a211-4e2fd20f3de6
+Fetch values: {1ad32607-d29d-45cc-8696-40326adf8ce7 d4481415-63fc-4022-a022-136d8b3f055c e8f88f3e-bfb0-4b08-a211-4e2fd20f3de6 80c0ef0a-a706-492f-b105-b3e7d17fd706 e33a31a9-58bf-43c6-bc86-2e3039937f04 images 2025-07-22 08:48:26.087094 +0000 UTC [{map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:38cd7684-3b4d-452a-a13e-3e636206ecc4 image_hash:img_hash_pickup_002 image_type:model19 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.087098 +0000 UTC  2025-07-22 08:49:26.087098 +0000 UTC}
+I am fetched: {1ad32607-d29d-45cc-8696-40326adf8ce7 e8f88f3e-bfb0-4b08-a211-4e2fd20f3de6 d4481415-63fc-4022-a022-136d8b3f055c 80c0ef0a-a706-492f-b105-b3e7d17fd706 e33a31a9-58bf-43c6-bc86-2e3039937f04 images 2025-07-22 08:48:26.087094 +0000 UTC [{map[captured_by:e33a31a9-58bf-43c6-bc86-2e3039937f04 created_at:2025-07-22T08:49:26Z event_type:pickup exception_id: image_ID:38cd7684-3b4d-452a-a13e-3e636206ecc4 image_hash:img_hash_pickup_002 image_type:model19 image_url:https://example.com/pickup_confirmation_002.jpg is_deleted:false is_synced:false mainfest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.087098 +0000 UTC  2025-07-22 08:49:26.087098 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#09
+I am query ID:  cda221a2-73d3-4f1e-98a3-58fadc228e99
+Fetch values: {25188901-2882-461c-b1ea-35fd995f97bd cc86b6e8-a9e5-4c69-a73e-a6f50f56a19f cda221a2-73d3-4f1e-98a3-58fadc228e99 ee9fc4be-e8cb-4b08-9737-015027fbaeb4 e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:48:26.103122 +0000 UTC [{map[accuracy:0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:75466807-de01-4a53-b408-6f611af1c0a7 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:26.103126 +0000 UTC  2025-07-22 08:49:26.103126 +0000 UTC}
+I am fetched: {25188901-2882-461c-b1ea-35fd995f97bd cda221a2-73d3-4f1e-98a3-58fadc228e99 cc86b6e8-a9e5-4c69-a73e-a6f50f56a19f ee9fc4be-e8cb-4b08-9737-015027fbaeb4 e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:48:26.103122 +0000 UTC [{map[accuracy:0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:75466807-de01-4a53-b408-6f611af1c0a7 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf]}] [] 1 0 2025-07-22 08:49:26.103126 +0000 UTC  2025-07-22 08:49:26.103126 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#09
+I am picked up here: 2025-07-22 08:44:26.363336504 +0000 UTC m=-296.913412355 and My type is time.Time
+{f0a657d7-e71b-45bd-a8a5-3c4733e63dba 47b80e93-b31e-4371-9b01-2e3ededf41fe 5efbadfe-df3e-4249-994e-5da89617bc15 31465460-2e84-4d3b-b73c-01c1bee86e65 e33a31a9-58bf-43c6-bc86-2e3039937f04 delivery_exception 2025-07-22 08:44:26.363336504 +0000 UTC m=-296.913412355 [{map[captured_at:2025-07-22 08:29:26.363336665 +0000 UTC m=-1196.913412225 created_at:2025-07-22 08:49:26.363336755 +0000 UTC m=+3.086587875 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 exception_ID:4717eb22-c9f5-4b3c-93d7-86f535eb5b2e exception_type:damaged is_deleted:false is_synced:false manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22 08:49:26.363336825 +0000 UTC m=+3.086587935 updated_at:2025-07-22 08:49:26.363336755 +0000 UTC m=+3.086587875]}] [] 1 0 2025-07-22 08:49:26.363361902 +0000 UTC m=+3.086613313 Received 2025-07-22 08:49:26.363361902 +0000 UTC m=+3.086613313}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:f0a657d7-e71b-45bd-a8a5-3c4733e63dba SessionID:5efbadfe-df3e-4249-994e-5da89617bc15 BatchID:47b80e93-b31e-4371-9b01-2e3ededf41fe DeviceID:31465460-2e84-4d3b-b73c-01c1bee86e65 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:delivery_exception ClientTimeStamp:2025-07-22 08:44:26.363336504 +0000 UTC ProcessedRecords:[{Data:map[captured_at:2025-07-22 08:29:26.363336665 +0000 UTC m=-1196.913412225 created_at:2025-07-22 08:49:26.363336755 +0000 UTC m=+3.086587875 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 exception_ID:4717eb22-c9f5-4b3c-93d7-86f535eb5b2e exception_type:damaged is_deleted:false is_synced:false manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22 08:49:26.363336825 +0000 UTC m=+3.086587935 updated_at:2025-07-22 08:49:26.363336755 +0000 UTC m=+3.086587875]}] UnprocessedRecords:[] ProcessedRecordCount:1 UnprocessedRecordCount:0 TimeStamp:2025-07-22 08:49:26.363361902 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.363361902 +0000 UTC}
+=== RUN   Test_SyncBatch/create-basic#10
+I am picked up here: 2025-07-22 08:44:26.375316484 +0000 UTC m=-296.901432386 and My type is time.Time
+{5bb5d186-d217-4388-a3f3-04abbb38ac97 fc055431-2e0b-427d-906a-2d759e827c74 fe0fa9bb-22e4-4737-9509-e9977bfe19b8 7fdcdad5-ca17-428f-bb12-234e0af6ed56 e33a31a9-58bf-43c6-bc86-2e3039937f04 delivery_exception 2025-07-22 08:44:26.375316484 +0000 UTC m=-296.901432386 [] [{delivery_exception map[captured_at:2025-07-22 08:29:26.375316635 +0000 UTC m=-1196.901432246 created_at:2025-07-22 08:49:26.375316755 +0000 UTC m=+3.098567875 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 exception_ID:ebde8a24-4de0-4e90-b98f-2fa37ec637d5 exception_type:no_one_to_recieve is_deleted:false is_synced:false manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22 08:49:26.375316825 +0000 UTC m=+3.098567935 updated_at:2025-07-22 08:49:26.375316755 +0000 UTC m=+3.098567875] exception Type is Empty or not one of the following: damaged, descripancy, refused, no_recipient, wrong_address, other}] 0 1 2025-07-22 08:49:26.375430316 +0000 UTC m=+3.098681436 Received 2025-07-22 08:49:26.375430316 +0000 UTC m=+3.098681436}
+Database Instance:  &{0xc000249ad0 pgx false 0xc00022faa0}
+Final DB Payload: {ID:5bb5d186-d217-4388-a3f3-04abbb38ac97 SessionID:fe0fa9bb-22e4-4737-9509-e9977bfe19b8 BatchID:fc055431-2e0b-427d-906a-2d759e827c74 DeviceID:7fdcdad5-ca17-428f-bb12-234e0af6ed56 UserID:e33a31a9-58bf-43c6-bc86-2e3039937f04 EntityType:delivery_exception ClientTimeStamp:2025-07-22 08:44:26.375316484 +0000 UTC ProcessedRecords:[] UnprocessedRecords:[{EntityType:delivery_exception Data:map[captured_at:2025-07-22 08:29:26.375316635 +0000 UTC m=-1196.901432246 created_at:2025-07-22 08:49:26.375316755 +0000 UTC m=+3.098567875 delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 exception_ID:ebde8a24-4de0-4e90-b98f-2fa37ec637d5 exception_type:no_one_to_recieve is_deleted:false is_synced:false manifest_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22 08:49:26.375316825 +0000 UTC m=+3.098567935 updated_at:2025-07-22 08:49:26.375316755 +0000 UTC m=+3.098567875] Reason:exception Type is Empty or not one of the following: damaged, descripancy, refused, no_recipient, wrong_address, other}] ProcessedRecordCount:0 UnprocessedRecordCount:1 TimeStamp:2025-07-22 08:49:26.375430316 +0000 UTC Status:Received CreatedAt:2025-07-22 08:49:26.375430316 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#10
+I am query ID:  5cf38828-5f4c-4f2b-9647-9f852056368e
+Fetch values: {5ec797de-b400-4008-9b26-a0970fb0eb9b 25138712-2060-4378-bec0-df9ef8e5645c 5cf38828-5f4c-4f2b-9647-9f852056368e d5a0d549-779e-4b51-9f05-31b99524dd5b e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:48:26.119211 +0000 UTC [] [{gpstracking map[accuracy:-0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:fffc3d03-f19d-4dbd-84ef-45bbaa241ea5 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf] invalid Accuracy Range must be >= 0.00 and <= 100.00}] 0 1 2025-07-22 08:49:26.119216 +0000 UTC  2025-07-22 08:49:26.119216 +0000 UTC}
+I am fetched: {5ec797de-b400-4008-9b26-a0970fb0eb9b 5cf38828-5f4c-4f2b-9647-9f852056368e 25138712-2060-4378-bec0-df9ef8e5645c d5a0d549-779e-4b51-9f05-31b99524dd5b e33a31a9-58bf-43c6-bc86-2e3039937f04 gpstracking 2025-07-22 08:48:26.119211 +0000 UTC [] [{gpstracking map[accuracy:-0.95 battery_level:0.8 created_at:2025-07-22T08:49:26Z delivery_personnel_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 is_deleted:false is_synced:false latitude:10 longitude:40 route_id:1ad7ed02-4644-424a-b2da-69dc2c07a32b speed:0.89 time_stamp:2025-07-22T08:49:26Z tracking_ID:fffc3d03-f19d-4dbd-84ef-45bbaa241ea5 updated_at:2025-07-22T08:49:26Z vehicle_id:67031a7f-dbd0-4414-abb1-b95f553676bf] invalid Accuracy Range must be >= 0.00 and <= 100.00}] 0 1 2025-07-22 08:49:26.119216 +0000 UTC  2025-07-22 08:49:26.119216 +0000 UTC}
+=== RUN   Test_SyncBatch/query-byid#11
+I am query ID:  2db80dd3-1b9b-4792-97bb-524482cf0297
+Fetch values: {548ef26c-06bf-4e18-938d-a5932c317612 687df660-60f7-4cb5-96de-cae5e688e9fe 2db80dd3-1b9b-4792-97bb-524482cf0297 19774b29-8c43-4135-97b3-09062f159922 f988c3d5-07a3-49aa-a19b-80522cd0ea22 delivery_exception 2025-07-22 08:48:26.137298 +0000 UTC [{map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:0be7c289-ef74-4bd1-9bf6-7bef7a4098c7 exception_type:damaged is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.137303 +0000 UTC  2025-07-22 08:49:26.137303 +0000 UTC}
+I am fetched: {548ef26c-06bf-4e18-938d-a5932c317612 2db80dd3-1b9b-4792-97bb-524482cf0297 687df660-60f7-4cb5-96de-cae5e688e9fe 19774b29-8c43-4135-97b3-09062f159922 f988c3d5-07a3-49aa-a19b-80522cd0ea22 delivery_exception 2025-07-22 08:48:26.137298 +0000 UTC [{map[captured_at:2025-07-22T08:29:26Z created_at:2025-07-22T08:49:26Z delivery_personnel_id_id:f988c3d5-07a3-49aa-a19b-80522cd0ea22 description:Package severely damaged during transport exception_ID:0be7c289-ef74-4bd1-9bf6-7bef7a4098c7 exception_type:damaged is_deleted:false is_synced:false manifest_id:e33a31a9-58bf-43c6-bc86-2e3039937f04 resolution_status:pending resolved_by: severity:high time_stamp:2025-07-22T08:49:26Z updated_at:2025-07-22T08:49:26Z]}] [] 1 0 2025-07-22 08:49:26.137303 +0000 UTC  2025-07-22 08:49:26.137303 +0000 UTC}
+=== NAME  Test_SyncBatch
+    dbtest.go:202: Drop Database: kbqm
+    dbtest.go:202: ******************** LOGS (Test_SyncBatch) ********************
+        
+    dbtest.go:202: 
+    dbtest.go:202: ******************** LOGS (Test_SyncBatch) ********************
+--- PASS: Test_SyncBatch (3.16s)
+    --- PASS: Test_SyncBatch/query-byid (0.01s)
+    --- PASS: Test_SyncBatch/create-basic (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#01 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#01 (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#02 (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#03 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#02 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#03 (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#04 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#04 (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#05 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#05 (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#06 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#06 (0.01s)
+    --- PASS: Test_SyncBatch/query-basic (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#07 (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#07 (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#08 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#08 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#09 (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#09 (0.01s)
+    --- PASS: Test_SyncBatch/create-basic#10 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#10 (0.01s)
+    --- PASS: Test_SyncBatch/query-byid#11 (0.01s)
+PASS
+coverage: 93.3% of statements
+ok  	github.com/FITHSCS/backend/business/domain/syncbatchbus	3.172s	coverage: 93.3% of statements
+	github.com/FITHSCS/backend/business/domain/syncbatchbus/stores/syncbatchdb		coverage: 0.0% of statements
+=== RUN   Test_User
+=== PAUSE Test_User
+=== CONT  Test_User
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: cxjx
+    dbtest.go:88: Migrate Database: cxjx
+=== RUN   Test_User/query-all
+=== RUN   Test_User/create-basic
+=== RUN   Test_User/update-basic
+=== RUN   Test_User/delete-user
+=== RUN   Test_User/delete-admin
+=== NAME  Test_User
+    dbtest.go:106: Drop Database: cxjx
+    dbtest.go:106: ******************** LOGS (Test_User) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_User) ********************
+--- PASS: Test_User (1.31s)
+    --- PASS: Test_User/query-all (0.02s)
+    --- PASS: Test_User/create-basic (0.17s)
+    --- PASS: Test_User/update-basic (0.18s)
+    --- PASS: Test_User/delete-user (0.01s)
+    --- PASS: Test_User/delete-admin (0.01s)
+PASS
+coverage: 59.2% of statements
+ok  	github.com/FITHSCS/backend/business/domain/userbus	1.315s	coverage: 59.2% of statements
+	github.com/FITHSCS/backend/business/domain/userbus/extensions/useraudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/userbus/stores/usercache		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/userbus/stores/userdb		coverage: 0.0% of statements
+=== RUN   Test_Vehicle
+=== PAUSE Test_Vehicle
+=== CONT  Test_Vehicle
+    dbtest.go:41: Name    : servicetest
+    dbtest.go:42: HostPort: 0.0.0.0:32768
+    dbtest.go:70: Create Database: hzws
+    dbtest.go:88: Migrate Database: hzws
+{6cb00907-72bc-4a77-aa37-4523d2003e9d 03-B-128602 Truck 8602 2 active 2025-07-22 08:49:28.015277 +0000 UTC 2025-07-22 08:49:28.015277 +0000 UTC}
+{716d3d2c-cb85-4031-9932-21b518feb537 03-B-128603 Truck 8603 3 active 2025-07-22 08:49:28.021703 +0000 UTC 2025-07-22 08:49:28.021703 +0000 UTC}
+{f4d26bce-bdae-4b8f-bbaa-1cbcdda2a444 03-B-126100 Truck 6100 0 active 2025-07-22 08:49:28.101375 +0000 UTC 2025-07-22 08:49:28.101375 +0000 UTC}
+{bb28497a-2c3a-43ef-b261-2791a2a3cb2c 03-B-126101 Truck 6101 1 active 2025-07-22 08:49:28.107115 +0000 UTC 2025-07-22 08:49:28.107115 +0000 UTC}
+=== RUN   Test_Vehicle/query-all
+[{6cb00907-72bc-4a77-aa37-4523d2003e9d 03-B-128602 Truck 8602 2 active 2025-07-22 08:49:28.015277 +0000 UTC 2025-07-22 08:49:28.015277 +0000 UTC} {716d3d2c-cb85-4031-9932-21b518feb537 03-B-128603 Truck 8603 3 active 2025-07-22 08:49:28.021703 +0000 UTC 2025-07-22 08:49:28.021703 +0000 UTC} {bb28497a-2c3a-43ef-b261-2791a2a3cb2c 03-B-126101 Truck 6101 1 active 2025-07-22 08:49:28.107115 +0000 UTC 2025-07-22 08:49:28.107115 +0000 UTC} {f4d26bce-bdae-4b8f-bbaa-1cbcdda2a444 03-B-126100 Truck 6100 0 active 2025-07-22 08:49:28.101375 +0000 UTC 2025-07-22 08:49:28.101375 +0000 UTC}]
+=== RUN   Test_Vehicle/query-byid
+=== RUN   Test_Vehicle/create-basic
+{61df53d5-814a-4041-8f90-41769f28b131 03-A-12223 SUV 120 23 active 2025-07-22 08:49:28.124668 +0000 UTC 2025-07-22 08:49:28.124668 +0000 UTC}
+=== RUN   Test_Vehicle/update-basic
+=== RUN   Test_Vehicle/delete-user
+=== RUN   Test_Vehicle/delete-admin
+=== NAME  Test_Vehicle
+    dbtest.go:106: Drop Database: hzws
+    dbtest.go:106: ******************** LOGS (Test_Vehicle) ********************
+        
+    dbtest.go:106: 
+    dbtest.go:106: ******************** LOGS (Test_Vehicle) ********************
+--- PASS: Test_Vehicle (0.58s)
+    --- PASS: Test_Vehicle/query-all (0.01s)
+    --- PASS: Test_Vehicle/query-byid (0.01s)
+    --- PASS: Test_Vehicle/create-basic (0.01s)
+    --- PASS: Test_Vehicle/update-basic (0.01s)
+    --- PASS: Test_Vehicle/delete-user (0.01s)
+    --- PASS: Test_Vehicle/delete-admin (0.01s)
+PASS
+coverage: 80.0% of statements
+ok  	github.com/FITHSCS/backend/business/domain/vehiclebus	0.592s	coverage: 80.0% of statements
+	github.com/FITHSCS/backend/business/domain/vehiclebus/extensions/vehicleaudit		coverage: 0.0% of statements
+	github.com/FITHSCS/backend/business/domain/vehiclebus/stores/vehicledb		coverage: 0.0% of statements
